@@ -1,0 +1,22 @@
+{
+  "name":   "toy",
+  "author": "allen",
+  "url":    "https://github.com/chenshinshi/toy",
+  "version": "1.1.7",
+  "displayName": {
+    "default": "toy",
+    "zh_CN": "玩具"
+  },
+  "description": {
+    "default": "这是一款「玩具」主题，将页面布局和配色分离，通过简单的配置即可快速实现多种主题样式效果。",
+    "zh_CN": "这是一款「玩具」主题，将页面布局和配色分离，通过简单的配置即可快速实现多种主题样式效果。"
+  },
+  "readme": {
+    "default": "README.md",
+    "zh_CN": "README.md"
+  },
+  "modes": [
+    "dark",
+    "light"
+  ]
+}
