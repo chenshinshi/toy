@@ -1008,3 +1008,28 @@ background-repeat:no-repeat;
     opacity: 1;
     color: var(--b3-theme-on-surface);
 }
+.toolbar__item:not(.toolbar__item--disabled):not(.toolbar__item--close):hover, .toolbar__item--active {
+    background-color: transparent;
+    color: var(--b3-toolbar-color);
+}
+:root {
+    --b3-toolbar-blur-background: #728087;
+}
+.b3-dialog__container,
+.b3-menu,
+.protyle-util {
+    border:none;
+}
+.b3-menu__separator,
+.protyle-toolbar__divider {
+    opacity:0.4;
+}
+.b3-dialog__header {
+    border-bottom:none;
+}
+.b3-dialog__action {
+     border-top:none;
+}
+.protyle-toolbar__divider {
+     display:none;
+}
