@@ -1054,7 +1054,7 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
 }
 /*补充标签样式*/
 .protyle-wysiwyg [data-node-id] span[data-type~=tag] {
-    /* border-bottom: 1px solid; */
+    border-bottom: none;
     /* color: var(--b3-protyle-inline-tag-color); */
     background-color: var(--b3-font-background6);
     transition: var(--b3-transition);
