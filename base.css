@@ -1052,3 +1052,13 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
     border-left:transparent;
     opacity:1;
 }
+/*补充标签样式*/
+.protyle-wysiwyg [data-node-id] span[data-type~=tag] {
+    /* border-bottom: 1px solid; */
+    /* color: var(--b3-protyle-inline-tag-color); */
+    background-color: var(--b3-font-background6);
+    transition: var(--b3-transition);
+    padding: 1px 4px;
+    border-radius: 3px;
+    color: #fff;
+}
