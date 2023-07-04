@@ -210,3 +210,11 @@
 	background-color: transparent;
 	height:40px;
 }
+.toolbar .protyle-toolbar__divider::before {
+        display: block;
+    content: "春";
+    font-size: 12px;
+    margin: -5px 10px 0px 0px;
+    opacity: 1;
+    color: var(--b3-toolbar-color);
+}

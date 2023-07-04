@@ -1030,6 +1030,25 @@ background-repeat:no-repeat;
 .b3-dialog__action {
      border-top:none;
 }
+/*修复窗口失焦*/
+:root {
+    --b3-toolbar-blur-background: transparent;
+}
+/*搜索界面修复边框*/
+.search__tip kbd {
+    border:none;
+    box-shadow:none;
+}
+.search__layout--row .search__preview,.search__layout--row,.search__header {
+    border:none;
+}
+.search__layout--row .search__drag {
+    opacity:0.3;
+}
+body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
+   box-shadow:none;
+}
 .protyle-toolbar__divider {
-     display:none;
+    border-left:transparent;
+    opacity:1;
 }

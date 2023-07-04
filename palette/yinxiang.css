@@ -248,3 +248,11 @@
 .fn__flex-column.fn__flex-shrink,.layout__center+.layout__resize--lr+.fn__flex-column{
 	padding-top:0px;
 }
+.toolbar .protyle-toolbar__divider::before {
+        display: block;
+    content: "印象";
+    font-size: 12px;
+    margin: -5px 10px 0px 0px;
+    opacity: 1;
+    color: var(--b3-toolbar-color);
+}
