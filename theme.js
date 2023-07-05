@@ -11,7 +11,8 @@ window.theme.colors = [
     'palette/light.css',
     'palette/spring.css',
     'palette/tonight.css',
-    'palette/winter.css',
+    'palette/fountain.css',
+    'palette/bearlight.css',
     'palette/yinxiang.css',
 ];
 

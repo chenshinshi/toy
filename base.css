@@ -121,7 +121,7 @@ background-attachment: fixed;
 /**** 菜单 ****/
 /* 右键菜单 */
 .b3-menu{
-  padding: 10px 0px;
+  padding: 10px 5px;
 }
 /* 菜单项 */
 .b3-menu__item{
@@ -135,7 +135,7 @@ background-attachment: fixed;
 }
 /* 菜单项选中状态 */
 .b3-menu__item:hover:not(.b3-menu__item--readonly):not(.b3-menu__item--custom), .b3-menu__item--current{
-  border-radius: 0px;
+  border-radius: var(--b3-border-radius);
 }
 .b3-menu__item:hover:not(.b3-menu__item--readonly):not(.b3-menu__item--custom)>.b3-menu__label, .b3-menu__item:hover:not(.b3-menu__item--readonly):not(.b3-menu__item--custom)>.b3-menu__accelerator, .b3-menu__item:hover:not(.b3-menu__item--readonly):not(.b3-menu__item--custom)>.b3-menu__icon, .b3-menu__item--current>.b3-menu__label, .b3-menu__item--current>.b3-menu__accelerator, .b3-menu__item--current>.b3-menu__icon{
   color: var(--b3-theme-on-background);
@@ -277,7 +277,7 @@ background-attachment: fixed;
 需要将页签栏颜色设置为与背景色相同
 */
 .layout-tab-bar .item{
-  padding: 0 8px; 
+  padding: 0 8px 0 0; 
   background-color: transparent;    
 }
 .layout-tab-bar .item--focus .item__text{
@@ -997,7 +997,7 @@ background-repeat:no-repeat;
     padding:0;
 }
 .config__panel>.b3-tab-bar .b3-list-item {
-    line-height:45px;
+    line-height:45px !important;
 }
 .b3-dialog__container .config__panel>.b3-tab-bar::before {
     display: block;
@@ -1061,4 +1061,79 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
     padding: 1px 4px;
     border-radius: 3px;
     color: #fff;
+}
+/*调整文档树间距*/
+.fn__flex-1.fn__flex-column.file-tree.sy__file .b3-list-item {
+    height: 2.2em;
+    padding-left: 4px;
+    padding-right: 8px;
+}
+.fn__flex.layout-tab-bar {
+   margin-left:8px !important;
+}
+:root {
+   --b3-dock-stats-counter-color:#fff;
+--b3-theme-background-light:var(--b3-theme-primary-lightest);
+--b3-theme-surface-lighter:var(--b3-theme-primary-lightest);
+}
+.layout-tab-bar .item--focus:after {
+    background-color:transparent;
+}
+.color__square {
+   transform:scale(1.2);
+}
+.fn__flex-1.fn__flex-column.file-tree {
+    overflow: hidden;
+}
+.color__square[style="background-color:var(--b3-font-background1)"]:before{ 
+    content: "A";
+    color:#000000;
+}
+.color__square[style="background-color:var(--b3-font-background2)"]:before{ 
+    content: "A";
+    color:#000000;
+}
+.color__square[style="background-color:var(--b3-font-background3)"]:before{ 
+    content: "A";
+    color:#000000;
+}
+.color__square[style="background-color:var(--b3-font-background4)"]:before{ 
+    content: "A";
+    color:#000000;
+}
+.color__square[style="background-color:var(--b3-font-background5)"]:before{ 
+    content: "A";
+    color:#000000;
+}
+.color__square[style="background-color:var(--b3-font-background6)"]:before{ 
+    content: "A";
+    color:#000000;
+}
+.color__square[style="background-color:var(--b3-font-background7)"]:before{ 
+    content: "A";
+    color:#000000;
+}
+.color__square[style="background-color:var(--b3-font-background8)"]:before{ 
+    content: "A";
+    color:#000000;
+}
+.color__square[style="background-color:var(--b3-font-background9)"]:before{ 
+    content: "A";
+    color:#000000;
+}
+.color__square[style="background-color:var(--b3-font-background10)"]:before{ 
+    content: "A";
+    color:#000000;
+}
+.color__square[style="background-color:var(--b3-font-background11)"]:before{ 
+    content: "A";
+    color:#000000;
+}
+.color__square[style="background-color:var(--b3-font-background12)"]:before{ 
+    content: "A";
+    color:#000000;
+}
+.color__square[style="background-color:var(--b3-font-background13)"]:before{ 
+    content: "A";
+    color:#000000;
 }

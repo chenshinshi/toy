@@ -217,3 +217,6 @@ strong[style*="background-color: var(--b3-font-background13)"]{
     opacity: 1;
     color: var(--b3-toolbar-color);
 }
+.status__counter:not(:empty) {
+    background-color: var(--b3-font-background6) !important;
+}
