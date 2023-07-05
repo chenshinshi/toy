@@ -290,3 +290,6 @@ ol ol {
 .layout-tab-bar .item--full.item--focus {
    background-color:transparent !important;
 }
+.layout-tab-bar .item--focus .item__text {
+   border-color:transparent;
+}
