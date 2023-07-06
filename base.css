@@ -1058,10 +1058,12 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
     /* color: var(--b3-protyle-inline-tag-color); */
     background-color: var(--b3-font-background6);
     transition: var(--b3-transition);
-    padding: 1px 4px;
-    border-radius: 3px;
+    padding: 1px 7px;
+    border-radius: 20px;
     color: #fff;
+    margin: 0 4px;
 }
+   
 /*调整文档树间距*/
 .fn__flex-1.fn__flex-column.file-tree.sy__file .b3-list-item {
     height: 2.2em;
