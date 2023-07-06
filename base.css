@@ -1139,3 +1139,9 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
     content: "A";
     color:#000000;
 }
+/*段落间距*/
+.protyle-wysiwyg.protyle-wysiwyg [data-node-id]:not([data-type="NodeHTMLBlock"]){
+    line-height:1.8em !important;
+    margin-bottom: 6px;
+    margin-top: 6px;
+} 
