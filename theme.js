@@ -13,6 +13,8 @@ window.theme.colors = [
     'palette/tonight.css',
     'palette/fountain.css',
     'palette/bearlight.css',
+    'palette/fruitspink.css',
+    'palette/mediawiki.css',
     'palette/yinxiang.css',
 ];
 
