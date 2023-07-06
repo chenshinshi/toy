@@ -217,6 +217,5 @@
     color: var(--b3-toolbar-color);
 }
 .b3-typography a, .protyle-wysiwyg [data-node-id] span[data-type="a"] {
-   text-decoration:underline;
-   text-underline-offset:0.2em;
+    border-bottom: 1px solid;
 }
