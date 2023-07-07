@@ -208,3 +208,7 @@
     opacity: 1;
     color: var(--b3-toolbar-color);
 }
+
+.protyle-wysiwyg ::selection{ 
+    background-color:#ea92004d !important;
+}

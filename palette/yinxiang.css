@@ -12,6 +12,7 @@
     --b3-theme-error:        #d23f31;
 --b3-dock-stats-counter-color:#fff;
 
+
     /* 文字颜色 */
     --b3-theme-on-primary:   #fff;
     --b3-theme-on-secondary: #fff;
@@ -184,7 +185,7 @@
     --page-scrollbar-transition: opacity 800ms ease 0s; /* 分页加载条动画 */
     --flex-column-transition:    width 200ms cubic-bezier(0, 0.7, 0.4, 1); /* 侧边栏动画 */
     --common-transition:         all 1s cubic-bezier(0, 0.7, .2, 1) 0ms;   /* 通用动画 */
-
+--column-scrollbar-background:#d4d5d6;
 }
 
 /**** 特殊样式 ****/

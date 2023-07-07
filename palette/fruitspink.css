@@ -14,6 +14,7 @@
     --b3-toolbar-color:var(--b3-theme-on-background);
     --dock-background:var(--b3-theme-surface);
     --b3-dockright-color:var(--b3-theme-on-background);
+--column-scrollbar-background:var(--b3-font-background6);
 
     /* 文字颜色 */
     --b3-theme-on-primary: #fff;

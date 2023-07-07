@@ -1,0 +1,49 @@
+/* 页宽 */
+.protyle-wysiwyg [data-node-id][custom-f~=full] table{
+	font-weight:500;
+	border-radius:5px;
+	overflow:hidden;
+	width: 100%;
+	display: table;
+}
+.protyle-wysiwyg [data-node-id][custom-f~=full] colgroup{
+	border-style:unset;
+}
+.protyle-wysiwyg div.table[data-node-id][custom-f~=full] table {
+    width: 100%;
+}
+
+.protyle-wysiwyg div.table[data-node-id][custom-f~=auto] table {
+    width: auto;
+}
+.protyle-wysiwyg [data-node-id][custom-f~=auto] table {
+    width: auto !important;
+    white-space: pre;
+}
+
+/* 空白表头 */
+.protyle-wysiwyg [data-node-id][custom-t~=biaotou] table th {
+    font-weight: normal !important;
+    color: inherit !important;
+}
+/* 表格样式 */
+.b3-typography [data-node-id][custom-b~=bt] table,
+.protyle-wysiwyg [data-node-id][custom-b~=bt] table {
+    border-radius:0;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-top: 2px solid var(--b3-theme-surface-lighter); 
+    border-left: 2px solid var(--b3-theme-surface-lighter);
+    border-bottom: none;
+    border-right: none;
+    font-size: 90%;
+    line-height: 1.625em !important;
+}
+.b3-typography [data-node-id][custom-b~=bt] table tr td, .b3-typography [data-node-id][custom-b~=bt] table tr th, .protyle-wysiwyg [data-node-id][custom-b~=bt] table tr td, .protyle-wysiwyg [data-node-id][custom-b~=bt] table tr th {
+    background-color: rgba(255,255,255,0) !important;
+    border-spacing: 0;
+    border-top: none;
+    border-left: none;
+    border-right: 2px solid var(--b3-theme-surface-lighter);
+    border-bottom: 2px solid var(--b3-theme-surface-lighter);
+}

@@ -215,15 +215,14 @@ background-attachment: fixed;
 
 /**** 滚动条 ****/
 /* 通用滚动条 */
-::-webkit-scrollbar { width: 8px;}
+/*::-webkit-scrollbar { width: 8px;}
 ::-webkit-scrollbar-thumb{ background-color:var(--b3-scroll-color); border-radius: 30px; }
-::-webkit-scrollbar-thumb:hover{  background-color: var(--scrollbar-hover-background);}
+::-webkit-scrollbar-thumb:hover{  background-color: var(--scrollbar-hover-background);}*/
 
 /* 边栏滚动条 */
-#layouts>.fn__flex-1>.fn__flex-column ::-webkit-scrollbar{ width: 6px;}
-#layouts>.fn__flex-1>.fn__flex-column ::-webkit-scrollbar-thumb{  background-color: var(--column-scrollbar-background); }
-#layouts>.fn__flex-1>.fn__flex-column ::-webkit-scrollbar-thumb:hover{ background-color: var(--column-scrollbar-hover-background); }
-
+#layouts>.fn__flex-1>.fn__flex-column ::-webkit-scrollbar,::-webkit-scrollbar{ width: 6px;}
+#layouts>.fn__flex-1>.fn__flex-column ::-webkit-scrollbar-thumb,::-webkit-scrollbar-thumb{  background-color: var(--column-scrollbar-background); }
+#layouts>.fn__flex-1>.fn__flex-column ::-webkit-scrollbar-thumb:hover,::-webkit-scrollbar-thumb:hover{ background-color: var(--column-scrollbar-hover-background); }
 
 
 /************** 二、文档编辑区 **************************/
@@ -825,7 +824,7 @@ span[data-type="tag"][data-content="完成"],span[data-type="tag"][data-content=
 /* 圆点悬浮时放大效果（折叠时无效果） */
 .protyle-wysiwyg [data-node-id].li:not([fold="1"])>.protyle-action:hover svg, .protyle-wysiwyg [data-node-id].li:not([fold="1"])>.protyle-action:hover:after{
   transition: all .2s ease-in-out;
-  transform: scale(1.22);
+  color:var(--b3-theme-primary);
 }
 
 /* 消除待办事项图标背景色 */
@@ -1145,3 +1144,31 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
     margin-bottom: 6px;
     margin-top: 6px;
 } 
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-wysiwyg [data-node-id] span[data-type="tag"]::before {
+   content:"#";
+}
+.protyle-background__img{
+-webkit-mask: linear-gradient( #f3f2ef ,#f3f2ef,transparent);
+}
+.b3-typography span[data-type~=inline-memo], .protyle-wysiwyg span[data-type~=inline-memo] {
+   background-color:var(--b3-theme-background-light);
+   border-bottom:2px solid var(--b3-theme-primary);
+}
+/*选中文字样式*/
+.protyle-wysiwyg ::selection {
+    background-color: var(--b3-theme-primary) !important;
+    color: white !important;
+}
+/*图片样式*/
+.b3-typography span.img img:not(.emoji), .protyle-wysiwyg span.img img:not(.emoji) {
+    border: 0.6em solid white;
+    box-shadow: 0 0 2px rgb(126 50 0 / 10%) inset, 0 1px 4px rgb(58 15 0 / 20%);
+    margin:0px auto;
+}
+.b3-typography span.img,
+.protyle-wysiwyg span.img {
+  white-space: initial;
+}
+.b3-typography u, .b3-typography span[data-type~=u], .protyle-wysiwyg u, .protyle-wysiwyg span[data-type~=u] {
+   border-bottom:2px solid;
+}

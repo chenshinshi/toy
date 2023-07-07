@@ -154,7 +154,7 @@
     --switch-uncheck-color:         #FFF; /* switch 开关未开启时颜色 */
 
     --scrollbar-hover-background:          #ccc; /* 滚动条悬浮时背景色 */
-    --column-scrollbar-background:         var(--b3-theme-background); /* 边栏内滚动条通用背景色 */
+    --column-scrollbar-background:         var(--b3-font-background6); /* 边栏内滚动条通用背景色 */
     --column-scrollbar-hover-background:   #ccc; /* 边栏内滚动条悬浮时背景色 */
 
     /* 标题颜色 */

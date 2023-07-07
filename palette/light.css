@@ -126,11 +126,11 @@
     --b3-protyle-inline-strong-color:      inherit; /* 粗体 */
     --b3-protyle-inline-em-color:          inherit; /* 斜体 */
     --b3-protyle-inline-s-color:           inherit; /* 删除线 */
-    --b3-protyle-inline-link-color:        var(--b3-theme-primary); /* 超级链接 */
+    --b3-protyle-inline-link-color:        #25789e; /* 超级链接 */
     --b3-protyle-inline-mark-background: #ffe68d; /* 高亮背景 */
     --b3-protyle-inline-mark-color:        inherit; /* 高亮文字 */
     --b3-protyle-inline-tag-color:       #5f6368; /* 标签 */
-    --b3-protyle-inline-blockref-color:    var(--b3-theme-primary); /* 双向链接 */
+    --b3-protyle-inline-blockref-color:    #25789e; /* 双向链接 */
 
     /************** Theme *********************/
     /**** 配色 ****/
@@ -180,7 +180,7 @@
     --page-scrollbar-transition: opacity 800ms ease 0s; /* 分页加载条动画 */
     --flex-column-transition:    width 200ms cubic-bezier(0, 0.7, 0.4, 1); /* 侧边栏动画 */
     --common-transition:         all 1s cubic-bezier(0, 0.7, .2, 1) 0ms;   /* 通用动画 */
-
+    --column-scrollbar-background:       var(--b3-theme-background-light);
 }
 
 /**** 特殊样式 ****/
@@ -211,7 +211,4 @@
     margin: -5px 10px 0px 0px;
     opacity: 1;
     color: var(--b3-toolbar-color);
-}
-.b3-typography a, .protyle-wysiwyg [data-node-id] span[data-type="a"] {
-    border-bottom: 1px solid;
 }

@@ -16,6 +16,8 @@
     --left-sidebar-background:#f6f8fa;
     --left-sidebar-color:#3b3f40;
     --dock-background:var(--left-sidebar-background);
+--column-scrollbar-background:#e7e7e7;
+
 }
 body{
     border: 1px solid rgba(0,0,0,0.5);
@@ -308,4 +310,12 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus{
 .status__counter:not(:empty),.status__counter:not(:empty) span {
    background-color:transparent;
    color:black;
+}
+.b3-typography span[data-type~=inline-memo], .protyle-wysiwyg span[data-type~=inline-memo] {
+   background-color:transparent;
+   border-bottom:transparent;
+}
+
+.protyle-wysiwyg ::selection{ 
+    background-color:#03a9f4 !important;
 }

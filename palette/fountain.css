@@ -15,6 +15,7 @@
     --left-sidebar-color:var(--b3-theme-on-background);
     --dock-background:var(--b3-theme-surface);
     --b3-theme-error: #d23f31; /* unused */
+--column-scrollbar-background:var(--b3-font-background6);
 
     /* 文字颜色 */
     --b3-theme-on-primary: rgb(255, 255, 255);

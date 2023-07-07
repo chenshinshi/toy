@@ -220,3 +220,7 @@ strong[style*="background-color: var(--b3-font-background13)"]{
 .status__counter:not(:empty) {
     background-color: var(--b3-font-background6) !important;
 }
+
+.protyle-wysiwyg ::selection{ 
+    background-color:#ea92004d !important;
+}
