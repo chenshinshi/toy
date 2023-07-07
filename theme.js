@@ -3174,6 +3174,7 @@ window.theme.colors = [
     'palette/mediawiki.css',
     'palette/qianlan.css',
     'palette/yinxiang.css',
+    'palette/pbook.css',
 ];
 
 /* DOM 节点 ID */
