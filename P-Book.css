@@ -50,4 +50,32 @@
 }
 
 
+/*自定义字色*/
+[style*="color:var(--b3-font-background10)"],
+[style*="color: var(--b3-font-background10)"] {
+text-decoration:0.6em underline #ffe09a;
+    text-decoration-skip-ink: none;
+    text-underline-offset:-0.6em;
+   background-color:transparent !important;
+}
 
+[style*="color:var(--b3-font-background11)"],
+[style*="color: var(--b3-font-background11)"] {
+text-decoration: underline wavy #ffb92a;
+text-underline-offset:0.2em;
+    text-decoration-skip-ink: none;
+   background-color:transparent !important;
+}
+[style*="color:var(--b3-font-background12)"],
+[style*="color: var(--b3-font-background12)"] {
+   border-bottom: 2px solid var(--b3-theme-primary);
+   background-color:transparent !important;
+}
+
+/*悬浮备注*/
+.tooltip.tooltip--memo{
+    font-size: 1.0rem !important;
+    line-height: 1.2em;
+    max-width:660px;
+    padding: 5px 10px;
+}

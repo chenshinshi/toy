@@ -212,3 +212,14 @@
     opacity: 1;
     color: var(--b3-toolbar-color);
 }
+[style*="color:var(--b3-font-background12)"],
+[style*="color: var(--b3-font-background12)"] {
+   border-bottom: 2px solid var(--b3-protyle-inline-link-color) !important;
+   background-color:transparent !important;
+background-image:none;
+filter:none;
+}
+.protyle-toolbar__item:hover {
+    background-color:transparent;
+    color:var(--b3-protyle-inline-link-color);
+}

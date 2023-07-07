@@ -1172,3 +1172,143 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
 .b3-typography u, .b3-typography span[data-type~=u], .protyle-wysiwyg u, .protyle-wysiwyg span[data-type~=u] {
    border-bottom:2px solid;
 }
+/*文档标题*/
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background{min-height:108px !important;margin:0 !important;padding:0}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background[style*="64px"]{min-height:210px !important;margin:0px !important}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background[style*="64px"] .protyle-background__iconw{top:96px}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background[style*="30vh"]{min-height:30vh !important;border-bottom:calc(78px / 2 + 8px + 24px + 4px) solid transparent !important}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background[style*="30vh"] .protyle-background__iconw{top:calc(30vh - 39px) !important}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background[style*="30vh"] .protyle-background__iconw .protyle-background__icon.fn__none+.protyle-icons{margin-top:calc(78px + 8px)}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons,#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-icons{background-color:transparent;margin:8px 0 4px;height:28px;-webkit-transition:opacity 300ms ease-in;transition:opacity 300ms ease-in;opacity:0;z-index:-99}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips,#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-icons .b3-tooltips{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;height:28px;border-radius:6px;padding:0 8px 0 6px;background-color:transparent}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips:hover,#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-icons .b3-tooltips:hover{background-color:none}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips svg,#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-icons .b3-tooltips svg{width:14px;height:14px;padding:7px 6px 0 0;color:var(--b3-theme-primary);display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips::after,#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-icons .b3-tooltips::after{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;z-index:0;height:28px;font-size:14px;line-height:28px;-webkit-transform:none;transform:none;-webkit-transition:none;transition:none;opacity:1;color:var(--b3-theme-siderbar-focus);background-color:transparent;position:static;margin:0;padding:0}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips input,#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-icons .b3-tooltips input{width:100% !important;font-size:0}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons{background-color:none;color:var(--b3-theme-background-light);height:26px;margin:0 8px;left:auto;right:68px}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips{background-color:transparent;border-radius:unset;height:26px}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips svg{color:var(--b3-theme-primary);width:10px;height:10px;padding-top:calc((26px - 10px) / 2)}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips::after{font-size:12px;line-height:26px;color:var(--b3-theme-on-background)}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips:first-child{border-radius:6px 0 0 6px}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips:first-child svg{width:9px;height:9px;padding-top:calc((26px - 9px) / 2)}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips:last-child{border-radius:0 6px 6px 0;border-bottom:2px solid var(--b3-theme-background)}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips:not(:last-child){border-right:1px solid var(--b3-theme-on-surface);border-bottom:2px solid var(--b3-theme-background)}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips:hover{border-bottom:2px solid var(--b3-theme-primary)}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img:hover .protyle-icons{opacity:1;z-index:99}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw{left:68px !important;height:auto;width:256px;margin-left:3px;display:block}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-background__icon{width:78px;height:78px;font-size:54px;top:calc(30vh - 42px);line-height:78px;text-align:center;border-radius:6px}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-background__icon svg{width:78px;height:78px}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-background__icon:hover{background-color:rgba(255,0,0,0.5)}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background:hover .protyle-background__iconw .protyle-icons{opacity:1}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-title{margin:0 75px !important}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-title:hover .protyle-title__icon{opacity:0.6}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-title .protyle-title__icon{-webkit-transform:translateX(-6px);transform:translateX(-6px);border-right:6px solid transparent}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-title .protyle-title__icon:hover{opacity:1}#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-title .protyle-title__icon::after{right:100%;left:auto}
+body .protyle-title__input {
+    font-size: 1.5rem;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-title {
+    margin: 0 75px !important;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background {
+    min-height: 108px !important;
+    margin: 0 !important;
+    padding: 0;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background[style*="30vh"] {
+    min-height: 30vh !important;
+    border-bottom: calc(78px / 2 + 8px + 24px + 4px) solid transparent !important;
+margin: 0 !important;
+    padding: 0;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips, #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-icons .b3-tooltips {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    height: 28px;
+    border-radius: 6px;
+    padding: 0 8px 0 6px;
+    background-color: transparent;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips::after, #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-icons .b3-tooltips::after {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    z-index: 0;
+    height: 28px;
+    font-size: 14px;
+    line-height: 28px;
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: none;
+    transition: none;
+    opacity: 1;
+    color: var(--b3-theme-on-background);
+    background-color: transparent;
+    position: static;
+    margin: 0;
+    padding: 0;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips svg, #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-icons .b3-tooltips svg {
+    width: 14px;
+    height: 14px;
+    padding: 7px 6px 0 0;
+    color: var(--b3-theme-primary);
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background[style*="30vh"] .protyle-background__iconw .protyle-background__icon.fn__none+.protyle-icons {
+    margin-top: calc(78px + 8px);
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background:hover .protyle-background__iconw .protyle-icons {
+    opacity: 1;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips:hover{border-bottom:2px solid var(--b3-theme-primary) !important}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons, #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-icons {
+    background-color: transparent;
+    margin: 8px 0 4px;
+    height: 28px;
+    -webkit-transition: opacity 300ms ease-in;
+    transition: opacity 300ms ease-in;
+    opacity: 0;
+    z-index: -99;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-background__icon {
+    width: 78px;
+    height: 78px;
+    font-size: 54px;
+    top: calc(30vh - 42px);
+    line-height: 78px;
+    text-align: center;
+    border-radius: 6px;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background[style*="30vh"] .protyle-background__iconw {
+    top: calc(30vh - 39px) !important;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw {
+    left: 68px !important;
+    height: auto;
+    width: 256px;
+    margin-left: 3px;
+    display: block;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    position: absolute;
+    color: var(--b3-theme-on-background)!important;
+    height: 26px;
+    margin: 0 8px;
+    left: auto;
+    right: 68px;
+    top: 20px;
+    border-radius:20px;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips input, #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__iconw .protyle-icons .b3-tooltips input {
+    width: 100% !important;
+    font-size: 0;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips::after {
+    font-size: 12px;
+    line-height: 26px;
+    color: var(--b3-theme-on-background);
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips:first-child {
+    border-radius: 20px 0 0 20px !important;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips:not(:last-child) {
+    border-right: 1px solid var(--b3-theme-on-surface);
+    border-bottom: 2px solid var(--b3-theme-background);
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips:not(:last-child)::hover {
+    border-right: 1px solid var(--b3-theme-on-surface);
+    border-bottom: 2px solid var(--b3-theme-primary);
+}
+
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons .b3-tooltips {
+    background-color: transparent;
+    height: 26px;
+}
+/*边距调整*/
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .b3-typography, #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-wysiwyg {
+ padding: 16px 68px 235px !important;
+    margin: 0;
+}
+/*文字菜单悬浮*/
+.protyle-toolbar__item:hover {
+    background-color:transparent;
+    color:var(--b3-theme-primary);
+}
+#toolbar .toolbar__item:hover {
+  background-color:var(--b3-theme-background-light);
+}
