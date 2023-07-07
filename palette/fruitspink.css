@@ -147,6 +147,13 @@
     --b3-pdf-background6: var(--b3-theme-primary);
     --b3-pdf-background7: #944194;
 
+    --h1-color: #a38cb2;
+    --h2-color: #b69bb7;
+    --h3-color: #c4a6bb;
+    --h4-color: #d3b2c0;
+    --h5-color: #e1bdc3;
+    --h6-color: #ecc6c7;
+
 }
 .protyle-linenumber__rows{
     background-color: #EFBBCF;
