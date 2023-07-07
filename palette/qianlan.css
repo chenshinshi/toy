@@ -169,6 +169,12 @@
     --b3-pdf-background6: var(--b3-theme-primary);
     --b3-pdf-background7: #944194;
     --b3-pdf-dark: #212224;
+    --h1-color: #4b7080;
+    --h2-color: #6a9395;
+    --h3-color: #85a9a3;
+    --h4-color: #9ebab4;
+    --h5-color: #bdcac4;
+    --h6-color: #cfd6d6;
 }
 
 /* https://github.com/siyuan-note/siyuan/issues/6440 */
@@ -205,4 +211,3 @@
     opacity: 1;
     color: var(--b3-toolbar-color);
 }
-

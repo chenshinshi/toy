@@ -1301,7 +1301,7 @@ margin: 0 !important;
 }
 /*边距调整*/
 #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .b3-typography, #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-wysiwyg {
- padding: 16px 68px 235px !important;
+ padding: 16px 71px 235px !important;
     margin: 0;
 }
 /*文字菜单悬浮*/
@@ -1323,4 +1323,7 @@ margin: 0 !important;
 }
 .emojis__panel {
    overflow:inherit;
+}
+.protyle-title__input {
+   color:var(--h1-color);
 }
