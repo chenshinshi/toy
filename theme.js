@@ -3342,3 +3342,4 @@ async function setLocalStorageVal(ikey, ival) {
     //     写入文件("/data/snippets/toy.config.json", JSON.stringify(window.theme.config, undefined, 4));
     // }, 5000)
 });
+
