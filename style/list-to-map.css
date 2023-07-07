@@ -15,17 +15,22 @@
 	margin: 10px 4px;
 }
 
+.protyle-wysiwyg.protyle-wysiwyg *[custom-f="dt"] [data-node-id]:not([data-type="NodeHTMLBlock"]){
+    line-height:1.8em !important;
+    margin-bottom: 0px;
+    margin-top: 0px;
+} 
 
 /* 设置首项底色为蓝色 */
 .protyle-wysiwyg *[custom-f="dt"].list[data-node-index]>div.li>div.p>div:first-child {
-    outline: 1px solid var(--b3-theme-surface-lighter);
+    outline: 1px solid var(--column-scrollbar-background);
     font-size:90%;
 }
 
 
 /* 第二项颜色 */
 .protyle-wysiwyg *[custom-f="dt"].list[data-node-index]>div.li>div.list>div.li>div.p>div:first-child {
-    outline: 1px solid var(--b3-theme-surface-lighter);
+    outline: 1px solid var(--column-scrollbar-background);
     font-size:90%;
 }
 
@@ -70,7 +75,7 @@
 	background-color: transparent;
 	border-radius: 1px;
 	max-width: 15vw;
-	outline: 1px solid var(--b3-theme-surface-lighter);;
+	outline: 1px solid var(--column-scrollbar-background);;
 }
 
 .protyle-wysiwyg *[custom-f="dt"] .li[data-subtype="t"]>[data-node-id]>div[spellcheck="false"] {
@@ -120,7 +125,7 @@
     content: '';   
     position: absolute;  
 	top: 50%;   
-    border-top: 2px solid var(--b3-theme-surface-lighter);    
+    border-top: 2px solid var(--column-scrollbar-background);    
     width: 20px;  
 	height: 50%;     
 }
@@ -128,19 +133,19 @@
 /*上竖线*/
 .protyle-wysiwyg *[custom-f="dt"] .li::before{   
     bottom: 50%;    
-    border-left:2px solid var(--b3-theme-surface-lighter);  
+    border-left:2px solid var(--column-scrollbar-background);  
 	left: 0px;
 }
 
 .protyle-wysiwyg *[custom-f="dt"] .li:hover::before{   
-    border-left:2px solid var(--b3-theme-surface-lighter);  
+    border-left:2px solid var(--column-scrollbar-background);  
 }
 /*下竖线*/
 .protyle-wysiwyg *[custom-f="dt"] .li::after{   
     content: '';   
     position: absolute;  
 	bottom: 50%;   
-    border-left:2px solid var(--b3-theme-surface-lighter);  
+    border-left:2px solid var(--column-scrollbar-background);  
     width: 20px;  
 	height: 50%; 
 }
@@ -178,7 +183,7 @@
     position: absolute; 
 	left: 0; 
 	top: 50%;   
-    border-top: 2px solid var(--b3-theme-surface-lighter);   
+    border-top: 2px solid var(--column-scrollbar-background);   
 	height: 0;  
 }
 /*取消根目录线*/

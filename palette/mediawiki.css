@@ -319,3 +319,8 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus{
 .protyle-wysiwyg ::selection{ 
     background-color:#03a9f4 !important;
 }
+.b3-typography span.img img:not(.emoji), .protyle-wysiwyg span.img img:not(.emoji) {
+     border: none; 
+    box-shadow: none;
+    margin: 0px auto; 
+}

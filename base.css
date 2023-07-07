@@ -1313,8 +1313,11 @@ margin: 0 !important;
   background-color:var(--b3-theme-background-light);
 }
 #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .list .li .protyle-action svg {
-    color: var(--b3-theme-primary) !important;
+    color: var(--b3-theme-primary);
 }
 #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-wysiwyg [data-node-id].li>.protyle-action:hover:after {
     background-color: var(--b3-theme-primary-lighter) !important;
+}
+.b3-typography span.img, .protyle-wysiwyg span.img svg {
+   color:var(--b3-theme-surface) !important;
 }

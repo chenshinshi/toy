@@ -5,20 +5,27 @@
 }
 
 /* ————————————————————所有子项目的表格（除去第一列其余的列），包含溢出的空白部分，所以才会有边框—————————————————————— */
-
+.protyle-wysiwyg *[custom-f="bg"] .li:before {
+   border-left:transparent;
+}
 .protyle-wysiwyg *[custom-f="bg"] .li .list {
     padding: 0px;
     margin: 0px !important;
     width: 100%;
     outline: var(--b3-border-normal);
+    border-radius:0px !important;
 }
-
+.protyle-wysiwyg.protyle-wysiwyg *[custom-f="bg"] [data-node-id]:not([data-type="NodeHTMLBlock"]){
+    line-height:1.8em !important;
+    margin-bottom: 0px;
+    margin-top: 0px;
+} 
 /* ————————————————————对所有子列表项设置格式———————————————————— */
 .protyle-wysiwyg *[custom-f="bg"] .li {
     display: flex;
-    outline: 1px solid var(--b3-theme-surface-lighter);
+    outline: 1px solid var(--column-scrollbar-background);
     background-color: transparent;
-    border-radius:0px;
+    border-radius:0px !important;
 }
 
 /* ————————————————————调整每个子列表项右侧边距———————————————————— */
