@@ -1321,3 +1321,6 @@ margin: 0 !important;
 .b3-typography span.img, .protyle-wysiwyg span.img svg {
    color:var(--b3-theme-surface) !important;
 }
+.emojis__panel {
+   overflow:hidden;
+}
