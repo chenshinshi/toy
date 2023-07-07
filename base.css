@@ -1322,5 +1322,5 @@ margin: 0 !important;
    color:var(--b3-theme-surface) !important;
 }
 .emojis__panel {
-   overflow:hidden;
+   overflow:inherit;
 }
