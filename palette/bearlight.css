@@ -74,3 +74,6 @@
 .b3-typography span[data-type~=inline-memo], .protyle-wysiwyg span[data-type~=inline-memo] {
    background-color:rgba(221, 76, 79,0.14);
 }
+.fn__flex-shrink, .fn__flex-shrink .block__icons {
+    background-color: var(--b3-theme-UI);
+}
