@@ -177,7 +177,7 @@ function creatTimeSpanElement(tilteElement) {
     var documentCreatTimeElement = addinsertCreateElement(tilteElement, "span");
     documentCreatTimeElement.setAttribute("documentCreatTimeElement", "true");
     documentCreatTimeElement.style.display = "block";
-    documentCreatTimeElement.style.marginLeft = "7px";
+    documentCreatTimeElement.style.marginLeft = "3px";
     documentCreatTimeElement.style.marginBottom = "0px";
     documentCreatTimeElement.style.fontSize = "61%";
     documentCreatTimeElement.style.color = "#767676";
@@ -391,7 +391,7 @@ function displayParentChildDocuments2() {
             var documentCreatParentChild = insertCreateAfter(documentCreatTimeElement, "span");
             documentCreatParentChild.setAttribute("documentCreatParentChild", "true");
             documentCreatParentChild.style.display = "block";
-            documentCreatParentChild.style.marginLeft = "7px";
+            documentCreatParentChild.style.marginLeft = "3px";
             documentCreatParentChild.style.marginBottom = "0px";
             documentCreatParentChild.style.fontSize = "61%";
             documentCreatParentChild.style.color = "#767676";
