@@ -158,12 +158,12 @@
     --column-scrollbar-hover-background:   #ccc; /* 边栏内滚动条悬浮时背景色 */
 
     /* 标题颜色 */
-    --h1-color: #5b6765;
-    --h2-color: #6f8077;
-    --h3-color: #809587;
-    --h4-color: #8fa895;
-    --h5-color: #9fbda4;
-    --h6-color: #aacbae;
+    --h1-color: #1d3b65;
+    --h2-color: #175267;
+    --h3-color: #136468;
+    --h4-color: #0f7569;
+    --h5-color: #0a876b;
+    --h6-color: #07946b;
 
     /**** 设置 ****/
     --dock-border:                  1px solid var(--b3-border-color); /* 顶栏、dock、页签栏边框 */

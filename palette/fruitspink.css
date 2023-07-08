@@ -147,12 +147,12 @@
     --b3-pdf-background6: var(--b3-theme-primary);
     --b3-pdf-background7: #944194;
 
-    --h1-color: #a38cb2;
-    --h2-color: #b69bb7;
-    --h3-color: #c4a6bb;
-    --h4-color: #d3b2c0;
-    --h5-color: #e1bdc3;
-    --h6-color: #ecc6c7;
+    --h1-color: #f3678e;
+    --h2-color: #f47d9c;
+    --h3-color: #f48ea8;
+    --h4-color: #f59fb3;
+    --h5-color: #f5b0be;
+    --h6-color: #f5bcc6;
 
 }
 .protyle-linenumber__rows{
