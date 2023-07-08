@@ -3312,35 +3312,3 @@ async function setLocalStorageVal(ikey, ival) {
     }
 }
 
-
-/**++++++++++++++++++++++++++++++++按需调用++++++++++++++++++++++++++++++ */
-获取文件("/data/snippets/toy.config.json", (v) => {
-    let funs = () => {
-
-		setTimeout(() => {
-
-			if (isPhone()) {
-
-				loadStyle("/appearance/themes/toy/style/module/mobile.css")
-
-				console.log("==============>附加CSS和特性JS_已经执行<==============");
-            } else {
-                
-                loadScript("/appearance/themes/toy/comment/index.js");//js批注评论
-
-                console.log("==============>附加CSS和特性JS_已经执行<==============");
-            }
-        }, 1000);
-    }
-    if (v == null) {
-        window.theme.config = { "toy": 1 };
-        写入文件("/data/snippets/toy.config.json", JSON.stringify(window.theme.config, undefined, 4), (a) => { funs() });
-    } else {
-        window.theme.config = v;
-        funs();
-    }
-    // setInterval(() => {
-    //     写入文件("/data/snippets/toy.config.json", JSON.stringify(window.theme.config, undefined, 4));
-    // }, 5000)
-});
-
