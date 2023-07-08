@@ -1327,3 +1327,26 @@ margin: 0 !important;
 .protyle-title__input {
    color:var(--h1-color);
 }
+/*引述块*/
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .bq::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    border-radius: 4px;
+    background-color: var(--quote-border-color);
+    border:none;
+}
+.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
+    border-left: none !important;
+    border-color: transparent !important;
+    color: var(--quote-color);
+    background-color: var(--quote-background);
+    margin: 1em 2em 1em 2em;
+    padding: 0px 4px;
+    padding-left: 1em;
+}
