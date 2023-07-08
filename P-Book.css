@@ -1,3 +1,7 @@
+.color__square {
+    transform: scale(1.3) !important;
+    margin: 2px 4px !important;
+}
 /*闪卡悬浮显示*/
 .card__main .protyle-wysiwyg span[data-type~=mark], [data-key="viewCards"] .protyle-wysiwyg span[data-type~=mark] {
     border-bottom:2px solid var(--b3-protyle-inline-mark-color);

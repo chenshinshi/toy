@@ -18,6 +18,7 @@
 --quote-border-color:var(--h1-color);
 --quote-color:#9b90ab;
 
+
     /* 文字颜色 */
     --b3-theme-on-primary: #fff;
     --b3-theme-on-secondary: #fff;
@@ -136,7 +137,7 @@
     --b3-protyle-inline-mark-background: #8675A9;
     --b3-protyle-inline-mark-color: #cdd1d6;
     --b3-protyle-inline-tag-color: #FE8F8F;
-    --b3-protyle-inline-blockref-color: #8675A9;
+    --b3-protyle-inline-blockref-color: var(--b3-protyle-inline-link-color);
 
     /* PDF */
     --b3-pdf-sidebar-width: 200px;
@@ -198,4 +199,7 @@
 }
 .config__panel>.b3-tab-bar .b3-list-item {
     line-height:45px !important;
+}
+.protyle-wysiwyg [data-node-id] span[data-type="block-ref"] {
+   border-bottom:1px dashed var(--b3-protyle-inline-blockref-color);
 }

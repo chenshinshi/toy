@@ -62,28 +62,28 @@ body{
     padding-bottom:0px;
 }
 /* 外链*/
-.protyle-wysiwyg [data-node-id] span[data-type~=a]{
-    background-image: url(/appearance/themes/toy/src/elink.svg);
+/*.protyle-wysiwyg [data-node-id] span[data-type~=a]{
+   background-image: url(/appearance/themes/toy/src/elink.svg);
     background-position: center right;
     background-repeat: no-repeat;
     background-size: 0.857em;
     padding-right: 1em;
     
-}
-.protyle-wysiwyg [data-node-id] span[data-type~=a]:hover{
+}*/
+/*.protyle-wysiwyg [data-node-id] span[data-type~=a]:hover{
     border-bottom:none;
     text-decoration: underline;
-}
+}*/
 /* 内链*/
 .protyle-wysiwyg[contenteditable=true] span[data-type~=block-ref]{
     transition:none;
     opacity:1
 }
-.protyle-wysiwyg[contenteditable=true] span[data-type~=block-ref]:hover{
+/*.protyle-wysiwyg[contenteditable=true] span[data-type~=block-ref]:hover{
     text-decoration: underline;
     transition:none;
     opacity:1
-}
+}*/
 /* 图片*/
 .b3-typography img, .protyle-wysiwyg img{
     background-color: #ffffff;
@@ -324,4 +324,7 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus{
      border: none; 
     box-shadow: none;
     margin: 0px auto; 
+}
+.protyle-wysiwyg [data-node-id] span[data-type="block-ref"] {
+  border-bottom-color:var(--b3-protyle-inline-blockref-color);
 }

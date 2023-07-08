@@ -154,8 +154,7 @@
     --b3-protyle-inline-mark-background: rgb(228, 179, 74);
     --b3-protyle-inline-mark-color: #202124;
     --b3-protyle-inline-tag-color: #5f6368;
-    --b3-protyle-inline-blockref-color: #6d29eb;
-    --b3-protyle-inline-fileref-color: #21862e;
+    --b3-protyle-inline-blockref-color: var(--b3-theme-primary);
 
     /* PDF */
     --b3-pdf-selection: #d0e9c8;

@@ -563,6 +563,7 @@ background-attachment: fixed;
   margin: 0 1px;
   text-decoration: none;
   padding: 2px 0;
+border-bottom: 1px solid var(--b3-protyle-inline-link-color);
 }
 .b3-typography a:hover,.protyle-wysiwyg [data-node-id] span[data-type="a"]:hover{
   /* border-bottom: 1px solid inherit; */
@@ -1155,10 +1156,10 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
    border-bottom:2px solid var(--b3-theme-primary);
 }
 /*选中文字样式*/
-.protyle-wysiwyg ::selection {
+/*.protyle-wysiwyg ::selection {
     background-color: var(--b3-theme-primary) !important;
     color: white !important;
-}
+}*/
 /*图片样式*/
 .b3-typography span.img img:not(.emoji), .protyle-wysiwyg span.img img:not(.emoji) {
     border: 0.6em solid white;
@@ -1349,4 +1350,20 @@ margin: 0 !important;
     margin: 1em 2em 1em 2em;
     padding: 0px 4px;
     padding-left: 1em;
+}
+.fn__flex.layout__dockb {
+   height:0px !important;
+}
+:root {
+    --b3-pdf-selection:var(--text-selection-background);
+    --b3-pdf-sidebar-width: 200px;
+    --b3-pdf-offset: 0;
+    --b3-pdf-background1: hsl(50deg 100% 50%);
+    --b3-pdf-background2: hsl(0deg 100% 88%);
+    --b3-pdf-background3: hsl(100deg 58% 75%);
+    --b3-pdf-background4: hsl(215deg, 35%, 84%);
+    --b3-pdf-background5: hsl(177deg 46% 80%);
+    --b3-pdf-background6: hsl(263deg 17% 52%);
+    --b3-pdf-background7: hsl(0deg 0% 67%);
+--b3-protyle-inline-fileref-color:var(--b3-protyle-inline-link-color);
 }

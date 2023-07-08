@@ -29,10 +29,6 @@
 }
 /*字色样式*/
 /*字色样式*/
-.color__square {
-    background-color: #e4e5e0a5;
-    transform:scale(1.1);
-}
 [style*="color:var(--b3-font-background1)"]{
     background-color:#da89a4 !important;
 }
@@ -60,7 +56,7 @@
 [style*="color:var(--b3-font-background9)"]{
     background-color:#d788c3 !important;
 }
-[style*="color:var(--b3-font-background10)"]{
+/*[style*="color:var(--b3-font-background10)"]{
     background-color:#ba9bd6 !important;
 }
 [style*="color:var(--b3-font-background11)"]{
@@ -68,7 +64,7 @@
 }
 [style*="color:var(--b3-font-background12)"]{
     background-color:#cc8783 !important;
-}
+}*/
 [style*="color: var(--b3-font-background1)"] {
     background-color:rgba(252,212,126,0.68);
     background-image: linear-gradient(104deg, rgba(252,212,126,0.68) 0px,rgba(249,193,79,0.86) 7px,rgba(247,178,42,0.68) 14px,rgba(252,212,126,0.86) 26px,rgba(249,180,42,0.86) 33px,rgba(249,180,42,0.86) 47px,rgba(252,212,126,0.86) 70px,rgba(247,203,84,0.68) 83%,rgba(252,212,126,0.68));
@@ -141,7 +137,7 @@
     background-attachment: scroll;
     filter: hue-rotate(280deg)brightness(0.95)saturate(0.95);
 }
-[style*="color: var(--b3-font-background10)"] {
+/*[style*="color: var(--b3-font-background10)"] {
     background-color:rgba(252,212,126,0.68);
     background-image: linear-gradient(104deg, rgba(252,212,126,0.68) 0px,rgba(249,193,79,0.86) 7px,rgba(247,178,42,0.68) 14px,rgba(252,212,126,0.86) 26px,rgba(249,180,42,0.86) 33px,rgba(249,180,42,0.86) 47px,rgba(252,212,126,0.86) 70px,rgba(247,203,84,0.68) 83%,rgba(252,212,126,0.68));
     background-repeat: repeat-y;
@@ -164,7 +160,7 @@
     background-position: left top;
     background-attachment: scroll;
     filter: hue-rotate(315deg)brightness(0.95)saturate(0.95);
-}
+}*/
 /* 标记*/
 .b3-typography mark, .b3-typography span[data-type~=mark], .protyle-wysiwyg mark, .protyle-wysiwyg span[data-type~=mark]{
     background-color:rgba(252,212,126,0.68);
