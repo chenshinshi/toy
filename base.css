@@ -1367,3 +1367,6 @@ margin: 0 !important;
     --b3-pdf-background7: hsl(0deg 0% 67%);
 --b3-protyle-inline-fileref-color:var(--b3-protyle-inline-link-color);
 }
+.backlinkList.fn__flex-1 {
+  height:90%;
+}
