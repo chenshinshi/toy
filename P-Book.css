@@ -83,3 +83,13 @@ text-underline-offset:0.2em;
     max-width:660px;
     padding: 5px 10px;
 }
+/*日历插件适配*/
+.arco-link,.arco-tabs-nav-type-line .arco-tabs-tab-title,.arco-picker-cell:not(.arco-picker-cell-selected).arco-picker-cell-in-view .exist {
+    color:var(--b3-theme-primary) !important;
+}
+.arco-picker-cell-today:after,.arco-tabs-nav-ink,.arco-picker-cell-selected .arco-picker-date-value {
+    background-color:var(--b3-theme-primary);
+}
+.arco-select-view-single:focus-within, .arco-select-view-single.arco-select-view-focus {
+    border-color:var(--b3-theme-primary);
+}

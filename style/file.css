@@ -1,0 +1,12 @@
+/* 禁止编辑 */
+.protyle-wysiwyg[custom-f~=no] {
+    pointer-events: none;
+}
+
+.protyle-wysiwyg[data-node-id][custom-f~=no] {
+    pointer-events: none;
+}
+/*全局首行缩进*/
+.protyle-wysiwyg[custom-f~=sj] .p {
+    text-indent: 2em !important;
+}

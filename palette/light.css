@@ -219,7 +219,16 @@
 background-image:none;
 filter:none;
 }
-.protyle-toolbar__item:hover {
+.protyle-toolbar__item:hover,.protyle-toolbar__item--current {
     background-color:transparent;
     color:var(--b3-protyle-inline-link-color);
+}
+.arco-link,.arco-tabs-nav-type-line .arco-tabs-tab-title,.arco-picker-cell:not(.arco-picker-cell-selected).arco-picker-cell-in-view .exist {
+    color:var(--b3-protyle-inline-link-color) !important;
+}
+.arco-picker-cell-today:after,.arco-tabs-nav-ink,.arco-picker-cell-selected .arco-picker-date-value {
+    background-color:var(--b3-protyle-inline-link-color);
+}
+.arco-select-view-single:focus-within, .arco-select-view-single.arco-select-view-focus {
+    border-color:var(--b3-protyle-inline-link-color);
 }

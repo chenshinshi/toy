@@ -1,9 +1,9 @@
 :root {
     /* 主色 */
     --b3-theme-primary: #4a6a6e;
-    --b3-theme-primary-light: rgba(53, 117, 240, 0.54);
-    --b3-theme-primary-lighter: rgba(53, 117, 240, 0.38);
-    --b3-theme-primary-lightest: rgba(53, 117, 240, 0.12);
+    --b3-theme-primary-light: rgba(211, 190, 168, 0.54);
+    --b3-theme-primary-lighter: rgba(211, 190, 168, 0.38);
+    --b3-theme-primary-lightest: rgba(211, 190, 168, 0.12);
     --b3-theme-secondary: #f3a92f;
     --left-sidebar-background:#dce4ea;
     --left-sidebar-color:#182026;
@@ -54,7 +54,7 @@
     --b3-list-icon-hover: rgba(222, 124, 163, 0.548);
 
     /* 菜单 */
-    --b3-menu-background: #f8f9fa;
+    --b3-menu-background: #dbe2e9;
 
     /* 提示 */
     --b3-tooltips-color: rgba(0, 0, 0, 0.54);
@@ -147,7 +147,7 @@
 
     /* 所见即所得行内元素颜色 */
     /* 加粗 */
-    --b3-protyle-inline-strong-color: #da2727;
+    --b3-protyle-inline-strong-color: inherit;
     --b3-protyle-inline-em-color: #202124;
     --b3-protyle-inline-s-color: #202124;
     --b3-protyle-inline-link-color: var(--b3-theme-primary);
@@ -174,6 +174,7 @@
     --h4-color: #9ebab4;
     --h5-color: #bdcac4;
     --h6-color: #cfd6d6;
+--text-selection-background:rgba(210,190,168,0.6);
 }
 
 /* https://github.com/siyuan-note/siyuan/issues/6440 */
@@ -209,4 +210,11 @@
     margin: -5px 10px 0px 0px;
     opacity: 1;
     color: var(--b3-toolbar-color);
+}
+.b3-dialog__container, .b3-menu, .protyle-util,.b3-menu__submenu{
+   border:1px solid rgba(255, 255, 255, 0.7) !important;
+}
+
+.layout__resize:after {
+   opacity:0.3;
 }

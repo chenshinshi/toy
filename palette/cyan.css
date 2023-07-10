@@ -66,10 +66,10 @@
     --b3-font-color11: #65b84d;
     --b3-font-color12: #f5822e;
     --b3-font-color13: var(--b3-theme-background);
-    --b3-font-background1: var(--b3-card-error-background);
-    --b3-font-background2: var(--b3-card-warning-background);
-    --b3-font-background3: var(--b3-card-info-background);
-    --b3-font-background4: var(--b3-card-success-background);
+    --b3-font-background1: rgba(216, 112, 107, 0.5);
+    --b3-font-background2: rgba(218, 181, 97, 0.5);
+    --b3-font-background3: rgba(97, 173, 220, 0.5);
+    --b3-font-background4: rgba(118, 209, 168, 0.5);
     --b3-font-background5: var(--b3-theme-surface);
     --b3-font-background6: var(--b3-theme-primary-light);
     --b3-font-background7: rgba(217, 211, 215, 0.5);
@@ -211,4 +211,7 @@
 
 .protyle-wysiwyg ::selection{ 
     background-color:#ea92004d !important;
+}
+.b3-typography strong, .b3-typography span[data-type~=strong], .protyle-wysiwyg strong, .protyle-wysiwyg span[data-type~=strong] {
+    text-shadow: 2px 2px black;
 }
