@@ -13,7 +13,60 @@
     background-color:transparent;
     padding: 0 2px;
 }
-
+.card__action .b3-button--error>div,.card__action .b3-button--warning>div,.card__action .b3-button--info>div,.card__action .b3-button--success>div {
+    display: none;
+}
+.b3-button--error {
+    line-height:43px;
+    background-image:url(/appearance/themes/toy/src/4.png);
+    background-size:80px 80px;
+    background-repeat: no-repeat;
+    border-top: 10px solid #fbd2d4;
+    background-color:#fbd2d4;
+    background-position-x: center;
+}
+.card__action .b3-button {
+    padding:50px 0 0px 0px;
+}
+.card__action .b3-button.fn__flex-1,.card__action .b3-button.b3-button--cancel {
+    padding:8px 0;
+    border-top:none;
+}
+.b3-button--warning {
+    line-height:43px;
+    background-image:url(/appearance/themes/toy/src/2.png);
+    background-size:80px 80px;
+    background-repeat: no-repeat;
+    border-top: 10px solid #fcf4cc;
+    background-color:#fcf4cc;
+    background-position-x: center;
+}
+.b3-button--info {
+    line-height:43px;
+    background-image:url(/appearance/themes/toy/src/3.png);
+    background-size:80px 80px;
+    background-repeat: no-repeat;
+    border-top: 10px solid #dbdcf4;
+    background-color:#dbdcf4;
+    background-position-x: center;
+}
+.b3-button--success {
+    line-height:43px;
+    background-image:url(/appearance/themes/toy/src/1.png);
+    background-size:80px 80px;
+    background-repeat: no-repeat;
+    border-top: 10px solid #cce7e0;
+    background-color:#cce7e0;
+    background-position-x: center;
+}
+.card__main .block__icon.block__icon--show.ft__smaller.fn__flex-center,.protyle-breadcrumb .block__icon.block__icon--show.ft__smaller.fn__flex-center {
+    color: var(--b3-theme-primary);
+    box-shadow: inset 0 0 0 0.6px var(--b3-theme-primary);
+    background-color: rgba(0,0,0,0);
+    border-radius: 4px;
+    line-height: 20px;
+    padding: 4px 6px;
+}
 .card__block--hidemark span[data-type~=mark]:hover {
     color:var(--b3-protyle-inline-mark-color) !important;
 }
@@ -92,4 +145,58 @@ text-underline-offset:0.2em;
 }
 .arco-select-view-single:focus-within, .arco-select-view-single.arco-select-view-focus {
     border-color:var(--b3-theme-primary);
+}
+/*搜索界面*/
+/* 搜索面板调整，来自HBuiderX-Light*/
+#searchList,
+#globalSearchList {
+    padding-right: 0px !important;
+}
+
+#searchList [data-type="search-item"],
+#globalSearchList [data-type="search-item"] {
+    display: block !important;
+    padding-top: 0px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+#searchList [data-type="search-item"]>.b3-list-item__graphic,
+#globalSearchList [data-type="search-item"]>.b3-list-item__graphic {
+    position: absolute;
+    margin-top: 6px !important;
+    margin-left: 2px !important;
+}
+
+#searchList [data-type="search-item"]>.b3-list-item__text,
+#globalSearchList [data-type="search-item"]>.b3-list-item__text {
+    margin-left: 20px;
+    max-height: 73px !important;
+    padding-top: 5px !important;
+    padding-bottom: 2px !important;
+    padding-right: 5px !important;
+    overflow-y: auto !important;
+    text-overflow: ellipsis !important;
+    line-height: 1.2;
+    -webkit-box-orient: inherit !important;
+}
+
+#searchList [data-type="search-item"]>.b3-list-item__meta.b3-list-item__meta--ellipsis,
+#globalSearchList [data-type="search-item"]>.b3-list-item__meta.b3-list-item__meta--ellipsis {
+    display: block !important;
+    max-width: 95% !important;
+    margin-top: -7px !important;
+    margin-bottom: -5px !important;
+    padding-left: 12px !important;
+}
+#searchList [data-type="search-item"], #globalSearchList [data-type="search-item"] {
+    margin-top:6px;
+    padding:2px 2px 4px 2px;
+    border-bottom:3px dotted var(--b3-border-color);
+    border-radius: 0px 0px 0px 0px;
+    padding-bottom:12px !important;
+}
+[data-key="viewCards"] .b3-list-item.b3-list-item--hide-action {
+   margin:1px 10px;
+   padding:3px 0px;
 }

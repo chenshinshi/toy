@@ -73,28 +73,19 @@
     --b3-card-success-background: #d7eed8;
 
     /* 自定义文字 */
-    --b3-font-color1: var(--b3-card-error-color);
-    --b3-font-color2: var(--b3-card-warning-color);
-    --b3-font-color3: var(--b3-card-info-color);
-    --b3-font-color4: var(--b3-card-success-color);
+    --b3-font-color9: #dd4c4f;
+    --b3-font-color7: #1478d4;
+    --b3-font-color3: #44c7c9;
+    --b3-font-color11: var(--b3-card-success-color);
     --b3-font-color5: var(--b3-theme-on-surface);
-    --b3-font-color6: var(--b3-theme-primary);
-    --b3-font-color7: var(--b3-theme-secondary);
-    --b3-font-color8: var(--b3-theme-error);
-    --b3-font-color9: #f5539e;
-    --b3-font-color10: #944194;
-    --b3-font-color11: #65b84d;
-    --b3-font-color12: #f5822e;
+    --b3-font-color10: var(--b3-theme-primary);
+    --b3-font-color2: var(--b3-theme-secondary);
+    --b3-font-color12: var(--b3-theme-error);
+    --b3-font-color1:  #f5539e;
+    --b3-font-color6: #944194;
+    --b3-font-color4: #65b84d;
+    --b3-font-color8: #f5822e;
     --b3-font-color13: var(--b3-theme-background);
-    --b3-font-background1: var(--b3-card-error-background);
-    --b3-font-background2: var(--b3-card-warning-background);
-    --b3-font-background3: var(--b3-card-info-background);
-    --b3-font-background4: var(--b3-card-success-background);
-    --b3-font-background5: #e2e3e4;
-    --b3-font-background6: var(--b3-list-hover);
-    --b3-font-background7: #fdeed6;
-    --b3-font-background8: rgba(255, 193, 153, 0.5);
-    --b3-font-background9: #fdd5e7;
     --b3-font-background10: #e6c7e6;
     --b3-font-background11: #def0d9;
     --b3-font-background12: rgba(253, 198, 200, 0.5);
@@ -171,9 +162,9 @@
     --h1-color: #4b7080;
     --h2-color: #6a9395;
     --h3-color: #85a9a3;
-    --h4-color: #9ebab4;
-    --h5-color: #bdcac4;
-    --h6-color: #cfd6d6;
+    --h4-color: #85a9a3;
+    --h5-color: #85a9a3;
+    --h6-color: #85a9a3;
 --text-selection-background:rgba(210,190,168,0.6);
 }
 
@@ -217,4 +208,19 @@
 
 .layout__resize:after {
    opacity:0.3;
+}
+/*PDF*/
+.pdf__outer #viewerContainer:not(.pdfPresentationMode){
+    mix-blend-mode:multiply;
+}
+:root {
+    --b3-font-background1: hsl(0deg 100% 88%);
+    --b3-font-background2: hsl(50deg 100% 50%);
+    --b3-font-background3: hsl(177deg 46% 80%);
+    --b3-font-background4: hsl(100deg 58% 75%);
+    --b3-font-background5: #c4c4c4;
+    --b3-font-background8: #ffbe77;
+    --b3-font-background6:  hsl(259, 100%, 89%);
+    --b3-font-background7:  rgba(177,217,255,1);
+    --b3-font-background9:  var(--text-selection-background);
 }

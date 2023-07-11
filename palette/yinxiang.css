@@ -56,28 +56,19 @@
     --b3-card-success-background:rgb(237, 247, 237);
 
     /* 自定义文字 */
-    --b3-font-color1: var(--b3-card-error-color);
-    --b3-font-color2: var(--b3-card-warning-color);
-    --b3-font-color3: var(--b3-card-info-color);
-    --b3-font-color4: var(--b3-card-success-color);
+    --b3-font-color9: #dd4c4f;
+    --b3-font-color7: #1478d4;
+    --b3-font-color3: #44c7c9;
+    --b3-font-color11: var(--b3-card-success-color);
     --b3-font-color5: var(--b3-theme-on-surface);
-    --b3-font-color6: var(--b3-theme-primary);
-    --b3-font-color7: var(--b3-theme-secondary);
-    --b3-font-color8: var(--b3-theme-error);
-    --b3-font-color9:  #f5539e;
-    --b3-font-color10: #944194;
-    --b3-font-color11: #65b84d;
-    --b3-font-color12: #f5822e;
+    --b3-font-color10: var(--b3-theme-primary);
+    --b3-font-color2: var(--b3-theme-secondary);
+    --b3-font-color12: var(--b3-theme-error);
+    --b3-font-color1:  #f5539e;
+    --b3-font-color6: #944194;
+    --b3-font-color4: #65b84d;
+    --b3-font-color8: #f5822e;
     --b3-font-color13: var(--b3-theme-background);
-    --b3-font-background1: var(--b3-card-error-background);
-    --b3-font-background2: var(--b3-card-warning-background);
-    --b3-font-background3: var(--b3-card-info-background);
-    --b3-font-background4: var(--b3-card-success-background);
-    --b3-font-background5: var(--b3-theme-surface);
-    --b3-font-background6: var(--b3-theme-primary-light);
-    --b3-font-background7:  rgba(217, 211, 215, 0.5);
-    --b3-font-background8:  rgba(255, 193, 153, 0.5);
-    --b3-font-background9:  rgba(189, 201, 255, 0.5);
     --b3-font-background10: rgba(239, 218, 251, 0.5);
     --b3-font-background11: rgba(234, 202, 220, 0.5);
     --b3-font-background12: rgba(253, 198, 200, 0.5);
@@ -257,4 +248,20 @@
     margin: -5px 10px 0px 0px;
     opacity: 1;
     color: var(--b3-toolbar-color);
+}
+
+/*PDF*/
+.pdf__outer #viewerContainer:not(.pdfPresentationMode){
+    mix-blend-mode:multiply;
+}
+:root {
+    --b3-font-background1: hsl(0deg 100% 88%);
+    --b3-font-background2: #FFE68D;
+    --b3-font-background3: hsl(177deg 46% 80%);
+    --b3-font-background4: hsl(100deg 58% 75%);
+    --b3-font-background5: #e8e8e8;
+    --b3-font-background8: #ffbe77;
+    --b3-font-background6:  hsl(259, 100%, 89%);
+    --b3-font-background7:  rgba(177,217,255,1);
+    --b3-font-background9:  var(--text-selection-background);
 }

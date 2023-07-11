@@ -10,3 +10,7 @@
 .protyle-wysiwyg[custom-f~=sj] .p {
     text-indent: 2em !important;
 }
+/*图片限宽*/
+.protyle-wysiwyg[custom-f~=kd] img{
+    max-width:400px;
+}

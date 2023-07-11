@@ -1,3 +1,99 @@
+/*标题*/
+.vditor-reset h1{
+    color: var(--h1-color);
+    border: none;
+}
+.vditor-reset h2{
+    color: var(--h2-color);
+    border: none;
+}
+.vditor-reset h3{
+    color: var(--h3-color);
+}
+.vditor-reset h4{
+    color: var(--h4-color);
+}
+.vditor-reset h5{
+    color: var(--h5-color);
+}
+.vditor-reset h6{
+    color: var(--h6-color);
+}
+
+:root {
+    --b3-font-background1: hsl(0deg 100% 88%);
+    --b3-font-background2: #FFE68D;
+    --b3-font-background3: hsl(177deg 46% 80%);
+    --b3-font-background4: hsl(100deg 58% 75%);
+    --b3-font-background5: #e8e8e8;
+    --b3-font-background8: #ffbe77;
+    --b3-font-background6:  hsl(259, 100%, 89%);
+    --b3-font-background7:  rgba(177,217,255,1);
+    --b3-font-background9:  var(--text-selection-background);
+    --b3-font-color9: #dd4c4f;
+    --b3-font-color7: #1478d4;
+    --b3-font-color3: #44c7c9;
+    --b3-font-color11: var(--b3-card-success-color);
+    --b3-font-color5: var(--b3-theme-on-surface);
+    --b3-font-color10: var(--b3-theme-primary);
+    --b3-font-color2: var(--b3-theme-secondary);
+    --b3-font-color12: var(--b3-theme-error);
+    --b3-font-color1:  #f5539e;
+    --b3-font-color6: #944194;
+    --b3-font-color4: #65b84d;
+    --b3-font-color8: #f5822e;
+    --b3-font-color13: var(--b3-theme-background);
+    --h1-color: #084594;
+    --h2-color: #2171b5;
+    --h3-color: #4292c6;
+    --h4-color: #6baed6;
+    --h5-color: #9ecae1;
+    --h6-color: #c6dbef;
+}
+
+.toolbar .protyle-toolbar__divider::before {
+        display: block;
+    content: "fountain";
+    font-size: 12px;
+    margin: -5px 10px 0px 0px;
+    opacity: 1;
+    color: var(--b3-toolbar-color);
+}
+
+.config__panel>.b3-tab-bar .b3-list-item {
+    line-height:45px !important;
+    padding:10px 10px;
+}
+
+.toolbar{
+  background-color:   var(--dock-background);
+  border-bottom:      var(--dock-border);
+	height:32px;
+	margin-bottom: 0px;
+	opacity: 1;
+	transition: none;
+	transform:none;
+	z-index:8;
+	transition-delay: none;
+}
+
+.toolbar__window{
+	background-color: transparent;
+	height:40px;
+}
+.b3-list--background .b3-list-item--focus .b3-list-item__meta--ellipsis{
+    color:white;
+}
+.layout-tab-bar .item--full {
+    border-radius:0px !important;
+}
+.layout-tab-bar .item--full.item--focus {
+   background-color:transparent !important;
+}
+.layout-tab-bar .item--focus .item__text {
+   border-color:transparent;
+}
+
 /*源泉 for 思源。Flying fly flies出品，[20201226] https://github.com/whyt-byte*/
 /*Fountain for Siyuan. Created by Flying fly flies, [20201226] find more: https://github.com/whyt-byte*/
 /*feel free to use and modify*/ 
@@ -15,7 +111,7 @@
     --left-sidebar-color:var(--b3-theme-on-background);
     --dock-background:var(--b3-theme-surface);
     --b3-theme-error: #d23f31; /* unused */
---column-scrollbar-background:var(--b3-font-background6);
+--column-scrollbar-background:var(--b3-theme-primary-light;
 
     /* 文字颜色 */
     --b3-theme-on-primary: rgb(255, 255, 255);
@@ -74,12 +170,6 @@
     --b3-vditor-mark-s-color: #5f6368;
     --b3-vditor-mark-mark-color: #5f6368;
 
-    --h1-color: #084594;
-    --h2-color: #2171b5;
-    --h3-color: #4292c6;
-    --h4-color: #6baed6;
-    --h5-color: #9ecae1;
-    --h6-color: #c6dbef;
 
     --file-list-background: #0474cfe3;
     --file-list-background-files: #0474cf3d;
@@ -199,27 +289,6 @@ blockquote {
     color: var(--workplace-markdown);
 }
 
-/*标题*/
-.vditor-reset h1{
-    color: var(--h1-color);
-    border: none;
-}
-.vditor-reset h2{
-    color: var(--h2-color);
-    border: none;
-}
-.vditor-reset h3{
-    color: var(--h3-color);
-}
-.vditor-reset h4{
-    color: var(--h4-color);
-}
-.vditor-reset h5{
-    color: var(--h5-color);
-}
-.vditor-reset h6{
-    color: var(--h6-color);
-}
 
 /*关系图*/
 .graph circle{
@@ -255,42 +324,4 @@ ol ol {
     border-left: 2px solid var(--b3-theme-surface);
     margin-left: 0.3em;
 }
-.toolbar .protyle-toolbar__divider::before {
-        display: block;
-    content: "fountain";
-    font-size: 12px;
-    margin: -5px 10px 0px 0px;
-    opacity: 1;
-    color: var(--b3-toolbar-color);
-}
-.config__panel>.b3-tab-bar .b3-list-item {
-    line-height:45px !important;
-    padding:10px 10px;
-}
-.toolbar{
-  background-color:   var(--dock-background);
-  border-bottom:      var(--dock-border);
-	height:32px;
-	margin-bottom: 0px;
-	opacity: 1;
-	transition: none;
-	transform:none;
-	z-index:8;
-	transition-delay: none;
-}
-.toolbar__window{
-	background-color: transparent;
-	height:40px;
-}
-.b3-list--background .b3-list-item--focus .b3-list-item__meta--ellipsis{
-    color:white;
-}
-.layout-tab-bar .item--full {
-    border-radius:0px !important;
-}
-.layout-tab-bar .item--full.item--focus {
-   background-color:transparent !important;
-}
-.layout-tab-bar .item--focus .item__text {
-   border-color:transparent;
-}
+
