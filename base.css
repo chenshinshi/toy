@@ -1090,55 +1090,55 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
 }
 .color__square[style="background-color:var(--b3-font-background1)"]:before{ 
     content: "A";
-    color:#000000;
+    color:var(--b3-theme-on-background);
 }
 .color__square[style="background-color:var(--b3-font-background2)"]:before{ 
     content: "A";
-    color:#000000;
+    color:var(--b3-theme-on-background);
 }
 .color__square[style="background-color:var(--b3-font-background3)"]:before{ 
     content: "A";
-    color:#000000;
+    color:var(--b3-theme-on-background);
 }
 .color__square[style="background-color:var(--b3-font-background4)"]:before{ 
     content: "A";
-    color:#000000;
+    color:var(--b3-theme-on-background);
 }
 .color__square[style="background-color:var(--b3-font-background5)"]:before{ 
     content: "A";
-    color:#000000;
+    color:var(--b3-theme-on-background);
 }
 .color__square[style="background-color:var(--b3-font-background6)"]:before{ 
     content: "A";
-    color:#000000;
+    color:var(--b3-theme-on-background);
 }
 .color__square[style="background-color:var(--b3-font-background7)"]:before{ 
     content: "A";
-    color:#000000;
+    color:var(--b3-theme-on-background);
 }
 .color__square[style="background-color:var(--b3-font-background8)"]:before{ 
     content: "A";
-    color:#000000;
+    color:var(--b3-theme-on-background);
 }
 .color__square[style="background-color:var(--b3-font-background9)"]:before{ 
     content: "A";
-    color:#000000;
+    color:var(--b3-theme-on-background);
 }
 .color__square[style="background-color:var(--b3-font-background10)"]:before{ 
     content: "A";
-    color:#000000;
+    color:var(--b3-theme-on-background);
 }
 .color__square[style="background-color:var(--b3-font-background11)"]:before{ 
     content: "A";
-    color:#000000;
+    color:var(--b3-theme-on-background);
 }
 .color__square[style="background-color:var(--b3-font-background12)"]:before{ 
     content: "A";
-    color:#000000;
+    color:var(--b3-theme-on-background);
 }
 .color__square[style="background-color:var(--b3-font-background13)"]:before{ 
     content: "A";
-    color:#000000;
+    color:var(--b3-theme-on-background);
 }
 /*段落间距*/
 .protyle-wysiwyg.protyle-wysiwyg [data-node-id]:not([data-type="NodeHTMLBlock"]){
