@@ -1146,7 +1146,7 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
     margin-bottom: 6px;
     margin-top: 6px;
 } 
-#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-wysiwyg [data-node-id] span[data-type="tag"]::before {
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-wysiwyg [data-node-id] span[data-type="tag"]::before,.protyle-wysiwyg [data-node-id] span[data-type~=tag]::before {
    content:"#";
 }
 .protyle-background__img{

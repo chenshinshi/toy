@@ -111,7 +111,7 @@ body{
 }
 /* 提示*/
 .tooltip{
-    color:black;
+    color:black !important;
     border-radius: 0px;
     background-color:#f8f9fa;
     border: 1px solid black;

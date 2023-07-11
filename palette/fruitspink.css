@@ -200,12 +200,18 @@
 }
 :root {
     --b3-font-background1: hsl(0deg 100% 88%);
-    --b3-font-background2: hsl(50deg 100% 50%);
+    --b3-font-background2: hsl(50deg 100% 88%);
     --b3-font-background3: hsl(177deg 46% 80%);
-    --b3-font-background4: hsl(100deg 58% 75%);
+    --b3-font-background4: hsl(100deg 100% 89%);
     --b3-font-background5: #e8e8e8;
-    --b3-font-background8: #ffbe77;
-    --b3-font-background6:  hsl(259, 100%, 89%);
-    --b3-font-background7:  rgba(177,217,255,1);
+    --b3-font-background8: #ffce98;
+    --b3-font-background6:  hsl(259, 100%,93%);
+    --b3-font-background7:  rgba(205,231,255,1);
     --b3-font-background9:  var(--text-selection-background);
+}
+[style*="color:var(--b3-font-background10)"], [style*="color: var(--b3-font-background10)"] {
+    text-decoration: 0.6em underline #ffffff;
+    text-decoration-skip-ink: none;
+    text-underline-offset: -0.6em;
+    background-color: transparent !important;
 }
