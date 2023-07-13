@@ -196,7 +196,3 @@ text-underline-offset:0.2em;
     border-radius: 0px 0px 0px 0px;
     padding-bottom:12px !important;
 }
-[data-key="viewCards"] .b3-list-item.b3-list-item--hide-action {
-   margin:1px 10px;
-   padding:3px 0px;
-}

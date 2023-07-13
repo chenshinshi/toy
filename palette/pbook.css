@@ -283,3 +283,6 @@ box-shadow: #5f5f5f24 0px 0px 0.1em 0.03em, #5f5f5fa3 0px 0px 0.3em;
     --b3-font-color8: #f5822e;
     --b3-font-color13: var(--b3-theme-background);
 }
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .bq {
+   border:none !important;
+}

@@ -233,3 +233,6 @@ strong[style*="background-color: var(--b3-font-background13)"]{
     text-underline-offset: -0.6em;
     background-color: transparent !important;
 }
+.card__action .b3-button {
+   opacity:0.8;
+}
