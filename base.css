@@ -845,7 +845,6 @@ span[data-type="tag"][data-content="完成"],span[data-type="tag"][data-content=
   border-color: var(--quote-border-color);
   color: var(--quote-color);
   background-color: var(--quote-background);
-  margin:1em 2em 1em 2em ; 
   padding: 0px 4px;
   padding-left: 1em ;
 }
@@ -1347,7 +1346,6 @@ margin: 0 !important;
     border-left: 4px solid var(--quote-border-color) !important;
     color: var(--quote-color);
     background-color: var(--quote-background);
-    margin: 1em 2em 1em 2em !important;
     padding: 0px 4px !important;
     padding-left: 0.8em;
 }
@@ -1438,4 +1436,8 @@ font-size:1.15rem;
 #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .bq .p {
     padding: 0 0 0 18px !important;
     height: auto;
+}
+div.list div.bq {
+    padding: 0px 10px 0px 20px !important;
+    margin: 0px 0px 0px 36px !important;
 }

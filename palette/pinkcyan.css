@@ -1,0 +1,133 @@
+/*主色*/
+:root {
+  --b3-theme-background: #f9ecef;
+  --b3-theme-surface: #f9ecef;
+  --b3-toolbar-blur-background: #f9ecef;
+    --b3-theme-primary: #ffb0b0;
+    --b3-theme-primary-light: rgba(73, 194, 198, 0.54);
+    --b3-theme-primary-lighter: rgba(73, 194, 198, 0.38);
+    --b3-theme-primary-lightest: rgba(73, 194, 198, 0.12);
+--text-selection-background:rgba(180,228,242,0.75);
+    --b3-theme-on-primary: #5a444b;
+    --b3-theme-on-background:#5a444b;
+    --b3-theme-on-surface:var(--b3-theme-on-background);
+    --b3-protyle-inline-link-color: var(--b3-theme-primary);
+    --b3-protyle-inline-blockref-color: var(--b3-theme-primary);
+    --b3-protyle-inline-mark-background: #ffd5cd;
+    --left-sidebar-background:#ffd5cd;
+    --dock-background:var(--left-sidebar-background);
+    --left-sidebar-color:var(--b3-theme-on-primary);
+    --b3-theme-background-light: #dc9898;
+    --quote-border-color:var(--b3-theme-primary);
+    --column-scrollbar-background:#f9dada;
+    --column-scrollbar-hover-background:#ac9797;
+    --quote-color:#955a6c;
+}
+.fn__flex-1.protyle .protyle-content, .protyle-content {
+    background-image: url(/appearance/themes/toy/src/8.png) !important;
+    background-position: 50% center;
+    background-attachment: local;
+    text-align: justify;
+}
+/* .p {
+    padding-bottom: 0px !important;
+background: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 50%,
+    rgba(204, 153, 69, 0.8) 50%,
+    rgba(204, 153, 69, 0.8) 100%
+  );
+  background-size: 7px 1px;
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+} */
+
+/*PDF*/
+.pdf__outer #viewerContainer:not(.pdfPresentationMode){
+    mix-blend-mode:multiply;
+}
+/*字色*/
+:root {
+    --b3-font-background1: hsl(0deg 100% 88%);
+    --b3-font-background2: hsl(50deg 100% 50%);
+    --b3-font-background3: hsl(177deg 46% 80%);
+    --b3-font-background4: hsl(100deg 58% 75%);
+    --b3-font-background5: #c4c4c4;
+    --b3-font-background8: #ffbe77;
+    --b3-font-background6:  hsl(259, 100%, 89%);
+    --b3-font-background7:  rgba(177,217,255,1);
+    --b3-font-background9:  var(--text-selection-background);
+    --b3-font-color9: #dd4c4f;
+    --b3-font-color7: #1478d4;
+    --b3-font-color3: #44c7c9;
+    --b3-font-color11: var(--b3-card-success-color);
+    --b3-font-color5: var(--b3-theme-on-surface);
+    --b3-font-color10: var(--b3-theme-primary);
+    --b3-font-color2: var(--b3-theme-secondary);
+    --b3-font-color12: var(--b3-theme-error);
+    --b3-font-color1:  #f5539e;
+    --b3-font-color6: #944194;
+    --b3-font-color4: #65b84d;
+    --b3-font-color8: #f5822e;
+    --b3-font-color13: var(--b3-theme-background);
+    --h1-color: #955a6c;
+    --h2-color: #955a6c;
+    --h3-color: #955a6c;
+    --h4-color: #955a6c;
+    --h5-color: #955a6c;
+    --h6-color: #955a6c;
+}
+/*工具栏*/
+.toolbar .protyle-toolbar__divider::before {
+        display: block;
+    content: "粉青";
+    font-size: 12px;
+    margin: -5px 10px 0px 0px;
+    opacity: 1;
+    color: var(--b3-toolbar-color);
+}
+.toolbar{
+  background-color:   var(--dock-background);
+  border-bottom:      var(--dock-border);
+	height:32px;
+	margin-bottom: 0px;
+	opacity: 1;
+	transition: none;
+	transform:none;
+	z-index:8;
+	transition-delay: none;
+}
+.toolbar__window{
+	background-color: transparent;
+	height:40px;
+}
+/*样式调整*/
+.b3-typography span[data-type~=inline-memo], .protyle-wysiwyg span[data-type~=inline-memo] {
+    background-color:rgba(255, 176, 176, 0.4);
+}
+.tooltip{
+       background-color: rgba(90, 68, 75, 0.6) !important;
+}
+.protyle-attr>.b3-tooltips:hover::after {
+    display: inline-block;
+    background-color: rgba(90, 68, 75, 0.6) !important;
+    font-size:1rem !important;
+    padding:5px 10px;
+}
+.tooltip.tooltip--memo{
+    font-size: 1.1rem !important;
+    line-height: 1.3em;
+    background-color: rgba(90, 68, 75, 0.6);
+box-shadow: #5f5f5f24 0px 0px 0.1em 0.03em, #5f5f5fa3 0px 0px 0.3em;
+    box-sizing: border-box;
+    color: #fff !important;
+    max-width:660px;
+    padding: 5px 10px;
+}
+.config__panel>.b3-tab-bar {
+   background-color:#ffdfd9 !important;
+}
+.b3-typography table td, .b3-typography table th, .protyle-wysiwyg table td, .protyle-wysiwyg table th {
+   border-color: var(--h1-color);
+}

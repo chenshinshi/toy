@@ -3173,6 +3173,7 @@ window.theme.colors = [
     'palette/fruitspink.css',
     'palette/mediawiki.css',
     'palette/qianlan.css',
+    'palette/pinkcyan.css',
     'palette/yinxiang.css',
     'palette/pbook.css',
 ];

@@ -36,7 +36,7 @@
 
     /* 顶部工具栏 */
     --b3-toolbar-background: #2b2d30;
-    --b3-toolbar-blur-background: #373a41;
+    --b3-toolbar-blur-background: transparent;
     --b3-toolbar-color: var(--left-sidebar-color);
     --b3-toolbar-hover: #383a42;
     --b3-toolbar-left-mac: 69px;
@@ -148,17 +148,6 @@
     --b3-protyle-inline-blockref-color: var(--b3-theme-primary);
 
     /* PDF */
-    --b3-pdf-selection: #d0e9c8;
-    --b3-pdf-sidebar-width: 200px;
-    --b3-pdf-offset: 0;
-    --b3-pdf-background1: var(--b3-theme-error);
-    --b3-pdf-background2: #f5822e;
-    --b3-pdf-background3: var(--b3-theme-secondary);
-    --b3-pdf-background4: #65b84d;
-    --b3-pdf-background5: #f5539e;
-    --b3-pdf-background6: var(--b3-theme-primary);
-    --b3-pdf-background7: #944194;
-    --b3-pdf-dark: #212224;
     --h1-color: #4b7080;
     --h2-color: #6a9395;
     --h3-color: #85a9a3;

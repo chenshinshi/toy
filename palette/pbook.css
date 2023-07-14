@@ -31,6 +31,7 @@
     --h5-color:var(--hd--);
     --h6-color:var(--hd--);
     --quote-border-color:transparent;
+--b3-protyle-inline-mark-background:#eab13f;
 }
 .protyle{
     background-color:write
@@ -283,6 +284,26 @@ box-shadow: #5f5f5f24 0px 0px 0.1em 0.03em, #5f5f5fa3 0px 0px 0.3em;
     --b3-font-color8: #f5822e;
     --b3-font-color13: var(--b3-theme-background);
 }
+
+.protyle-toolbar__item:hover,.b3-list-item__toggle:hover,.b3-list-item__action:hover {
+    background-color: var(--b3-theme-primary-lightest);
+    border-radius: 6px;
+}
 #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .bq {
-   border:none !important;
+    border: none !important;
+    padding: 10px !important;
+}
+div.list div.bq {
+    padding: 10px !important;
+    margin: 0px 0px 0px 36px !important;
+}
+
+/*闪卡布局*/
+.card__action {
+   background-color:#fff;
+}
+/*悬浮窗布局*/
+.block__popover>.block__icons {
+    border-radius: var(--b3-border-radius-b) var(--b3-border-radius-b) 0 0;
+    background-color: var(--bg--);
 }

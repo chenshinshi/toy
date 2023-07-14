@@ -7,11 +7,13 @@
     border-bottom:2px solid var(--b3-protyle-inline-mark-color);
     background-color:transparent;
     padding: 0 2px;
+    background-image:none;
 }
 .card__block--hidemark span[data-type~=mark] {
     border-bottom:2px solid var(--b3-protyle-inline-mark-color);
     background-color:transparent;
     padding: 0 2px;
+    background-image:none;
 }
 .card__action .b3-button--error>div,.card__action .b3-button--warning>div,.card__action .b3-button--info>div,.card__action .b3-button--success>div {
     display: none;
@@ -195,4 +197,10 @@ text-underline-offset:0.2em;
     border-bottom:3px dotted var(--b3-border-color);
     border-radius: 0px 0px 0px 0px;
     padding-bottom:12px !important;
+}
+/*备注框文字*/
+.protyle-util  .b3-text-field {
+   font-size: 130%;
+min-height: 200px !important;
+   line-height:25px;
 }
