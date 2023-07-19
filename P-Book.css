@@ -204,3 +204,19 @@ text-underline-offset:0.2em;
 min-height: 200px !important;
    line-height:25px;
 }
+.tooltip.tooltip--memo{
+    font-size: 1.1rem !important;
+    line-height: 1.3em;
+    background-color: var(--b3-theme-background) !important;
+box-shadow: #5f5f5f24 0px 0px 0.1em 0.03em, #5f5f5fa3 0px 0px 0.3em;
+    box-sizing: border-box;
+    color: var(--b3-theme-on-background) !important;
+    max-width:660px;
+    padding: 5px 10px;
+}
+.protyle-attr>.b3-tooltips:hover::after {
+   display:inline-block;
+    padding: 5px 10px;
+   font-size:1rem !important;
+   opacity:0.8;
+}

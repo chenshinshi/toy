@@ -18,3 +18,7 @@
 @import url("style/table.css");
 @import url("style/file.css");
 
+[data-key="viewCards"] .b3-list-item.b3-list-item--hide-action {
+   margin:1px 10px;
+   padding:3px 0px;
+}

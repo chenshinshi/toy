@@ -307,3 +307,6 @@ div.list div.bq {
     border-radius: var(--b3-border-radius-b) var(--b3-border-radius-b) 0 0;
     background-color: var(--bg--);
 }
+.protyle-util  .b3-text-field {
+    background-image: url(/appearance/themes/toy/src/bg.png);
+}

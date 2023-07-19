@@ -279,7 +279,7 @@ background-attachment: fixed;
   background-color: transparent;    
 }
 .layout-tab-bar .item--focus .item__text{
-  border-color: var(--b3-theme-primary);
+  /*border-color: var(--b3-theme-primary);*/
   opacity: 1;
 }
 .layout-tab-bar .item__text{
@@ -1154,6 +1154,7 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
 .b3-typography span[data-type~=inline-memo], .protyle-wysiwyg span[data-type~=inline-memo] {
    background-color:var(--b3-theme-background-light);
    border-bottom:2px solid var(--b3-theme-primary);
+   margin:0px 0.5px;
 }
 /*选中文字样式*/
 /*.protyle-wysiwyg ::selection {
@@ -1359,23 +1360,25 @@ margin: 0 !important;
     --b3-pdf-background2: hsl(50deg 100% 50%);
     --b3-pdf-background1: hsl(0deg 100% 88%);
     --b3-pdf-background4: hsl(100deg 58% 75%);
-    --b3-pdf-background7: rgba(0,132,255,0.19);
+    --b3-pdf-background7: hsl(209, 100%, 81%) !important;
     --b3-pdf-background3: hsl(177deg 46% 80%);
     --b3-pdf-background6: hsl(259, 100%, 89%);
-    --b3-pdf-background5: #44444420;
+    --b3-pdf-background5: hsl(45, 5%, 90%) !important;
 --b3-protyle-inline-fileref-color:inherit;
 --b3-tooltips-color: #fafafa !important;
 --b3-list-icon-hover:var(--b3-theme-background-light) !important;
     --b3-protyle-inline-mark-color: var(--b3-theme-on-background) !important;
+   --b3-dialog-shadow:8px 0 24px rgba(140,149,159,.2) !important;
+  /* --b3-point-shadow:rgba(0,0,0, 0.15) 0px 3px 3px 0px; !important;*/
 }
 .backlinkList.fn__flex-1 {
   height:90%;
 }
-#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-wysiwyg [data-node-id] span[data-type="file-annotation-ref"]::before{
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-wysiwyg [data-node-id] span[data-type="file-annotation-ref"]::before,.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref]::before{
    content:"『";
    color:var(--b3-protyle-inline-link-color);
 }
-#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-wysiwyg [data-node-id] span[data-type="file-annotation-ref"]::after{
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-wysiwyg [data-node-id] span[data-type="file-annotation-ref"]::after,.protyle-wysiwyg [data-node-id] span[data-type~=file-annotation-ref]::after{
    content:"』";
    color:var(--b3-protyle-inline-link-color);
 }
@@ -1440,4 +1443,11 @@ font-size:1.15rem;
 div.list div.bq {
     padding: 0px 10px 0px 20px !important;
     margin: 0px 0px 0px 36px !important;
+}
+.pdf__rect>div {
+   border-radius:0px !important;
+}
+.pdf__rect>div:hover {
+   border-radius:0px !important;
+   filter:brightness(95%);
 }
