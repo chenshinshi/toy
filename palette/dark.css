@@ -236,3 +236,6 @@ strong[style*="background-color: var(--b3-font-background13)"]{
 .card__action .b3-button {
    opacity:0.8;
 }
+.pdf__outer #viewerContainer:not(.pdfPresentationMode) {
+   mix-blend-mode:soft-light;
+}

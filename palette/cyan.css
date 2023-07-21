@@ -224,3 +224,7 @@
 .card__action .b3-button {
    opacity:0.8;
 }
+.pdf__outer #viewerContainer:not(.pdfPresentationMode) {
+    mix-blend-mode: exclusion;
+    filter: invert(1);
+}
