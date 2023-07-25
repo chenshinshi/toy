@@ -141,7 +141,7 @@ background-color:rgb(167, 176, 179) !important;
    display:none;
 }
 .protyle-hint .b3-list-item .b3-list-item__text,.protyle-hint .b3-list-item .b3-list-item__graphic,.protyle-hint .b3-list-item.b3-list-item--two, .protyle-hint .emojis__title,.menu[data-v-06ff44db] {
-    color: #cfcfcf !important;
+    color: #cfcfcf;
 }
 .protyle-hint .b3-list-item.b3-list-item--focus .b3-list-item__text, .protyle-hint .b3-list-item.b3-list-item--focus .b3-list-item__graphic, .protyle-hint .b3-list-item:hover .b3-list-item__text, .protyle-hint .b3-list-item:hover .b3-list-item__graphic {
    color:grey !important;
