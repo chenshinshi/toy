@@ -381,7 +381,7 @@ background-attachment: fixed;
 /**** 块图标 ****/
 /* 减淡块图标颜色 */
 .protyle-gutters svg {
-  color: var(--b3-scroll-color);
+  color: var(--b3-theme-primary-light);
 }
 /* 增加块图标悬浮时背景色 */
 .protyle-gutters button:hover svg{
