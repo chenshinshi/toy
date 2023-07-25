@@ -18,7 +18,7 @@
 .card__action .b3-button--error>div,.card__action .b3-button--warning>div,.card__action .b3-button--info>div,.card__action .b3-button--success>div {
     display: none;
 }
-.b3-button--error {
+.card__main .b3-button--error {
     line-height:43px;
     background-image:url(/appearance/themes/toy/src/4.png);
     background-size:80px 80px;

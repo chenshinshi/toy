@@ -1455,7 +1455,7 @@ font-size:1.15rem;
 }*/
 div.list div.bq {
     padding: 5px 10px 3px 20px !important;
-    margin: 0px 0px 0px 36px !important;
+    margin: 5px 0px 0px 36px !important;
 }
 div.list div.bq::before {
    font-size:200% !important;
@@ -1493,5 +1493,5 @@ div.list div.bq::before {
    border:none;
 }
 :root {
---custom-h-fold-mark: "ヾ(•ω•`。)好像藏了什么";
+--custom-h-fold-mark: "ヾ(•ω•`。)有秘密！";
 }
