@@ -68,7 +68,6 @@
 .fn__flex-shrink .b3-list-item__text,.fn__flex-shrink .b3-list-item__graphic,.toolbar__item, .dock__item{
   color: var(--left-sidebar-color);
 }
-.fn__flex-shrink div{ background: transparent;}
 /**** 左边栏背景色 代码结束 ****/
 
 /**** 实验功能：开启左边栏背景图 ****
@@ -219,9 +218,8 @@ background-attachment: fixed;
 ::-webkit-scrollbar-thumb:hover{  background-color: var(--scrollbar-hover-background);}*/
 
 /* 边栏滚动条 */
-#layouts>.fn__flex-1>.fn__flex-column ::-webkit-scrollbar,::-webkit-scrollbar{ width: 6px;}
-#layouts>.fn__flex-1>.fn__flex-column ::-webkit-scrollbar-thumb,::-webkit-scrollbar-thumb{  background-color: var(--column-scrollbar-background); }
-#layouts>.fn__flex-1>.fn__flex-column ::-webkit-scrollbar-thumb:hover,::-webkit-scrollbar-thumb:hover{ background-color: var(--column-scrollbar-hover-background); }
+/*#layouts>.fn__flex-1>.fn__flex-column ::-webkit-scrollbar-thumb,::-webkit-scrollbar-thumb{  background-color: var(--column-scrollbar-background); }
+#layouts>.fn__flex-1>.fn__flex-column ::-webkit-scrollbar-thumb:hover,::-webkit-scrollbar-thumb:hover{ background-color: var(--column-scrollbar-hover-background); }*/
 
 
 /************** 二、文档编辑区 **************************/
@@ -840,20 +838,20 @@ span[data-type="tag"][data-content="完成"],span[data-type="tag"][data-content=
 
 
 /**** 引述 ****/
-.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
+/*.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
   border-left: var(--quote-border-width) solid var(--b3-theme-primary);
   border-color: var(--quote-border-color);
   color: var(--quote-color);
   background-color: var(--quote-background);
   padding: 0px 4px;
   padding-left: 1em ;
-}
+}*/
 /* 调整引述在超级块中的样式 */
-.protyle-wysiwyg .sb blockquote,  .protyle-wysiwyg .sb .bq{
+/*.protyle-wysiwyg .sb blockquote,  .protyle-wysiwyg .sb .bq{
   border-left: 3px solid var(--b3-border-color);
   margin:  var(--allen-block-margin);
   padding: var(--allen-block-padding);
-}
+}*/
 
 /**** 代码块 ****/
 .b3-typography .code-block, .protyle-wysiwyg .code-block{
@@ -1022,12 +1020,12 @@ background-repeat:no-repeat;
 .protyle-toolbar__divider {
     opacity:0.4;
 }
-.b3-dialog__header {
+/*.b3-dialog__header {
     border-bottom:none;
-}
-.b3-dialog__action {
+}*/
+/*.b3-dialog__action {
      border-top:none;
-}
+}*/
 /*修复窗口失焦*/
 :root {
     --b3-toolbar-blur-background: transparent;
@@ -1068,9 +1066,26 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
     padding-left: 4px;
     padding-right: 8px;
 }
-.fn__flex.layout-tab-bar {
+/*.fn__flex.layout-tab-bar {
    margin-left:8px !important;
+}*/
+.layout-tab-bar .item {
+    padding-left: 12px !important;
 }
+#layouts div.layout__center div[data-type="wnd"] ul.layout-tab-bar .item {
+    border-bottom: 4px solid var(--b3-theme-background);
+}
+#layouts div.layout__center div[data-type="wnd"] ul.layout-tab-bar .item.item--focus {
+    border-bottom: 4px solid var(--b3-theme-primary);
+   /* -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.12);
+    box-shadow: 0 1px 10px rgba(0,0,0,0.12);
+    -webkit-transition: ease-in-out 0.6s;*/
+    transition: ease-in-out 0.6s;
+}
+.layout__wnd--active .layout-tab-bar .item--focus:after {
+   display:none;
+}
+
 :root {
    --b3-dock-stats-counter-color:#fff;
 --b3-theme-background-light:var(--b3-theme-primary-lightest);
@@ -1140,8 +1155,8 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
     color:var(--b3-theme-on-background);
 }
 /*段落间距*/
-.protyle-wysiwyg.protyle-wysiwyg [data-node-id]:not([data-type="NodeHTMLBlock"]){
-    line-height:1.8em !important;
+.protyle-wysiwyg.protyle-wysiwyg [data-node-id]:not([data-type="NodeHTMLBlock"]):not([data-type="NodeCodeBlock"]):not([data-type="NodeBlockquote"]){
+    line-height:1.8em;
     margin-bottom: 6px;
     margin-top: 6px;
 } 
@@ -1330,7 +1345,7 @@ margin: 0 !important;
    color:var(--h1-color);
 }
 /*引述块*/
-#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .bq::before {
+/*#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .bq::before {
     content: "";
     display: none !important;
     position: absolute;
@@ -1342,34 +1357,35 @@ margin: 0 !important;
     border-radius: 4px;
     background-color: var(--quote-border-color);
     border:none;
-}
-.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
+}*/
+/*.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
     border-left: 4px solid var(--quote-border-color) !important;
     color: var(--quote-color);
     background-color: var(--quote-background);
     padding: 0px 4px !important;
     padding-left: 0.8em;
-}
+}*/
 .fn__flex.layout__dockb {
    height:0px !important;
 }
 :root {
-    --b3-pdf-selection:var(--text-selection-background);
+    --b3-pdf-selection:var(--text-selection-background) !important;
     --b3-pdf-sidebar-width: 200px;
     --b3-pdf-offset: 0;
-    --b3-pdf-background2: hsl(50deg 100% 50%);
-    --b3-pdf-background1: hsl(0deg 100% 88%);
-    --b3-pdf-background4: hsl(100deg 58% 75%);
+    --b3-pdf-background2: hsl(50deg 100% 50%) !important;
+    --b3-pdf-background1: hsl(0deg 100% 88%) !important;
+    --b3-pdf-background4: hsl(100deg 58% 75%) !important;
     --b3-pdf-background7: hsl(209, 100%, 81%) !important;
-    --b3-pdf-background3: hsl(177deg 46% 80%);
-    --b3-pdf-background6: hsl(259, 100%, 89%);
+    --b3-pdf-background3: hsl(177deg 46% 80%) !important;
+    --b3-pdf-background6: hsl(259, 100%, 89%) !important;
     --b3-pdf-background5: hsl(45, 5%, 90%) !important;
---b3-protyle-inline-fileref-color:inherit;
---b3-tooltips-color: #fafafa !important;
+--b3-protyle-inline-fileref-color:inherit !important;
 --b3-list-icon-hover:var(--b3-theme-background-light) !important;
     --b3-protyle-inline-mark-color: var(--b3-theme-on-background) !important;
-   --b3-dialog-shadow:8px 0 24px rgba(140,149,159,.2) !important;
+   --b3-dialog-shadow:8px 0 24px rgba(140,149,159,.2);
   /* --b3-point-shadow:rgba(0,0,0, 0.15) 0px 3px 3px 0px; !important;*/
+    --b3-tooltips-color: var(--b3-theme-on-background);
+    --b3-tooltips-background: var(--b3-theme-background);
 }
 .backlinkList.fn__flex-1 {
   height:90%;
@@ -1384,9 +1400,6 @@ margin: 0 !important;
 }
 #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-wysiwyg [data-node-id] span[data-type="file-annotation-ref"] {
    color:inherit !important;
-}
-.tooltip{
-    color: #fafafa !important;
 }
 .config__panel>.b3-tab-bar .config__tab-title {
    display:none;
@@ -1432,17 +1445,21 @@ font-size:1.15rem;
     margin:2px 8px;
     border-radius: 6px 6px 0 0;
 }
-#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .b3-typography>div, #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-wysiwyg>div {
+.protyle-wysiwyg.protyle-wysiwyg [data-node-id]{
     padding-left: 10px !important;
     padding-right: 10px !important;
 }
-#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .bq .p {
+/*#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .bq .p {
     padding: 0 0 0 18px !important;
     height: auto;
-}
+}*/
 div.list div.bq {
-    padding: 0px 10px 0px 20px !important;
+    padding: 5px 10px 3px 20px !important;
     margin: 0px 0px 0px 36px !important;
+}
+div.list div.bq::before {
+   font-size:200% !important;
+   margin-left:-40px !important;
 }
 .pdf__rect>div {
    border-radius:0px !important;
@@ -1450,4 +1467,31 @@ div.list div.bq {
 .pdf__rect>div:hover {
    border-radius:0px !important;
    filter:brightness(95%);
+}
+.block__popover>.block__icons {
+    border-radius: var(--b3-border-radius-b) var(--b3-border-radius-b) 0 0;
+    background-color: var(--dock-background);
+}
+.b3-dialog--open .b3-dialog__scrim {
+   opacity:0.4;
+}
+.toolbar {
+   border-bottom:none !important;
+}
+.layout__resize:after {
+  opacity:0;
+}
+
+.fn__flex-shrink, .fn__flex-shrink .block__icons {
+  background-color:transparent;
+ }
+.fn__flex-column.fn__flex-shrink>.fn__flex:first-child:not(.fn__none),.layout__center~.fn__flex-column>.fn__flex:first-child,.fn__flex-column.layout__dockr.layout--float .fn__flex-1.fn__flex {
+   background-color:transparent;
+}
+.layout--float.layout__dockl,.layout--float.layout__dockr {
+   box-shadow:unset;
+   border:none;
+}
+:root {
+--custom-h-fold-mark: "ヾ(•ω•`。)好像藏了什么";
 }

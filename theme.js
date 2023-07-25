@@ -2868,8 +2868,6 @@ function SubMenu(selectid,selecttype,className = 'b3-menu__submenu') {
     node.appendChild(AutoWidth(selectid))
 	node.appendChild(Removeth(selectid))
 	node.appendChild(Defaultth(selectid))
-	node.appendChild(biaotou(selectid))
-	node.appendChild(biaotouu(selectid))
   }
   if(selecttype=="NodeParagraph"){
     node.appendChild(qblta(selectid))
@@ -2961,27 +2959,6 @@ function Defaultth(selectid){
   button.onclick=ViewMonitor
   return button
 }
-function biaotou(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","b")
-  button.setAttribute("custom-attr-value","bt")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#iconTable"></use></svg><span class="b3-menu__label">简单样式</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function biaotouu(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","b")
-  button.setAttribute("custom-attr-value","")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#iconRefresh"></use></svg><span class="b3-menu__label">恢复样式</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-
 function qblta(selectid){
   let button = document.createElement("button")
   button.className="b3-menu__item"
@@ -3171,11 +3148,10 @@ window.theme.colors = [
     'palette/fountain.css',
     'palette/bearlight.css',
     'palette/fruitspink.css',
-    'palette/mediawiki.css',
     'palette/qianlan.css',
     'palette/pinkcyan.css',
-    'palette/yinxiang.css',
     'palette/pbook.css',
+    'palette/yinxiang.css',
 ];
 
 /* DOM 节点 ID */

@@ -41,7 +41,6 @@
     --b3-menu-background: var(--b3-theme-background);
 
     /* 提示 */
-    --b3-tooltips-color: rgba(0, 0, 0, 0.7);
 
     /* 卡片背景 */
     --b3-card-error-color:       rgb(97, 26, 21);
@@ -67,17 +66,14 @@
     --b3-font-color4: #65b84d;
     --b3-font-color8: #f5822e;
     --b3-font-color13: var(--b3-theme-background);
-    --b3-font-background5: #e8e8e8;
-    --b3-font-background8: #ffbe77;
-    --b3-font-background6:  hsl(259, 100%, 89%);
-    --b3-font-background7:  rgba(177,217,255,1);
-    --b3-font-background1: hsla(0deg,100%,88%);
-    --b3-font-background2: hsla(50deg,100%,70%);
-    --b3-font-background3: hsl(179deg 100% 89%);
-    --b3-font-background4: hsl(100deg 100% 89%);
-    --b3-font-background8: #e7af71;
-    --b3-font-background6:  hsla(259, 100%, 89%);
-    --b3-font-background7:  rgba(177,217,255,1);
+    --b3-font-background1: hsla(0deg,100%,88%,0.5);
+    --b3-font-background2: hsla(50deg,100%,50%,0.5);
+    --b3-font-background3: hsla(177deg,46%,80%,0.8);
+    --b3-font-background4: hsla(100deg,58%,75%,0.8);
+    --b3-font-background5: hsla(0deg, 0%, 77%, 0.5);
+    --b3-font-background8: hsla(31, 100%, 73%,0.5);
+    --b3-font-background6:  hsla(259, 100%, 89%,0.5);
+    --b3-font-background7:  rgba(177,217,255,0.8);
     --b3-font-background9:  var(--text-selection-background);
     --b3-font-background10: rgba(239, 218, 251, 0.5);
     --b3-font-background11: rgba(234, 202, 220, 0.5);
@@ -187,7 +183,8 @@
     --page-scrollbar-transition: opacity 800ms ease 0s; /* 分页加载条动画 */
     --flex-column-transition:    width 200ms cubic-bezier(0, 0.7, 0.4, 1); /* 侧边栏动画 */
     --common-transition:         all 1s cubic-bezier(0, 0.7, .2, 1) 0ms;   /* 通用动画 */
-
+    --b3-dialog-shadow:0 0 2px rgb(132 132 132 / 10%) inset, 0 1px 4px rgb(68 68 68 / 20%);
+    --b3-point-shadow:0 0 2px rgb(132 132 132 / 10%) inset, 0 1px 4px rgb(68 68 68 / 20%);
 }
 /**** 特殊样式 ****/
 /* 工具栏选中状态 */
@@ -221,5 +218,31 @@
 
 /*PDF*/
 .pdf__outer #viewerContainer:not(.pdfPresentationMode){
-    mix-blend-mode:multiply;
+    mix-blend-mode:unset !important;
+}
+#mainContainer {
+   background-color:var(--b3-theme-background);
+}
+.layout__resize--lr {
+   opacity:0;
+}
+.fn__flex-shrink .block__icons,.fn__flex-1.fn__flex-column.file-tree,.fn__flex-1.plugin-webapp_custom-dock,.fn__flex-1.plugin-excalidraw-dock,.fn__flex-1.sy__siyuan-dailynote-todaydock_tab.layout__tab--active {
+   background-color:var(--b3-theme-background);
+}
+.b3-typography blockquote::before, .b3-typography .bq::before, .protyle-wysiwyg blockquote::before, .protyle-wysiwyg .bq::before {
+   content:"“";
+   color:var(--quote-border-color);
+   display:block;
+   font-size:400%;
+   position:absolute;
+   margin-left:-70px;
+}
+.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
+    background-color:var(--b3-theme-surface-lighter);
+    border-left:none;
+    padding-top:10px;
+    padding-bottom:5px;
+   border-radius:30px 0 0 0 !important;
+   padding-left:20px;
+   padding-right:10px;
 }

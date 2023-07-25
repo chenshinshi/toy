@@ -34,7 +34,6 @@
 
 
     /* 提示 */
-    --b3-tooltips-color: rgba(0, 0, 0, 0.54);
 
     /* 动画效果 */
     --b3-transition: all .15s cubic-bezier(0, 0, .2, 1) 0ms;
@@ -243,14 +242,14 @@ ol ol {
 }
 
 :root {
-    --b3-font-background1: hsl(0deg 100% 88%);
-    --b3-font-background2: #FFE68D;
-    --b3-font-background3: hsl(177deg 46% 80%);
-    --b3-font-background4: hsl(100deg 58% 75%);
-    --b3-font-background5: #e8e8e8;
-    --b3-font-background8: #ffbe77;
-    --b3-font-background6:  hsl(259, 100%, 89%);
-    --b3-font-background7:  rgba(177,217,255,1);
+    --b3-font-background1: hsla(0deg,100%,88%,0.5);
+    --b3-font-background2: hsla(50deg,100%,50%,0.5);
+    --b3-font-background3: hsla(177deg,46%,80%,0.5);
+    --b3-font-background4: hsla(100deg,58%,75%,0.5);
+    --b3-font-background5: hsla(0deg, 0%, 77%, 0.5);
+    --b3-font-background8: hsla(31, 100%, 73%,0.5);
+    --b3-font-background6:  hsla(259, 100%, 89%,0.5);
+    --b3-font-background7:  rgba(177,217,255,0.5);
     --b3-font-background9:  var(--text-selection-background);
     --b3-font-color9: #dd4c4f;
     --b3-font-color7: #1478d4;
@@ -314,4 +313,30 @@ ol ol {
 /*源泉 for 思源。Flying fly flies出品，[20201226] https://github.com/whyt-byte*/
 /*Fountain for Siyuan. Created by Flying fly flies, [20201226] find more: https://github.com/whyt-byte*/
 /*feel free to use and modify*/ 
-
+.layout__resize--lr {
+   opacity:0;
+}
+/*PDF*/
+.pdf__outer #viewerContainer:not(.pdfPresentationMode){
+    mix-blend-mode:unset !important;
+}
+#mainContainer {
+   background-color:var(--b3-theme-background);
+}
+.b3-typography blockquote::before, .b3-typography .bq::before, .protyle-wysiwyg blockquote::before, .protyle-wysiwyg .bq::before {
+   content:"“";
+   color:var(--quote-border-color);
+   display:block;
+   font-size:400%;
+   position:absolute;
+   margin-left:-70px;
+}
+.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
+    background-color:var(--b3-theme-surface-lighter);
+    border-left:none;
+    padding-top:10px;
+    padding-bottom:5px;
+   border-radius:30px 0 0 0 !important;
+   padding-left:20px;
+   padding-right:10px;
+}

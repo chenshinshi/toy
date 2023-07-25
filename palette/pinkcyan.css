@@ -22,6 +22,8 @@
     --column-scrollbar-background:#dfdbcf;
     --column-scrollbar-hover-background:#dfd3b1;
     --quote-color:#955a6c;
+    --b3-dialog-shadow:0 0 2px rgb(132 132 132 / 10%) inset, 0 1px 4px rgb(68 68 68 / 20%);
+    --b3-point-shadow:0 0 2px rgb(132 132 132 / 10%) inset, 0 1px 4px rgb(68 68 68 / 20%);
 }
 .fn__flex-1.protyle .protyle-content, .protyle-content {
     background-image: url(/appearance/themes/toy/src/8.png) !important;
@@ -29,6 +31,7 @@
     background-attachment: local;
     text-align: justify;
 }
+
 /* .p {
     padding-bottom: 0px !important;
 background: linear-gradient(
@@ -49,14 +52,14 @@ background: linear-gradient(
 }
 /*字色*/
 :root {
-    --b3-font-background1: hsl(0deg 100% 88%);
-    --b3-font-background2: hsl(50deg 100% 50%);
-    --b3-font-background3: hsl(177deg 46% 80%);
-    --b3-font-background4: hsl(100deg 58% 75%);
-    --b3-font-background5: #c4c4c4;
-    --b3-font-background8: #ffbe77;
-    --b3-font-background6:  hsl(259, 100%, 89%);
-    --b3-font-background7:  rgba(177,217,255,1);
+    --b3-font-background1: hsla(0deg,100%,88%,0.3);
+    --b3-font-background2: hsla(50deg,100%,50%,0.3);
+    --b3-font-background3: hsla(177deg,46%,80%,0.3);
+    --b3-font-background4: hsla(100deg,58%,75%,0.3);
+    --b3-font-background5: hsla(0deg, 0%, 77%, 0.3);
+    --b3-font-background8: hsla(31, 100%, 73%,0.3);
+    --b3-font-background6:  hsla(259, 100%, 89%,0.3);
+    --b3-font-background7:  rgba(177,217,255,0.3);
     --b3-font-background9:  var(--text-selection-background);
     --b3-font-color9: #dd4c4f;
     --b3-font-color7: #1478d4;
@@ -105,9 +108,6 @@ background: linear-gradient(
 /*样式调整*/
 .b3-typography span[data-type~=inline-memo], .protyle-wysiwyg span[data-type~=inline-memo] {
     background-color:rgba(214, 217, 193,0.6);
-}
-.tooltip{
-       background-color: rgba(90, 68, 75, 0.6) !important;
 }
 .protyle-attr>.b3-tooltips:hover::after {
     display: inline-block;
@@ -160,7 +160,7 @@ background: linear-gradient(
 .b3-typography table td, .b3-typography table th, .protyle-wysiwyg table td, .protyle-wysiwyg table th {
    border-color: var(--h1-color);
 }
-.b3-button {
+[data-type="myPlugin"],.card__action .b3-button.fn__flex-1,#searchInclude.b3-button.b3-button--mid {
    color:#fff;
 }
 .b3-switch:checked {
@@ -174,4 +174,62 @@ background: linear-gradient(
 }
 .b3-dialog__action .b3-button {
   color:#7e5537;
+}
+.block__popover>.block__icons,.card__main .block__icons {
+    border-radius: var(--b3-border-radius-b) var(--b3-border-radius-b) 0 0;
+    background-color: var(--dock-background);
+}
+.layout__resize--lr {
+   opacity:0;
+}
+/*PDF*/
+.pdf__outer #viewerContainer:not(.pdfPresentationMode){
+    mix-blend-mode:unset !important;
+}
+#mainContainer {
+   background-color:var(--b3-theme-background);
+}
+.fn__flex-shrink .block__icons,.fn__flex-1.fn__flex-column.file-tree {
+   background-color:var(--b3-theme-background);
+}
+.b3-dialog__container .config__panel>.b3-tab-bar::before{
+   color:#7E5537;
+}
+/* 表格样式 */
+.b3-typography table,
+.protyle-wysiwyg table {
+    border-radius:0;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-top: 2px solid var(--b3-theme-primary-light); 
+    border-left: 2px solid var(--b3-theme-primary-light);
+    border-bottom: none;
+    border-right: none;
+    font-size: 90%;
+    line-height: 1.625em !important;
+}
+.b3-typography table tr td, .b3-typography table tr th, .protyle-wysiwyg table tr td,.protyle-wysiwyg table tr th {
+    background-color: var(--b3-theme-background) !important;
+    border-spacing: 0;
+    border-top: none;
+    border-left: none;
+    border-right: 2px solid var(--b3-theme-primary-light);
+    border-bottom: 2px solid var(--b3-theme-primary-light);
+}
+.b3-typography blockquote::before, .b3-typography .bq::before, .protyle-wysiwyg blockquote::before, .protyle-wysiwyg .bq::before {
+   content:"“";
+   color:var(--quote-border-color);
+   display:block;
+   font-size:400%;
+   position:absolute;
+   margin-left:-70px;
+}
+.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
+    background-color:var(--b3-theme-surface-lighter);
+    border-left:none;
+    padding-top:10px;
+    padding-bottom:5px;
+   border-radius:30px 0 0 0 !important;
+   padding-left:20px;
+   padding-right:10px;
 }

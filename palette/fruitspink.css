@@ -1,12 +1,12 @@
 :root {
     /* 主色 */
-    --b3-theme-primary: #8675A9;
+    --b3-theme-primary: #f48ea8;
     --b3-theme-primary-light: rgba(171, 146, 180, 0.54);
     --b3-theme-primary-lighter: rgba(171, 146, 180, 0.38);
     --b3-theme-primary-lightest: rgba(171, 146, 180, 0.12);
     --b3-theme-secondary: #f3a92f;
-    --b3-theme-background: #FFD5CD;
-    --b3-theme-surface: #FFD5CD;
+    --b3-theme-background: #fff3f3;
+    --b3-theme-surface: #ffe0db;
     --b3-theme-surface-light: rgba(243, 243, 243, .86);
     --b3-theme-error: #d23f31;
     --left-sidebar-background:var(--b3-theme-surface);
@@ -17,13 +17,14 @@
 --column-scrollbar-background:var(--b3-theme-primary-light);
 --quote-border-color:var(--h1-color);
 --quote-color:#9b90ab;
+--text-selection-background:rgba(121, 150, 231, 0.215);
 
 
     /* 文字颜色 */
     --b3-theme-on-primary: #fff;
     --b3-theme-on-secondary: #fff;
-    --b3-theme-on-background: #8675A9;
-    --b3-theme-on-surface: #5f6368;
+    --b3-theme-on-background: #5a647e;
+    --b3-theme-on-surface: #5a647e;
     --b3-theme-on-error: #fff;
 
 
@@ -37,14 +38,13 @@
     --b3-list-hover: rgba(134, 117, 169, .05);
 
     /* 页签 */
-    --b3-tab-background: #FFD5CD;
-    --b3-tab-background-hover: #FFD5CD;
+    --b3-tab-background: #ffe0db;
+    --b3-tab-background-hover: #ffe0db;
 
     /* 菜单 */
-    --b3-menu-background: #FFD5CD;
+    --b3-menu-background: var(--b3-theme-background);
 
     /* 提示 */
-    --b3-tooltips-color: rgba(0, 0, 0, 0.54);
 
     /* 卡片背景 */
     --b3-card-error-color: rgb(97, 26, 21);
@@ -158,7 +158,7 @@
 
 }
 .protyle-wysiwyg ::selection{ 
-    background-color:rgba(121, 150, 231, 0.315);
+    background-color:rgba(121, 150, 231, 0.215);
 }
 .protyle-wysiwyg--select, .protyle-wysiwyg--select .hljs {
     background-color: #73bce928 !important;
@@ -196,22 +196,71 @@
 }
 /*PDF*/
 .pdf__outer #viewerContainer:not(.pdfPresentationMode){
-    mix-blend-mode:multiply;
+    mix-blend-mode:unset !important;
+}
+#mainContainer {
+   background-color:var(--b3-theme-background);
 }
 :root {
-    --b3-font-background1: hsl(0deg 100% 88%);
-    --b3-font-background2: hsl(50deg 100% 88%);
-    --b3-font-background3: hsl(177deg 46% 80%);
-    --b3-font-background4: hsl(100deg 100% 89%);
-    --b3-font-background5: #e8e8e8;
-    --b3-font-background8: #ffce98;
-    --b3-font-background6:  hsl(259, 100%,93%);
-    --b3-font-background7:  rgba(205,231,255,1);
+    --b3-font-background1: hsla(0deg,100%,88%,0.3);
+    --b3-font-background2: hsla(50deg,100%,50%,0.3);
+    --b3-font-background3: hsla(177deg,46%,80%,0.3);
+    --b3-font-background4: hsla(100deg,58%,75%,0.3);
+    --b3-font-background5: hsla(0deg, 0%, 77%, 0.3);
+    --b3-font-background8: hsla(31, 100%, 73%,0.3);
+    --b3-font-background6:  hsla(259, 100%, 89%,0.3);
+    --b3-font-background7:  rgba(177,217,255,0.3);
     --b3-font-background9:  var(--text-selection-background);
+    --b3-dialog-shadow:0 0 2px rgb(132 132 132 / 10%) inset, 0 1px 4px rgb(68 68 68 / 20%);
+    --b3-point-shadow:0 0 2px rgb(132 132 132 / 10%) inset, 0 1px 4px rgb(68 68 68 / 20%);
 }
 [style*="color:var(--b3-font-background10)"], [style*="color: var(--b3-font-background10)"] {
     text-decoration: 0.6em underline #ffffff;
     text-decoration-skip-ink: none;
     text-underline-offset: -0.6em;
     background-color: transparent !important;
+}
+.layout__resize--lr {
+   opacity:0;
+}
+.fn__flex-shrink .block__icons,.fn__flex-1.fn__flex-column.file-tree,.fn__flex-1.plugin-webapp_custom-dock,.fn__flex-1.plugin-excalidraw-dock,.fn__flex-1.sy__siyuan-dailynote-todaydock_tab.layout__tab--active {
+   background-color:var(--b3-theme-background);
+}
+/* 表格样式 */
+.b3-typography table,
+.protyle-wysiwyg table {
+    border-radius:0;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-top: 2px solid var(--b3-theme-primary-light); 
+    border-left: 2px solid var(--b3-theme-primary-light);
+    border-bottom: none;
+    border-right: none;
+    font-size: 90%;
+    line-height: 1.625em !important;
+}
+.b3-typography table tr td, .b3-typography table tr th, .protyle-wysiwyg table tr td,.protyle-wysiwyg table tr th {
+    background-color: var(--b3-theme-background) !important;
+    border-spacing: 0;
+    border-top: none;
+    border-left: none;
+    border-right: 2px solid var(--b3-theme-primary-light);
+    border-bottom: 2px solid var(--b3-theme-primary-light);
+}
+.b3-typography blockquote::before, .b3-typography .bq::before, .protyle-wysiwyg blockquote::before, .protyle-wysiwyg .bq::before {
+   content:"“";
+   color:var(--quote-border-color);
+   display:block;
+   font-size:400%;
+   position:absolute;
+   margin-left:-70px;
+}
+.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
+    background-color:var(--b3-theme-surface-lighter);
+    border-left:none;
+    padding-top:10px;
+    padding-bottom:5px;
+   border-radius:30px 0 0 0 !important;
+   padding-left:20px;
+   padding-right:10px;
 }

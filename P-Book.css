@@ -199,7 +199,7 @@ text-underline-offset:0.2em;
     padding-bottom:12px !important;
 }
 /*备注框文字*/
-.protyle-util  .b3-text-field {
+.protyle-util  .b3-text-field.b3-text-field--text.fn__block {
    font-size: 130%;
 min-height: 200px !important;
    line-height:25px;
@@ -208,7 +208,7 @@ min-height: 200px !important;
     font-size: 1.1rem !important;
     line-height: 1.3em;
     background-color: var(--b3-theme-background) !important;
-box-shadow: #5f5f5f24 0px 0px 0.1em 0.03em, #5f5f5fa3 0px 0px 0.3em;
+box-shadow: var(--b3-point-shadow) !important;
     box-sizing: border-box;
     color: var(--b3-theme-on-background) !important;
     max-width:660px;
@@ -219,4 +219,104 @@ box-shadow: #5f5f5f24 0px 0px 0.1em 0.03em, #5f5f5fa3 0px 0px 0.3em;
     padding: 5px 10px;
    font-size:1rem !important;
    opacity:0.8;
+}
+.fn__flex-1.fn__flex [data-type='wnd'] {
+    min-height: 0%;
+    margin: 12px;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgb(132 132 132 / 10%) inset, 0 1px 4px rgb(68 68 68 / 20%);
+}
+
+.fn__flex.fn__flex-1 {
+   background-color:var(--dock-background);
+}
+.fn__flex-1.fn__flex.config__panel {
+   border-radius: 0 var(--b3-border-radius-b) var(--b3-border-radius-b) 0;
+}
+#searchList ::-webkit-scrollbar, #globalSearchList ::-webkit-scrollbar {
+   width:0px;
+}
+.protyle-content::-webkit-scrollbar {
+    width: 10px;
+}
+#layouts > .fn__flex-1 > .fn__flex-column ::-webkit-scrollbar,::-webkit-scrollbar{ width: 6px;}
+::-webkit-scrollbar-thumb{
+    background-color:var(--column-scrollbar-background) !important;
+}
+
+:root {
+    --b3-scroll-color:transparent !important;
+}
+.b3-card {
+   background-color:transparent;
+}
+[data-key="⌘P"] .b3-dialog__container {
+   background-color:var(--b3-theme-background);
+}
+.search__layout--row {
+border-top: 1px solid var(--b3-theme-surface-lighter) !important;
+    border-bottom: 1px solid var(--b3-theme-surface-lighter) !important;
+}
+.search__header, #criteria.fn__flex,.layout-tab-bar {
+    border-bottom: 1px solid var(--b3-theme-surface-lighter) !important;
+}
+.b3-dialog__close,.b3-dialog__close:hover {
+   opacity:0;
+   cursor:auto;
+}
+/*代码块*/
+
+.protyle-wysiwyg span[data-type~=inline-memo] {
+    text-decoration: underline wavy var(--b3-protyle-inline-link-color);
+    text-decoration-skip-ink: none;
+    background-color: transparent !important;
+    cursor: pointer;
+    border-bottom: 0px solid !important;
+}
+
+.b3-typography s, .b3-typography span[data-type~=s], .protyle-wysiwyg s, .protyle-wysiwyg span[data-type~=s] {
+   color:inherit !important;
+   opacity:0.6;
+}
+.b3-typography strong, .b3-typography span[data-type~=strong], .protyle-wysiwyg strong, .protyle-wysiwyg span[data-type~=strong] {
+   color:inherit !important;
+}
+.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed]{
+   background-color:transparent;
+   border:1px solid var(--b3-theme-primary-light);
+}
+.tooltip {
+   box-shadow:var(--b3-point-shadow);
+}
+.layout-tab-container {
+   overflow:hidden;
+}
+#searchList, #globalSearchList {
+   background-color:var(--b3-theme-background);
+}
+.layout-tab-container,.search__tip kbd {
+   background-color:var(--b3-theme-background);
+}
+.config__panel>.b3-tab-bar {
+   background-color:var(--b3-theme-surface);
+}
+.b3-text-field:not(.b3-text-field--text):focus, .pcr-app .pcr-interaction .pcr-result:not(.b3-text-field--text):focus {
+box-shadow: inset 0 0 0 0.6px var(--b3-theme-on-surface);
+}
+.b3-typography table,
+.protyle-wysiwyg table {
+ font-size:90%;
+}
+.protyle-wysiwyg [fold="1"][data-node-id][data-type="NodeHeading"]::after {
+  /* 添加子标题折叠标记 */
+  content: var(--custom-h-fold-mark);
+  font-size: 60%;
+ opacity:0.6;
+  font-weight: 100;
+  position:absolute;
+  top:30px;
+}
+.config-bazaar__readme .item__img {
+   height:150px;
+   width:150px;
 }

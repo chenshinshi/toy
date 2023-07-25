@@ -22,3 +22,14 @@
    margin:1px 10px;
    padding:3px 0px;
 }
+
+div.list div.bq .p {
+   margin-top:0px !important;
+   margin-bottom:0px !important;
+   line-height:1.425em !important;
+   padding:0px;
+}   
+div.list div.bq .bq {
+   margin-left:10px !important;
+   margin-top:5px !important;
+}
