@@ -381,11 +381,13 @@ background-attachment: fixed;
 /**** 块图标 ****/
 /* 减淡块图标颜色 */
 .protyle-gutters svg {
-  color: var(--b3-theme-primary-light);
+  color: var(--b3-theme-primary);
+  opacity:0.35;
 }
 /* 增加块图标悬浮时背景色 */
 .protyle-gutters button:hover svg{
   color: var(--b3-theme-primary);
+  opacity:1;
 }
 .protyle-gutters button{
   /* padding: 2px 0 0 0;

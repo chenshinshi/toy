@@ -326,3 +326,11 @@ box-shadow: inset 0 0 0 0.6px var(--b3-theme-on-surface);
 .protyle-wysiwyg [data-node-id].li:hover:before {
    border-left:0.5px solid var(--b3-theme-primary-light);
 }
+.layout-tab-bar .item--pin {
+   min-width:30px;
+   max-width:30px;
+   padding:0px;
+}
+.layout-tab-bar .item--pin .item__text {
+   padding:0px;
+}
