@@ -1,3 +1,7 @@
+.layout--float.layout__dockl .fn__flex.fn__flex-1, .layout--float.layout__dockr .fn__flex.fn__flex-1 {
+   background-color:transparent;
+}
+
 /******* Cyan Theme **********/
 :root {
     /* 主色 */
@@ -201,7 +205,7 @@
 /*当前应用主题提示*/
 .toolbar .protyle-toolbar__divider::before {
         display: block;
-    content: "苍青";
+    content: "Logseq Cyan";
     font-size: 12px;
     margin: -5px 10px 0px 0px;
     opacity: 1;

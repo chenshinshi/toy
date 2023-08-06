@@ -1,3 +1,7 @@
+.layout--float.layout__dockl .fn__flex.fn__flex-1, .layout--float.layout__dockr .fn__flex.fn__flex-1 {
+   background-color:transparent;
+}
+
 /******* Autumn 主题 **********/
 :root {
     /* 主色 */
@@ -209,7 +213,7 @@
 }
 .toolbar .protyle-toolbar__divider::before {
         display: block;
-    content: "护眼";
+    content: "Eye Protection";
     font-size: 12px;
     margin: -5px 10px 0px 0px;
     opacity: 1;

@@ -1,3 +1,7 @@
+.layout--float.layout__dockl .fn__flex.fn__flex-1, .layout--float.layout__dockr .fn__flex.fn__flex-1 {
+   background-color:transparent;
+}
+
 /******* 深色主题配色模板 **********/
 :root {
     /* 主色 */
@@ -211,7 +215,7 @@ strong[style*="background-color: var(--b3-font-background13)"]{
 /*当前应用主题提示*/
 .toolbar .protyle-toolbar__divider::before {
         display: block;
-    content: "黑墨";
+    content: "lighthaus";
     font-size: 12px;
     margin: -5px 10px 0px 0px;
     opacity: 1;

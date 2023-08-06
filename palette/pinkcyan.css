@@ -1,3 +1,7 @@
+.layout--float.layout__dockl .fn__flex.fn__flex-1, .layout--float.layout__dockr .fn__flex.fn__flex-1 {
+   background-color:transparent;
+}
+
 /*主色*/
 :root {
   --b3-theme-background: #fff8f7;
@@ -80,11 +84,12 @@ background: linear-gradient(
     --h4-color: #955a6c;
     --h5-color: #955a6c;
     --h6-color: #955a6c;
+    --code-block-background:#f8f0e2 !important;
 }
 /*工具栏*/
 .toolbar .protyle-toolbar__divider::before {
         display: block;
-    content: "粉青";
+    content: "Olive";
     font-size: 12px;
     margin: -5px 10px 0px 0px;
     opacity: 1;
@@ -232,4 +237,7 @@ background: linear-gradient(
    border-radius:30px 0 0 0 !important;
    padding-left:20px;
    padding-right:10px;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-breadcrumb .protyle-breadcrumb__item svg {
+   color:var(--b3-theme-primary);
 }

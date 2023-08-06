@@ -38,7 +38,7 @@
 /*当前应用主题提示*/
 .toolbar .protyle-toolbar__divider::before {
         display: block;
-    content: "bearlight";
+    content: "Red Graphite";
     font-size: 12px;
     margin: -5px 10px 0px 0px;
     opacity: 1;
@@ -113,7 +113,8 @@ background-color:rgb(167, 176, 179) !important;
     --b3-font-background9:  var(--text-selection-background);
     --quote-border-color:var(--b3-theme-primary);
     --dock-background:#2e3235;
-   --left-sidebar-background:#2e3235
+   --left-sidebar-background:#2e3235;
+  --code-block-background:#fff !important;
 }
 .b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
     border-left: 4px solid var(--quote-border-color) !important;
@@ -140,7 +141,7 @@ background-color:rgb(167, 176, 179) !important;
 .b3-typography blockquote::before, .b3-typography .bq::before, .protyle-wysiwyg blockquote::before, .protyle-wysiwyg .bq::before {
    display:none;
 }
-.protyle-hint .b3-list-item .b3-list-item__text,.protyle-hint .b3-list-item .b3-list-item__graphic,.protyle-hint .b3-list-item.b3-list-item--two, .protyle-hint .emojis__title,.menu[data-v-06ff44db] {
+.protyle-hint .b3-list-item .b3-list-item__text,.protyle-hint .b3-list-item .b3-list-item__graphic,.protyle-hint .b3-list-item.b3-list-item--two, .protyle-hint .emojis__title,.menu[data-v-06ff44db],.protyle-toolbar__item svg {
     color: #cfcfcf;
 }
 .protyle-hint .b3-list-item.b3-list-item--focus .b3-list-item__text, .protyle-hint .b3-list-item.b3-list-item--focus .b3-list-item__graphic, .protyle-hint .b3-list-item:hover .b3-list-item__text, .protyle-hint .b3-list-item:hover .b3-list-item__graphic {
@@ -148,4 +149,7 @@ background-color:rgb(167, 176, 179) !important;
 }
 .layout-tab-bar {
    border-bottom:1px solid transparent !important;
+}
+.protyle-toolbar__item:hover svg {
+   color:var(--b3-theme-primary);
 }

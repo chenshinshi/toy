@@ -147,15 +147,7 @@
     --h4-color: #f48ea8;
     --h5-color: #f48ea8;
     --h6-color: #f48ea8;
-
-}
-.protyle-linenumber__rows{
-    background-color: #EFBBCF;
-}
-.protyle-reset .hljs,
-.protyle-wysiwyg .hljs,.b3-typography .hljs  {
-    background: #EFBBCF !important;
-
+    --code-block-background:#EFBBCF !important;
 }
 .protyle-wysiwyg ::selection{ 
     background-color:rgba(121, 150, 231, 0.215);
@@ -182,7 +174,7 @@
 /*当前应用主题提示*/
 .toolbar .protyle-toolbar__divider::before {
         display: block;
-    content: "粉紫";
+    content: "FruitsPink";
     font-size: 12px;
     margin: -5px 10px 0px 0px;
     opacity: 1;
@@ -263,4 +255,10 @@
    border-radius:30px 0 0 0 !important;
    padding-left:20px;
    padding-right:10px;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-breadcrumb .protyle-breadcrumb__item svg {
+   color:var(--b3-theme-primary);
+}
+.layout--float.layout__dockl .fn__flex.fn__flex-1, .layout--float.layout__dockr .fn__flex.fn__flex-1 {
+   background-color:transparent;
 }

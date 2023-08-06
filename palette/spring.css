@@ -1,3 +1,7 @@
+.layout--float.layout__dockl .fn__flex.fn__flex-1, .layout--float.layout__dockr .fn__flex.fn__flex-1 {
+   background-color:transparent;
+}
+
 /******* Spring **********
 需要在 theme.css 开启左边栏背景图功能
 ************/
@@ -202,7 +206,7 @@
 }
 .toolbar .protyle-toolbar__divider::before {
         display: block;
-    content: "春";
+    content: "Spring";
     font-size: 12px;
     margin: -5px 10px 0px 0px;
     opacity: 1;

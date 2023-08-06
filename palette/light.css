@@ -1,3 +1,7 @@
+.layout--float.layout__dockl .fn__flex.fn__flex-1, .layout--float.layout__dockr .fn__flex.fn__flex-1 {
+   background-color:transparent;
+}
+
 /******* 亮色主题配色模板 **********/
 :root {
     /* 主色 */
@@ -196,7 +200,7 @@
 }
 .toolbar .protyle-toolbar__divider::before {
         display: block;
-    content: "满白";
+    content: "Boring Light";
     font-size: 12px;
     margin: -5px 10px 0px 0px;
     opacity: 1;
@@ -265,4 +269,10 @@ filter:none;
    border-radius:30px 0 0 0 !important;
    padding-left:20px;
    padding-right:10px;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-breadcrumb .protyle-breadcrumb__item svg {
+   color:var(--b3-theme-primary);
+}
+.protyle-background__img img,.b3-typography span.img img:not(.emoji), .protyle-wysiwyg span.img img:not(.emoji),.layout-tab-bar .item__graphic,.b3-typography img.emoji, .protyle-wysiwyg img.emoji {
+   filter:grayscale(1);
 }

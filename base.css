@@ -120,7 +120,7 @@ background-attachment: fixed;
 /**** 菜单 ****/
 /* 右键菜单 */
 .b3-menu{
-  padding: 10px 5px;
+  padding: 10px 0px 10px 5px;
 }
 /* 菜单项 */
 .b3-menu__item{
@@ -372,6 +372,7 @@ background-attachment: fixed;
   border-radius: 30px;
   padding: 1px 10px;
   z-index: 100;
+    background-color: var(--dock-background);
 }
 
 /**** 页面标题 ****/
@@ -1496,4 +1497,10 @@ div.list div.bq::before {
 }
 :root {
 --custom-h-fold-mark: "ヾ(•ω•`。)有秘密！";
+}
+.toolbar .protyle-toolbar__divider::before {
+  min-width:90px;
+  max-width:90px;
+  text-align:right;
+    margin: -5px 0px 0px 0px !important;
 }

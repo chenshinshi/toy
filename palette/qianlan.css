@@ -1,3 +1,7 @@
+.layout--float.layout__dockl .fn__flex.fn__flex-1, .layout--float.layout__dockr .fn__flex.fn__flex-1 {
+   background-color:transparent;
+}
+
 :root {
     /* 主色 */
     --b3-theme-primary: #4a6a6e;
@@ -141,7 +145,7 @@
     --b3-protyle-inline-em-color: #202124;
     --b3-protyle-inline-s-color: #202124;
     --b3-protyle-inline-link-color: var(--b3-theme-primary);
-    --b3-protyle-inline-mark-background: rgb(228, 179, 74);
+    --b3-protyle-inline-mark-background: #d3b57f;
     --b3-protyle-inline-mark-color: #202124;
     --b3-protyle-inline-tag-color: #5f6368;
     --b3-protyle-inline-blockref-color: var(--b3-theme-primary);
@@ -159,10 +163,6 @@
 /* https://github.com/siyuan-note/siyuan/issues/6440 */
 .protyle-action--order:after {
     mix-blend-mode: multiply;
-}
-
-.b3-typography div.hljs, .protyle-wysiwyg div.hljs {
-    background-color: #f8f9fa;
 }
 
 
@@ -184,7 +184,7 @@
 }
 .toolbar .protyle-toolbar__divider::before {
         display: block;
-    content: "雨青";
+    content: "Rainy Puff";
     font-size: 12px;
     margin: -5px 10px 0px 0px;
     opacity: 1;
@@ -239,4 +239,10 @@
    border-radius:30px 0 0 0 !important;
    padding-left:20px;
    padding-right:10px;
+}
+.fn__flex-1.fn__flex.config__panel {
+   border-radius: var(--b3-border-radius-b) var(--b3-border-radius-b) !important;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-breadcrumb .protyle-breadcrumb__item svg {
+   color:var(--b3-theme-primary);
 }
