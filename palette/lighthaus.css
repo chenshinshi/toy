@@ -1,7 +1,6 @@
 .layout--float.layout__dockl .fn__flex.fn__flex-1, .layout--float.layout__dockr .fn__flex.fn__flex-1 {
    background-color:transparent;
 }
-
 /******* 深色主题配色模板 **********/
 :root {
     /* 主色 */
@@ -143,7 +142,8 @@
     /**** 配色 ****/
     --dock-background:              var(--b3-theme-surface); /* 顶栏、dock 栏背景色 */
     --left-sidebar-background:      var(--b3-theme-surface); /* 左边栏背景色 */
-    --left-sidebar-color:           var(--b3-theme-on-surface); /* 左边栏文字颜色 */
+    --left-sidebar-color:           #bababa; /* 左边栏文字颜色 */
+   --b3-toolbar-color:#bababa;
     --caret-color:                  var(--b3-theme-primary); /* 光标颜色 */
     --text-selection-background:    var(--b3-theme-primary-lighter); /* 文本选中背景色 */
     --text-selection-color:         inherit; /* 文本选中颜色 */
@@ -187,6 +187,7 @@
     --page-scrollbar-transition: opacity 800ms ease 0s; /* 分页加载条动画 */
     --flex-column-transition:    width 200ms cubic-bezier(0, 0.7, 0.4, 1); /* 侧边栏动画 */
     --common-transition:         all 1s cubic-bezier(0, 0.7, .2, 1) 0ms;   /* 通用动画 */
+    --blockquery:var(--b3-theme-surface-lighter);
 }
 
 /* 调整背景色设置时的字体颜色 */
@@ -221,10 +222,11 @@ strong[style*="background-color: var(--b3-font-background13)"]{
     opacity: 1;
     color: var(--b3-toolbar-color);
 }
+
 .protyle-wysiwyg ::selection{ 
     background-color:#ea92004d !important;
 }
-.b3-typography strong, .b3-typography span[data-type~=strong], .protyle-wysiwyg strong, .protyle-wysiwyg span[data-type~=strong] {
+.b3-typography strong, .b3-typography span[data-type~=strong], .protyle-wysiwyg strong, .protyle-wysiwyg span[data-type~=strong],.b3-typography .h1, .b3-typography h1, .b3-typography .h2, .b3-typography h2, .b3-typography .h3, .b3-typography h3, .b3-typography .h4, .b3-typography h4, .b3-typography .h5, .b3-typography h5, .b3-typography .h6, .b3-typography h6, .protyle-wysiwyg .h1, .protyle-wysiwyg h1, .protyle-wysiwyg .h2, .protyle-wysiwyg h2, .protyle-wysiwyg .h3, .protyle-wysiwyg h3, .protyle-wysiwyg .h4, .protyle-wysiwyg h4, .protyle-wysiwyg .h5, .protyle-wysiwyg h5, .protyle-wysiwyg .h6, .protyle-wysiwyg h6 {
     color:rgba(255, 255, 255, 0.9);
 }
 .status__counter:not(:empty) {
@@ -239,7 +241,79 @@ strong[style*="background-color: var(--b3-font-background13)"]{
 .card__action .b3-button {
    opacity:0.8;
 }
-.fn__flex-shrink, .fn__flex-shrink .block__icons {
+.b3-typography blockquote::before, .b3-typography .bq::before, .protyle-wysiwyg blockquote::before, .protyle-wysiwyg .bq::before {
+   content:"“";
+   color:var(--quote-border-color);
+   display:block;
+   font-size:400%;
+   position:absolute;
+   margin-left:-70px;
+}
+.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
+    background-color:transparent;
+    border-left:none;
+    padding-top:10px;
+    padding-bottom:5px;
+   border-radius:30px 0 0 0 !important;
+   padding-left:20px;
+   padding-right:10px;
+    color: #f8f8f8dd;
+border: 3px solid var(--b3-theme-surface-lighter);
+}
+/*room移植*/
+[data-type='wnd']::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -3;
+   /* background-image: var(--allen-background-image);*/
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    background: rgb(0 0 0 / 58%);
+    /*backdrop-filter: blur(140px);*/
+}
+.fn__flex-1.fn__flex [data-type='wnd'] {
+    background: transparent;
+    margin: 0px auto;
+    padding: 2px 10px;
+    position: relative;
+    margin: 10px;
+    box-shadow: 2px 5px 4px 3px #00000038;
+    overflow: hidden;
+    z-index: 2;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+[data-type='wnd'] .layout-tab-container, [data-type='wnd'] .protyle, [data-type='wnd'] .protyle-content, [data-type='wnd'] .protyle-wysiwyg, .block__icons {
+    background: transparent;
+}
+.toolbar, #dockLeft, #dockRight, #dockTop, #dockBottom {
+    background: transparent;
+}
+.protyle-background__img img {
+    filter: brightness(0.6);
+}
+.b3-typography img, .protyle-wysiwyg img {
+    filter:brightness(0.6);
+}
+
+body {
+    background-color: white;
+    background-image: url(/appearance/themes/toy/src/lh.jpg);
+    background-position: center top;
+    background-size: cover;
+}
+.fn__flex.fn__flex-1 {
+   background-color:transparent;
+}
+.dock#dockBottom {
+   border-top:none;
+}
+/*.fn__flex-shrink, .fn__flex-shrink .block__icons {
    background-color:transparent;
 }
 
@@ -251,22 +325,91 @@ strong[style*="background-color: var(--b3-font-background13)"]{
 }
 .layout__resize--lr {
    opacity:0;
+}*/
+.layout__center .layout-tab-bar .item--focus {
+    border-radius: 40px;
+    background: #915d06b3;
 }
-.b3-typography blockquote::before, .b3-typography .bq::before, .protyle-wysiwyg blockquote::before, .protyle-wysiwyg .bq::before {
-   content:"“";
-   color:var(--quote-border-color);
-   display:block;
-   font-size:400%;
-   position:absolute;
-   margin-left:-70px;
+.layout__center .layout-tab-bar .item {
+    border: none;
+    margin: 0 4px;
+    padding-left: 20px;
+    transition: all 0.5s ease-in-out;
+    border-bottom:none;
 }
-.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
-    background-color:var(--b3-theme-surface-lighter);
-    border-left:none;
-    padding-top:10px;
-    padding-bottom:5px;
-   border-radius:30px 0 0 0 !important;
-   padding-left:20px;
-   padding-right:10px;
-    color: lemonchiffon;
+.layout--float.layout__dockl,.layout--float.layout__dockr {
+   border-radius:6px !important;
+}
+.layout-tab-bar {
+   background-color:transparent;
+}
+.layout__center .layout-tab-bar {
+    background: transparent;
+    padding: 6px;
+    border: none;
+}
+.layout__center .protyle-breadcrumb {
+    background: transparent;
+    margin-top: 5px;
+}
+#layouts div.layout__center div[data-type="wnd"] ul.layout-tab-bar .item.item--focus,#layouts div.layout__center div[data-type="wnd"] ul.layout-tab-bar .item {
+   border-bottom:none;
+}
+.layout__wnd--active .layout-tab-bar .item--focus:after {
+   display:none;
+}
+.b3-typography table td, .b3-typography table th, .protyle-wysiwyg table td, .protyle-wysiwyg table th {
+   background-color:#191919;
+}
+.b3-typography table tr:nth-child(2n) td, .protyle-wysiwyg table tr:nth-child(2n) td {
+   background-color:#222222;
+}
+.b3-typography table, .protyle-wysiwyg table,.protyle-wysiwyg .code-block, .b3-typography .code-block {
+   opacity:0.8;
+}
+.b3-typography table, .protyle-wysiwyg table {
+   color:#fff;
+}
+.block__popover>.block__icons,.block__popover .protyle {
+   background-color:rgba(0,0,0,0.75);
+}
+.block__popover {
+   background-color:transparent;
+}
+.block__popover .protyle-breadcrumb {
+   background-color:transparent;
+   border-bottom:1px solid #9f9f9f;
+}
+.protyle-toolbar {
+    background-color: #00000042;
+    backdrop-filter: blur(16px);
+}
+
+element.style {
+    top: 444.111px;
+    left: 1002.67px;
+}
+.b3-dialog__container, .b3-menu, .protyle-util {
+    border: none;
+}
+.protyle-util {
+    background-color: rgba(0,0,0,0.18);
+    backdrop-filter: blur(80px);
+}
+.b3-dialog__container {
+   background-color:rgba(0,0,0,0.7);
+   backdrop-filter:blur(90px);
+}
+.config__panel>.b3-tab-bar {
+    background-color: rgba(0,0,0,0.45);
+    border-radius: 10px 0px 0px 10px !important;
+}
+.config__tab-wrap {
+   background-color:rgba(0,0,0,0.37);
+}
+.protyle-util .b3-text-field.b3-text-field--text.fn__block,.b3-text-field, .pcr-app .pcr-interaction .pcr-result {
+   background-color:transparent;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons {
+    background-color: rgba(255, 255, 255, 0.22);
 }

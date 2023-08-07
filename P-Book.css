@@ -2,6 +2,12 @@
     transform: scale(1.3) !important;
     margin: 2px 4px !important;
 }
+.protyle-icons {
+   display:inline-flex;
+}
+.protyle-background__icon:hover {
+   background-color:var(--b3-theme-primary-lightest) !important;
+}
 /*闪卡悬浮显示*/
 .card__main .protyle-wysiwyg span[data-type~=mark], [data-key="viewCards"] .protyle-wysiwyg span[data-type~=mark] {
     border-bottom:2px solid var(--b3-protyle-inline-mark-color);
@@ -278,11 +284,11 @@ border-top: 1px solid var(--b3-theme-surface-lighter) !important;
 }
 
 .b3-typography s, .b3-typography span[data-type~=s], .protyle-wysiwyg s, .protyle-wysiwyg span[data-type~=s] {
-   color:inherit !important;
+   color:inherit;
    opacity:0.6;
 }
 .b3-typography strong, .b3-typography span[data-type~=strong], .protyle-wysiwyg strong, .protyle-wysiwyg span[data-type~=strong] {
-   color:inherit !important;
+   color:inherit;
 }
 .protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed]{
    background-color:transparent;

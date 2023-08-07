@@ -1,7 +1,9 @@
 .layout--float.layout__dockl .fn__flex.fn__flex-1, .layout--float.layout__dockr .fn__flex.fn__flex-1 {
    background-color:transparent;
 }
-
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons {
+    background-color: rgba(255, 255, 255, 0.22);
+}
 /******* Cyan Theme **********/
 :root {
     /* 主色 */
