@@ -286,7 +286,12 @@ border-top: 1px solid var(--b3-theme-surface-lighter) !important;
 }
 .protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed]{
    background-color:transparent;
-   border:1px solid var(--b3-theme-primary-light);
+border: 3px solid transparent;
+    box-shadow: 0 0 0 2px var(--blockquery) inset, 0 0 0 4px var(--blockquery);
+}
+.protyle-wysiwyg .protyle-breadcrumb__bar {
+    font-size: 14px;
+    border-bottom: 2px solid var(--blockquery);
 }
 .tooltip {
    box-shadow:var(--b3-point-shadow);
@@ -447,3 +452,6 @@ code.hljs {
    background-color:var(--code-block-background);
 }
 /* -------------------------------------------------代码块样式 END--------------------------------------------------- */
+:root {
+       --blockquery:var(--b3-theme-primary-light);
+}

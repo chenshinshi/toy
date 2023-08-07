@@ -3137,21 +3137,17 @@ window.theme = {};
 
 /* 颜色配置文件列表 */
 window.theme.colors = [
-    'palette/autumn.css',
-    'palette/blue.css',
-    'palette/cyan.css',
-    'palette/dark.css',
-    'palette/green.css',
-    'palette/light.css',
-    'palette/spring.css',
-    'palette/tonight.css',
-    'palette/fountain.css',
     'palette/bearlight.css',
-    'palette/fruitspink.css',
-    'palette/qianlan.css',
-    'palette/pinkcyan.css',
+    'palette/fountain.css',
+    'palette/rainypuff.css',
     'palette/pbook.css',
-    'palette/yinxiang.css',
+    'palette/autumn.css',
+    'palette/eyeprotection.css',
+    'palette/fruitspink.css',
+    'palette/olive.css',
+    'palette/sapphire.css',
+    'palette/logseqcyan.css',
+    'palette/lighthaus.css',
 ];
 
 /* DOM 节点 ID */

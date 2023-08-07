@@ -115,6 +115,13 @@ background-color:rgb(167, 176, 179) !important;
     --dock-background:#2e3235;
    --left-sidebar-background:#2e3235;
   --code-block-background:#fff !important;
+    --h1-color: inherit;
+    --h2-color: inherit;
+    --h3-color: inherit;
+    --h4-color: inherit;
+    --h5-color: inherit;
+    --h6-color: inherit;
+    --switch-uncheck-color:         #FFF; /* switch 开关未开启时颜色 */
 }
 .b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
     border-left: 4px solid var(--quote-border-color) !important;

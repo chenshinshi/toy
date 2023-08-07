@@ -18,6 +18,15 @@
 --quote-border-color:var(--h1-color);
 --quote-color:#9b90ab;
 --text-selection-background:rgba(121, 150, 231, 0.215);
+    --switch-uncheck-color:         #FFF; /* switch 开关未开启时颜色 */
+    --block-margin:     var(--margin-top-bottom)  var(--margin-left-right)  !important; /* 块间距 */
+    --block-padding:    var(--padding-top-bottom) var(--padding-left-right) !important; /* 块内边距 */
+    --margin-top-bottom:            2px;    /* 上下 margin */
+    --margin-left-right:            0px;    /* 左右 margin */
+    --padding-top-bottom:           2px;    /* 上下 padding */
+    --padding-left-right:           4px;    /* 左右 padding */
+    --line-height:                  1.75em; /* 行高 */
+
 
 
     /* 文字颜色 */

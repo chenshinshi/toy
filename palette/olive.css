@@ -1,0 +1,249 @@
+.layout--float.layout__dockl .fn__flex.fn__flex-1, .layout--float.layout__dockr .fn__flex.fn__flex-1 {
+   background-color:transparent;
+}
+
+/*主色*/
+:root {
+    --block-margin:     var(--margin-top-bottom)  var(--margin-left-right)  !important; /* 块间距 */
+    --block-padding:    var(--padding-top-bottom) var(--padding-left-right) !important; /* 块内边距 */
+    --margin-top-bottom:            2px;    /* 上下 margin */
+    --margin-left-right:            0px;    /* 左右 margin */
+    --padding-top-bottom:           2px;    /* 上下 padding */
+    --padding-left-right:           4px;    /* 左右 padding */
+    --line-height:                  1.75em; /* 行高 */
+
+  --b3-theme-background: #fff8f7;
+  --b3-theme-surface: #fff8f7;
+  --b3-toolbar-blur-background: #fff8f7;
+    --b3-theme-primary: #4b6722;
+    --b3-theme-primary-light: #e8c5ca;
+    --b3-theme-primary-lighter: rgba(198,177,73, 0.38);
+    --b3-theme-primary-lightest: rgba(198,177,73, 0.12);
+--text-selection-background:rgba(197, 213, 173,0.4);
+    --b3-theme-on-primary: #5a444b;
+    --b3-theme-on-background:#5a444b;
+    --b3-theme-on-surface:var(--b3-theme-on-background);
+    --b3-protyle-inline-link-color: var(--b3-theme-primary);
+    --b3-protyle-inline-blockref-color: var(--b3-theme-primary);
+    --b3-protyle-inline-mark-background: #ffd5cd;
+    --left-sidebar-background:#d7d9c8;
+    --dock-background:var(--left-sidebar-background);
+    --left-sidebar-color:#7e5537;
+    --b3-theme-background-light: #dab54c;
+    --quote-border-color:var(--b3-theme-primary);
+    --column-scrollbar-background:#dfdbcf;
+    --column-scrollbar-hover-background:#dfd3b1;
+    --quote-color:#955a6c;
+    --b3-dialog-shadow:0 0 2px rgb(132 132 132 / 10%) inset, 0 1px 4px rgb(68 68 68 / 20%);
+    --b3-point-shadow:0 0 2px rgb(132 132 132 / 10%) inset, 0 1px 4px rgb(68 68 68 / 20%);
+    --switch-uncheck-color:         #FFF; /* switch 开关未开启时颜色 */
+
+}
+.fn__flex-1.protyle .protyle-content, .protyle-content {
+    background-image: url(/appearance/themes/toy/src/8.png) !important;
+    background-position: 50% center;
+    background-attachment: local;
+    text-align: justify;
+}
+
+/* .p {
+    padding-bottom: 0px !important;
+background: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 50%,
+    rgba(204, 153, 69, 0.8) 50%,
+    rgba(204, 153, 69, 0.8) 100%
+  );
+  background-size: 7px 1px;
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+} */
+
+/*PDF*/
+.pdf__outer #viewerContainer:not(.pdfPresentationMode){
+    mix-blend-mode:multiply;
+}
+/*字色*/
+:root {
+    --b3-font-background1: hsla(0deg,100%,88%,0.3);
+    --b3-font-background2: hsla(50deg,100%,50%,0.3);
+    --b3-font-background3: hsla(177deg,46%,80%,0.3);
+    --b3-font-background4: hsla(100deg,58%,75%,0.3);
+    --b3-font-background5: hsla(0deg, 0%, 77%, 0.3);
+    --b3-font-background8: hsla(31, 100%, 73%,0.3);
+    --b3-font-background6:  hsla(259, 100%, 89%,0.3);
+    --b3-font-background7:  rgba(177,217,255,0.3);
+    --b3-font-background9:  var(--text-selection-background);
+    --b3-font-color9: #dd4c4f;
+    --b3-font-color7: #1478d4;
+    --b3-font-color3: #44c7c9;
+    --b3-font-color11: var(--b3-card-success-color);
+    --b3-font-color5: var(--b3-theme-on-surface);
+    --b3-font-color10: var(--b3-theme-primary);
+    --b3-font-color2: var(--b3-theme-secondary);
+    --b3-font-color12: var(--b3-theme-error);
+    --b3-font-color1:  #f5539e;
+    --b3-font-color6: #944194;
+    --b3-font-color4: #65b84d;
+    --b3-font-color8: #f5822e;
+    --b3-font-color13: var(--b3-theme-background);
+    --h1-color: #955a6c;
+    --h2-color: #955a6c;
+    --h3-color: #955a6c;
+    --h4-color: #955a6c;
+    --h5-color: #955a6c;
+    --h6-color: #955a6c;
+    --code-block-background:#e8c5ca !important;
+    --blockquery:#b95d6d !important;
+    --quote-border-color:#b95d6d !important;
+}
+/*工具栏*/
+.toolbar .protyle-toolbar__divider::before {
+        display: block;
+    content: "Olive";
+    font-size: 12px;
+    margin: -5px 10px 0px 0px;
+    opacity: 1;
+    color: var(--b3-toolbar-color);
+}
+.toolbar{
+  background-color:   var(--dock-background);
+  border-bottom:      var(--dock-border);
+	height:32px;
+	margin-bottom: 0px;
+	opacity: 1;
+	transition: none;
+	transform:none;
+	z-index:8;
+	transition-delay: none;
+}
+.toolbar__window{
+	background-color: transparent;
+	height:40px;
+}
+/*样式调整*/
+.protyle-attr>.b3-tooltips:hover::after {
+    display: inline-block;
+    background-color: rgba(90, 68, 75, 0.6) !important;
+    font-size:1rem !important;
+    padding:5px 10px;
+    opacity:1;
+}
+.tooltip.tooltip--memo{
+    font-size: 1.1rem !important;
+    line-height: 1.3em;
+    background-color:#f8f0e2;
+    box-shadow: var(--b3-point-shadow);
+    box-sizing: border-box;
+    color: var(--b3-theme-on-primary) !important;
+    max-width:660px;
+    padding: 5px 10px;
+    background-image: url(/appearance/themes/toy/src/8.png) !important;
+}
+.config__panel>.b3-tab-bar {
+   background-color:var(--left-sidebar-background) !important;
+}
+.config__panel>.b3-tab-bar .b3-list-item,.b3-list-item__text{
+   color:var(--left-sidebar-color) !important;
+}
+.config__tab-wrap {
+   background-color:#fff8f7;
+   color:var(--left-sidebar-color) !important;
+}
+.b3-menu__icon {
+   color:var(--b3-theme-primary) !important;
+}
+.b3-menu, .protyle-util,.b3-menu__item,.b3-menu__submenu{
+   background-color:#fff8f7 !important;
+   color:var(--left-sidebar-color) !important;
+}
+.b3-dialog__container{
+   background-color:#fff8f7 !important;
+}
+.b3-text-field, .pcr-app .pcr-interaction .pcr-result {
+   background-color:#fff8f7 !important;
+}
+.b3-menu__item:hover {
+   background-color:var(--left-sidebar-background) !important;
+   color:var(--b3-theme-primary) !important;
+}
+.b3-menu__item--current>.b3-menu__label {
+   color:var(--b3-theme-primary) !important;
+}
+.b3-typography table td, .b3-typography table th, .protyle-wysiwyg table td, .protyle-wysiwyg table th {
+   border-color: var(--h1-color);
+}
+[data-type="myPlugin"],.card__action .b3-button.fn__flex-1,#searchInclude.b3-button.b3-button--mid {
+   color:#fff;
+}
+.b3-switch:checked {
+  background-color:var(--left-sidebar-background);
+}
+.b3-button--outline {
+  color:var(--b3-theme-primary);
+}
+.b3-dialog__action .b3-button {
+  color:#7e5537;
+}
+.block__popover>.block__icons,.card__main .block__icons {
+    border-radius: var(--b3-border-radius-b) var(--b3-border-radius-b) 0 0;
+    background-color: var(--dock-background);
+}
+.layout__resize--lr {
+   opacity:0;
+}
+/*PDF*/
+.pdf__outer #viewerContainer:not(.pdfPresentationMode){
+    mix-blend-mode:unset !important;
+}
+#mainContainer {
+   background-color:var(--b3-theme-background);
+}
+.fn__flex-shrink .block__icons,.fn__flex-1.fn__flex-column.file-tree {
+   background-color:var(--b3-theme-background);
+}
+.b3-dialog__container .config__panel>.b3-tab-bar::before{
+   color:#7E5537;
+}
+/* 表格样式 */
+.b3-typography table,
+.protyle-wysiwyg table {
+    border-radius:0;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-top: 2px solid var(--b3-theme-primary-light); 
+    border-left: 2px solid var(--b3-theme-primary-light);
+    border-bottom: none;
+    border-right: none;
+    font-size: 90%;
+    line-height: 1.625em !important;
+}
+.b3-typography table tr td, .b3-typography table tr th, .protyle-wysiwyg table tr td,.protyle-wysiwyg table tr th {
+    background-color: var(--b3-theme-background) !important;
+    border-spacing: 0;
+    border-top: none;
+    border-left: none;
+    border-right: 2px solid var(--b3-theme-primary-light);
+    border-bottom: 2px solid var(--b3-theme-primary-light);
+}
+.b3-typography blockquote::before, .b3-typography .bq::before, .protyle-wysiwyg blockquote::before, .protyle-wysiwyg .bq::before {
+   content:"“";
+   color:var(--quote-border-color);
+   display:block;
+   font-size:400%;
+   position:absolute;
+   margin-left:-70px;
+}
+.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
+    background-color:#b95d6d54;
+    border-left:none;
+    padding-top:10px;
+    padding-bottom:5px;
+   border-radius:30px 0 0 0 !important;
+   padding-left:20px;
+   padding-right:10px;
+}
+#layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-breadcrumb .protyle-breadcrumb__item svg {
+   color:var(--b3-theme-primary);
+}

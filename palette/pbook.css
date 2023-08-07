@@ -4,6 +4,7 @@
 
 :root {
     --b3-theme-primary: rgba(101,74,143,1);
+    --b3-protyle-inline-link-color: var(--b3-theme-primary);
     --b3-protyle-inline-blockref-color:rgba(101,74,143,1);
     --b3-theme-on-background:rgba(40,28,59,1);
 --b3-theme-on-surface:rgba(89,75,93,1);
@@ -37,6 +38,7 @@
     --quote-border-color:transparent;
 --b3-protyle-inline-mark-background:#eab13f;
    --code-block-background:#c3bec8 !important;
+    --blockquery:transparent !important;
 }
 .protyle{
     background-color:write
