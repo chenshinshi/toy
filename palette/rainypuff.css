@@ -5,10 +5,12 @@
 :root {
     /* 主色 */
     --b3-theme-primary: #4a6a6e;
+    --switch-uncheck-color:         #FFF; /* switch 开关未开启时颜色 */
     --b3-theme-primary-light: rgba(211, 190, 168, 0.54);
     --b3-theme-primary-lighter: rgba(211, 190, 168, 0.38);
     --b3-theme-primary-lightest: rgba(211, 190, 168, 0.12);
     --b3-theme-secondary: #f3a92f;
+--column-scrollbar-background:var(--b3-list-hover);
     --left-sidebar-background:#dce4ea;
     --left-sidebar-color:#182026;
     --dock-background:var(--left-sidebar-background);
