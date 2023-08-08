@@ -20,7 +20,7 @@
     --b3-theme-primary-lighter: rgba(198,177,73, 0.38);
     --b3-theme-primary-lightest: rgba(198,177,73, 0.12);
 --text-selection-background:rgba(197, 213, 173,0.4);
-    --b3-theme-on-primary: #5a444b;
+    --b3-theme-on-primary: #fff;
     --b3-theme-on-background:#5a444b;
     --b3-theme-on-surface:var(--b3-theme-on-background);
     --b3-protyle-inline-link-color: var(--b3-theme-primary);

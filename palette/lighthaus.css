@@ -15,7 +15,7 @@
     --b3-theme-error: #d23f31;
 
     /* 文字颜色 */
-    --b3-theme-on-primary:   #fff;
+    --b3-theme-on-primary:   #191919;
     --b3-theme-on-secondary: #fff;
     --b3-theme-on-background:#c9d1d9;
     --b3-theme-on-surface:   #8a878e;
@@ -188,6 +188,7 @@
     --flex-column-transition:    width 200ms cubic-bezier(0, 0.7, 0.4, 1); /* 侧边栏动画 */
     --common-transition:         all 1s cubic-bezier(0, 0.7, .2, 1) 0ms;   /* 通用动画 */
     --blockquery:var(--b3-theme-surface-lighter);
+--b3-dockright-color:#bababa;
 }
 
 /* 调整背景色设置时的字体颜色 */
@@ -261,30 +262,29 @@ strong[style*="background-color: var(--b3-font-background13)"]{
 border: 3px solid var(--b3-theme-surface-lighter);
 }
 /*room移植*/
-[data-type='wnd']::before {
+/*[data-type='wnd']::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -3;
+    z-index: -3;*/
    /* background-image: var(--allen-background-image);*/
-    background-position: center top;
+   /* background-position: center top;
     background-size: cover;
     background-attachment: fixed;
-    background: rgb(0 0 0 / 58%);
+    background: rgb(0 0 0 / 58%);*/
     /*backdrop-filter: blur(140px);*/
-}
+/*}*/
 .fn__flex-1.fn__flex [data-type='wnd'] {
-    background: transparent;
+    background: rgb(0 0 0 / 58%) !important;
     margin: 0px auto;
     padding: 2px 10px;
     position: relative;
     margin: 10px;
     box-shadow: 2px 5px 4px 3px #00000038;
     overflow: hidden;
-    z-index: 2;
     box-sizing: border-box;
     border-radius: 6px;
 }
@@ -370,19 +370,26 @@ body {
 .b3-typography table, .protyle-wysiwyg table {
    color:#fff;
 }
-.block__popover>.block__icons,.block__popover .protyle {
+.block__popover .protyle {
    background-color:rgba(0,0,0,0.75);
+    backdrop-filter: blur(90px);
 }
-.block__popover {
-   background-color:transparent;
+.block__popover>.block__icons {
+   background-color:#12100e;
+}
+.block__popover,#searchList, #globalSearchList,.search__header, #criteria.fn__flex,.search__tip kbd {
+   background-color:transparent !important;
+}
+.search__tip kbd  {
+  border:1px solid #5f626bad;
 }
 .block__popover .protyle-breadcrumb {
    background-color:transparent;
    border-bottom:1px solid #9f9f9f;
 }
 .protyle-toolbar {
-    background-color: #00000042;
-    backdrop-filter: blur(16px);
+    background-color: rgba(0,0,0,0.9);
+    backdrop-filter: blur(140px);
 }
 
 element.style {
@@ -393,8 +400,23 @@ element.style {
     border: none;
 }
 .protyle-util {
-    background-color: rgba(0,0,0,0.18);
+    background-color: rgba(0,0,0,0.75);
     backdrop-filter: blur(80px);
+}
+[data-key="⌘P"] .b3-dialog__container {
+   background-color:rgba(0,0,0,0.75);
+}
+[data-key="⌘P"] .search__preview {
+   background-color:rgba(0,0,0,0.2);
+}
+[data-key="⌘P"] .search__preview .protyle-breadcrumb {
+   background-color:transparent;
+}
+.card__block.fn__flex-1.card__block--hidemark.protyle,.card__block.fn__flex-1.protyle {
+   background-color:rgba(255,255,255,0.04);
+}
+.card__main,.card__block.fn__flex-1.card__block--hidemark.protyle .protyle-breadcrumb,.card__block.fn__flex-1.protyle .protyle-breadcrumb{
+   background-color:transparent;
 }
 .b3-dialog__container {
    background-color:rgba(0,0,0,0.7);
@@ -412,4 +434,34 @@ element.style {
 }
 #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-content .protyle-background .protyle-background__img .protyle-icons {
     background-color: rgba(255, 255, 255, 0.22);
+}
+.b3-menu {
+   padding:10px 5px;
+background-color: rgba(0,0,0,0);
+}
+.b3-menu__item--show>.b3-menu__submenu {
+background-color: rgba(0,0,0,0);
+}
+.b3-menu__item--show>.b3-menu__submenu::before,.b3-menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -3;
+   /* background-image: var(--allen-background-image);*/
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    background: rgb(0 0 0 / 73%);
+    backdrop-filter: blur(140px);
+    border-radius:6px;
+}
+
+.b3-menu__item {
+   background-color:transparent;
+}
+.tooltip,.tooltip.tooltip--memo{
+      opacity:0.8 !important;
 }
