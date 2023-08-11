@@ -8,10 +8,11 @@
     --b3-theme-primary:         #1b9061; /* 主色调，一般用在按钮等其他需要醒目的地方 */
     --b3-theme-primary-light:   #1b90618c; /* 主色调的透明色，用于文本选中背景等 */
     --b3-theme-primary-lighter: #1b906160;
+--column-scrollbar-background-hover:#35845b;
     --b3-theme-primary-lightest:#1b906120;
     --b3-theme-secondary:       #f3a92f;
-    --b3-theme-background:      #bee4c1; /* 背景色，主要用于编辑器背景 */
-    --b3-theme-surface:         #aadcb3; /* 主要用于分栏背景 */
+    --b3-theme-background:      #d4e7d8; /* 背景色，主要用于编辑器背景 */
+    --b3-theme-surface:         #c6dcc9; /* 主要用于分栏背景 */
     --b3-theme-surface-light:   #f7f6f38c;
     --b3-theme-error:           #d23f31;
 
@@ -250,3 +251,4 @@
    padding-left:20px;
    padding-right:10px;
 }
+

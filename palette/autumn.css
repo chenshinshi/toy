@@ -9,6 +9,7 @@
     --b3-theme-primary-light:   rgba(164, 115, 39, 0.54); /* 主色调的透明色，用于文本选中背景等 */
     --b3-theme-primary-lighter: rgba(164, 115, 39, 0.3);
     --b3-theme-primary-lightest:rgba(164, 115, 39, 0.1);
+--column-scrollbar-background-hover:#ebbd70;
     --b3-theme-secondary:       #f3a92f;
     --b3-theme-background:      #F6F1E0; /* 背景色，主要用于编辑器背景 */
     --b3-theme-surface:         #EDE7CF; /* 主要用于分栏背景 */
@@ -259,3 +260,5 @@
 #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-breadcrumb .protyle-breadcrumb__item svg {
    color:var(--b3-theme-primary);
 }
+
+

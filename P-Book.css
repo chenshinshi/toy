@@ -11,13 +11,13 @@
 /*闪卡悬浮显示*/
 .card__main .protyle-wysiwyg span[data-type~=mark], [data-key="viewCards"] .protyle-wysiwyg span[data-type~=mark] {
     border-bottom:2px solid var(--b3-protyle-inline-mark-color);
-    background-color:transparent;
+    background-color:transparent !important;
     padding: 0 2px;
     background-image:none;
 }
 .card__block--hidemark span[data-type~=mark] {
     border-bottom:2px solid var(--b3-protyle-inline-mark-color);
-    background-color:transparent;
+    background-color:transparent !important;
     padding: 0 2px;
     background-image:none;
 }
@@ -245,11 +245,22 @@ box-shadow: var(--b3-point-shadow) !important;
 .protyle-content::-webkit-scrollbar {
     width: 10px;
 }
+.protyle-wysiwyg .table>div:first-child::-webkit-scrollbar {
+   height:6px !important;
+}
+.pdf__outer #viewerContainer:not(.pdfPresentationMode)::-webkit-scrollbar {
+   width:10px !important;
+}
 #layouts > .fn__flex-1 > .fn__flex-column ::-webkit-scrollbar,::-webkit-scrollbar{ width: 6px;}
 ::-webkit-scrollbar-thumb{
     background-color:var(--column-scrollbar-background) !important;
 }
-
+::-webkit-scrollbar-thumb:hover{
+    background-color:var(--column-scrollbar-background-hover) !important;
+}
+::-webkit-scrollbar:hover{
+   filter:brightness(1.5);
+}
 :root {
     --b3-scroll-color:transparent !important;
 }
@@ -298,6 +309,9 @@ border: 3px solid transparent;
 .protyle-wysiwyg .protyle-breadcrumb__bar {
     font-size: 14px;
     border-bottom: 2px solid var(--blockquery);
+    border-radius:0px;
+    background-color:transparent;
+    padding:0px;
 }
 .tooltip {
    box-shadow:var(--b3-point-shadow);
@@ -460,4 +474,69 @@ code.hljs {
 /* -------------------------------------------------代码块样式 END--------------------------------------------------- */
 :root {
        --blockquery:var(--b3-theme-primary-light);
+}
+.protyle-breadcrumb__bar {
+   border-radius:30px;
+   background-color:var(--b3-theme-surface);
+   padding:0px 10px;
+}
+.protyle-breadcrumb {
+   margin:5px;
+   margin-bottom:0px;
+   background-color:transparent;
+   height:30px;
+   position:absolute;
+}
+.protyle-breadcrumb .block__icon--show {
+   border-radius:30px;
+   padding:8px;
+   background-color:var(--b3-theme-surface);
+   opacity:0.6;
+}
+.protyle-content {
+    float: left;
+    padding-top: 40px;
+}
+.b3-typography table td, .protyle-wysiwyg table td {
+background-color: var(--b3-theme-background);
+}
+.protyle-attr--refcount {
+  font-size:14px;
+  border-radius:30px;
+  padding:4px 8px;
+  opacity:0.8;
+  transfrom:scale3d(0.8,0.8,0.8);
+}
+.table table {
+  border:2px solid var(--blockquery);
+}
+.toolbar__item:has(#tts-content) {
+    margin-left: -56px!important;
+    margin-right: 46px!important;
+}
+#tts-content {
+    margin: 3px;
+    font-size: 12px;
+}
+.pdf__outer #viewerContainer:not(.pdfPresentationMode) {
+   margin-bottom:20px;
+}
+#sidebarContainer {
+   background-color:transparent;
+}
+.thumbnailSelectionRing {
+   box-shadow:unset;
+    margin: 0 auto 0 20px;
+}
+.thumbnailImage {
+   box-shadow:unset;
+   border:none;
+}
+.textLayer .highlight.selected {
+   background-color: transparent;
+   border:2px solid var(--b3-theme-primary);
+}
+.color__square:hover {
+    border:2px solid var(--b3-theme-primary);
+    transition:none;
 }

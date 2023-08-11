@@ -31,7 +31,7 @@
     |Olive|chenshinshi|☀️|浅绿|浅粉|浅绿|中式古典清新|
     |Sapphire|langzhou|🌃|深蓝|深蓝|水蓝|深蓝色夜间主题|
     |Logseq Cyan|langzhou|🌃|深青|深青|黄|深绿色夜间主题|
-    |Lighthaus|VIWZ|🌃|黑|黑|黄|黑色夜间主题|
+    |Lighthaus|langzhou|🌃|黑|黑|黄|黑色夜间主题|
 
 ### 修改
 

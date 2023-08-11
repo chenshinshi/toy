@@ -13,6 +13,7 @@
 --column-scrollbar-background:var(--b3-list-hover);
     --left-sidebar-background:#dce4ea;
     --left-sidebar-color:#182026;
+--column-scrollbar-background-hover:#8fb5b2;
     --dock-background:var(--left-sidebar-background);
     --block-margin:     var(--margin-top-bottom)  var(--margin-left-right)  !important; /* 块间距 */
     --block-padding:    var(--padding-top-bottom) var(--padding-left-right) !important; /* 块内边距 */
@@ -257,4 +258,10 @@
 }
 #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-breadcrumb .protyle-breadcrumb__item svg {
    color:var(--b3-theme-primary);
+}
+.table table {
+  border:2px solid var(--blockquery);
+}
+.protyle-wysiwyg [data-node-id] span[data-type~=tag] {
+   background-color:rgb(90 136 133 / 56%);
 }

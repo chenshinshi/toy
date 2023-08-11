@@ -4,6 +4,7 @@
 
 :root {
     --b3-theme-primary: rgba(101,74,143,1);
+--column-scrollbar-background-hover:#b8a7b8;
     --b3-protyle-inline-link-color: var(--b3-theme-primary);
     --b3-protyle-inline-blockref-color:rgba(101,74,143,1);
     --b3-theme-on-background:rgba(40,28,59,1);

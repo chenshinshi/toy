@@ -7,6 +7,7 @@
     --b3-theme-secondary: #f3a92f;
     --b3-theme-background: #fff3f3;
     --b3-theme-surface: #ffe0db;
+--column-scrollbar-background-hover:#b390af;
     --b3-theme-surface-light: rgba(243, 243, 243, .86);
     --b3-theme-error: #d23f31;
     --left-sidebar-background:var(--b3-theme-surface);
@@ -270,4 +271,8 @@
 }
 .layout--float.layout__dockl .fn__flex.fn__flex-1, .layout--float.layout__dockr .fn__flex.fn__flex-1 {
    background-color:transparent;
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type~=tag] {
+   background-color:#fcb8b8;
 }

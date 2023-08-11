@@ -1,5 +1,8 @@
-.layout--float.layout__dockl .fn__flex.fn__flex-1, .layout--float.layout__dockr .fn__flex.fn__flex-1 {
-   background-color:transparent;
+.protyle-breadcrumb__bar {
+   background-color:var(--left-sidebar-background);
+}
+.protyle-breadcrumb .block__icon--show {
+   background-color:var(--left-sidebar-background);
 }
 
 /*主色*/
@@ -11,7 +14,7 @@
     --padding-top-bottom:           2px;    /* 上下 padding */
     --padding-left-right:           4px;    /* 左右 padding */
     --line-height:                  1.75em; /* 行高 */
-
+--column-scrollbar-background-hover:#c8bfa6;
   --b3-theme-background: #fff8f7;
   --b3-theme-surface: #fff8f7;
   --b3-toolbar-blur-background: #fff8f7;
@@ -247,3 +250,4 @@ background: linear-gradient(
 #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-breadcrumb .protyle-breadcrumb__item svg {
    color:var(--b3-theme-primary);
 }
+

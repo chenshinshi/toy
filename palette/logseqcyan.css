@@ -159,7 +159,7 @@
 
     --scrollbar-hover-background:          #999; /* 滚动条悬浮时背景色 */
     --column-scrollbar-background:         rgba(181,137,0,0.6); /* 边栏内滚动条通用背景色 */
-    --column-scrollbar-hover-background:   rgba(181,137,0.1); /* 边栏内滚动条悬浮时背景色 */
+    --column-scrollbar-background-hover:   rgba(181,137,0.1); /* 边栏内滚动条悬浮时背景色 */
 
     /* 标题颜色 */
     --h1-color: inherit;
@@ -262,4 +262,10 @@
    padding-left:20px;
    padding-right:10px;
    color:#a1d0c3;
+}
+.table table {
+  border:2px solid #00b5888c;
+}
+.protyle-wysiwyg [data-node-id] span[data-type~=tag] {
+   background-color:var(--b3-theme-surface-lighter);
 }

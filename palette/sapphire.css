@@ -8,6 +8,7 @@
 :root {
     /* 主色 */
     --b3-theme-primary: #027fa8;
+--column-scrollbar-background-hover:#0179b6;
     --b3-theme-primary-light: #027fa88c;
     --b3-theme-primary-lighter: #027fa860;
     --b3-theme-primary-lightest: #027fa820;

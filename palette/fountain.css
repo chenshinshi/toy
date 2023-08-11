@@ -42,7 +42,7 @@
 
     /* 页签 */
     --b3-tab-background:#e6e6e6;
-
+--column-scrollbar-background-hover:#7cacd6;
 
     /* 提示 */
 
@@ -112,14 +112,13 @@ li.b3-list-item.b3-list-item--hide-action:hover{
     color: var(--b3-theme-primary);
 }
 
-.ft__primary:hover{
+/*.ft__primary:hover{
     transform: scale(1.5);
-}
+}*/
 
 .b3-list-item__text {
     line-height: 1.2;
 }
-
 .b3-list-item:hover {
     background-color: var(--file-list-background-files) !important;
 }
@@ -357,5 +356,9 @@ ol ol {
    background-color:transparent;
 }
 #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-breadcrumb .protyle-breadcrumb__item svg {
+   opacity:0.6;
    color:var(--b3-theme-primary);
+}
+.table table {
+  border:2px solid var(--b3-theme-primary);
 }
