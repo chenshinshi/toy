@@ -29,29 +29,14 @@
     |Eye Protection|langzhou|☀️|绿|绿|绿|护眼豆绿|
     |FruitsPink|[clark-cui](https://github.com/clark-cui/siyuan-themes-fruits-pink)|☀️|粉|粉|粉/蓝/紫|少女粉，在原fruitspink配色基础上大幅度修改|
     |Olive|chenshinshi|☀️|浅绿|浅粉|浅绿|中式古典清新|
-    |Sapphire|langzhou|🌃|深蓝|深蓝|水蓝|深蓝色夜间主题|
-    |Logseq Cyan|langzhou|🌃|深青|深青|黄|深绿色夜间主题|
-    |Lighthaus|langzhou|🌃|黑|黑|黄|黑色夜间主题|
-
-### 修改
-
-1. **全局新增**主题迭代，补充标签、引述块、图片、有序无序列表、题头图、代码块、按钮悬浮、顶栏、底栏、面板、搜索面板、闪卡、菜单样式，修改备注、备注框、文字选中、表格、PDF、滚动条、加粗、删除线、列表项、悬浮气泡、悬浮窗样式。
-2. **bearlight主题**​~​ ​~修补列表辅助线错位，取消“已关闭笔记本”的浮动显示，修补网页视图显示不全、侧栏搜索UI，统一链接引用样式。**适配**思源新版本，隐藏无关元素，适配设置界面、退出聚焦按钮与tooltips。
-
-### 待修改
-
-1. 底栏适配插件~（朗读、护眼）~
-2. 完善链接图标
-3. 修改大纲标题样式
-4. 題頭圖標懸浮樣式，题头图调整图片位置的按钮
-5. 對話框樣式
-6. bearlight大纲定位问题
-7. b3页面（商店readme）文档适配
+    |Sapphire|langzhou|<br />|深蓝|深蓝|水蓝|深蓝色夜间主题|
+    |Logseq Cyan|langzhou|<br />|深青|深青|黄|深绿色夜间主题|
+    |Lighthaus|[VIWZ](https://github.com/VIWZ/Room)|<br />|黑|黑|黄|适合背景图片插件|
 
 ### 借鉴移植总览
 
-1. 配色主题：langzhou（Toy）| whyt-byte（fountain）| geekmai（bearlight）| clark-cui（fruitspink）| lifthrasir（P-Book）| rovingMars（qianlan）
-2. 面板布局：langzhou（Toy）| geekmai（bearlight）| 路人二（mini-vlook）| Roy（Savor）| UserZYF（chuizi）
+1. 配色主题：langzhou（Toy）| whyt-byte（fountain）| geekmai（bearlight）| clark-cui（fruitspink）| lifthrasir（P-Book）| rovingMars（qianlan）| VIWZ（Room）
+2. 面板布局：langzhou（Toy）| geekmai（bearlight）| 路人二（mini-vlook）| Roy（Savor）| UserZYF（chuizi）| 少数派
 3. 字色样式：UserZYF（chuizi）| langzhou（toy）| chenshinshi（PinkX-room）| VIWZ（Room）
 4. 特殊块样式：UserZYF（chuizi）| geekmai（bearlight）| 路人二（mini-vlook）| 微信读书
 5. 题头样式：geekmai（bearlight）

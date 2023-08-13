@@ -1138,7 +1138,7 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
     color:var(--b3-theme-on-background);
 }
 .color__square[style="background-color:var(--b3-font-background9)"]:before{ 
-    content: "A";
+    content: "I";
     color:var(--b3-theme-on-background);
 }
 .color__square[style="background-color:var(--b3-font-background10)"]:before{ 
@@ -1158,7 +1158,7 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
     color:var(--b3-theme-on-background);
 }
 /*段落间距*/
-.protyle-wysiwyg.protyle-wysiwyg [data-node-id]:not([data-type="NodeHTMLBlock"]):not([data-type="NodeCodeBlock"]):not([data-type="NodeBlockquote"]){
+.protyle-wysiwyg.protyle-wysiwyg [data-node-id]:not([data-type="NodeHTMLBlock"]):not([data-type="NodeCodeBlock"]):not([data-type="NodeBlockquote"]),.b3-typography p,.b3-typography ul, .b3-typography ol{
     line-height:1.8em;
     margin-bottom: 6px;
     margin-top: 6px;
@@ -1453,7 +1453,7 @@ font-size:1.15rem;
    border-radius:0px !important;
 }
 .file-tree.sy__file li.b3-list-item[data-type="navigation-root"] {
-    border-bottom: 1px solid var(--b3-border-color) !important;
+    border-bottom: 1px solid var(--b3-theme-background-light);
     margin:2px 8px;
     border-radius: 6px 6px 0 0;
 }

@@ -94,7 +94,7 @@
     --b3-font-color5: var(--b3-theme-on-surface);
     --b3-font-color10: var(--b3-theme-primary);
     --b3-font-color2: var(--b3-theme-secondary);
-    --b3-font-color12: var(--b3-theme-error);
+    --b3-font-color12: #a47327;
     --b3-font-color1:  #f5539e;
     --b3-font-color6: #944194;
     --b3-font-color4: #65b84d;
@@ -113,8 +113,7 @@
     --b3-select-background: url("data:image/svg+xml;utf8,<svg fill='rgba(95, 99, 104, .68)' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right 2px center var(--b3-theme-background);
 
     /* 阴影 */
-    --b3-point-shadow: 0 3px 6px rgba(140, 149, 159, 0.15);
-    --b3-dialog-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
+    --b3-dialog-shadow: -8px 8px 16px hsl(0deg 0% 0% / 0.25);
     --b3-button-shadow: 0px 5px 5px -3px rgb(0 0 0 / 0.2), 0px 8px 10px 1px rgb(0 0 0 / 0.14), 0px 3px 14px 2px rgb(0 0 0 / 0.12);
 
     /* 图表颜色 */
@@ -227,8 +226,6 @@
     --b3-font-background6:  hsla(259, 100%, 89%,0.3);
     --b3-font-background7:  rgba(177,217,255,0.3);
     --b3-font-background9:  var(--text-selection-background);
-    --b3-dialog-shadow:0 0 2px rgb(132 132 132 / 10%) inset, 0 1px 4px rgb(68 68 68 / 20%);
-    --b3-point-shadow:0 0 2px rgb(132 132 132 / 10%) inset, 0 1px 4px rgb(68 68 68 / 20%);
 }
 .layout__resize--lr {
    opacity:0;
@@ -238,14 +235,31 @@
 }
 .b3-typography blockquote::before, .b3-typography .bq::before, .protyle-wysiwyg blockquote::before, .protyle-wysiwyg .bq::before {
    content:"“";
-   color:var(--quote-border-color);
+   color:#8cafad;
    display:block;
    font-size:400%;
    position:absolute;
    margin-left:-70px;
 }
+
+element.style {
+}
+<style>
+.protyle-wysiwyg.protyle-wysiwyg [data-node-id]:not([data-type="NodeHTMLBlock"]):not([data-type="NodeCodeBlock"]):not([data-type="NodeBlockquote"]) {
+    line-height: 2em !important;
+}
+.protyle-wysiwyg.protyle-wysiwyg [data-node-id]:not([data-type="NodeHTMLBlock"]):not([data-type="NodeCodeBlock"]):not([data-type="NodeBlockquote"]) {
+    line-height: 1.8em;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
+    background-color: transparent;
+    border: 3px solid transparent;
+    box-shadow: 0 0 0 2px #8cafad inset, 0 0 0 4px #8cafad;
+}
 .b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
-    background-color:var(--b3-theme-surface-lighter);
+    background-color:rgb(157, 181, 191,0.3);
     border-left:none;
     padding-top:10px;
     padding-bottom:5px;

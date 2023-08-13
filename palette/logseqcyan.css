@@ -61,11 +61,11 @@
     --b3-font-color9: #dd4c4f;
     --b3-font-color7: #1478d4;
     --b3-font-color3: #44c7c9;
-    --b3-font-color11: var(--b3-card-success-color);
+    --b3-font-color11: #1a9861;
     --b3-font-color5: var(--b3-theme-on-surface);
     --b3-font-color10: var(--b3-theme-primary);
     --b3-font-color2: var(--b3-theme-secondary);
-    --b3-font-color12: var(--b3-theme-error);
+    --b3-font-color12: #a47327;
     --b3-font-color1:  #f5539e;
     --b3-font-color6: #944194;
     --b3-font-color4: #65b84d;
@@ -91,7 +91,7 @@
 
     /* 阴影 */
     --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-    --b3-dialog-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+    --b3-dialog-shadow:-8px 8px 16px hsl(150.46deg 89.84% 84.5% / 25%);
 
 
     /* diff */
@@ -268,4 +268,7 @@
 }
 .protyle-wysiwyg [data-node-id] span[data-type~=tag] {
    background-color:var(--b3-theme-surface-lighter);
+}
+.fn__flex-column.fn__flex-shrink.layout__dockl .fn__flex [data-type='wnd'],.fn__flex-column.fn__flex-shrink.layout__dockr .fn__flex [data-type='wnd'] {
+   margin:0px;
 }
