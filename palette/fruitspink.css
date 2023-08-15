@@ -90,7 +90,7 @@
 
     /* 阴影 */
     --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-    --b3-dialog-shadow: -8px 8px 16px hsl(0deg 0% 0% / 0.25);
+    --b3-dialog-shadow: rgba(0, 0, 0, 0.133) 0px 6.4px 14.4px 0px, rgba(0, 0, 0, 0.11) 0px 1.2px 3.6px 0px;
 
     /* diff */
     --b3-diff-add: #dfd;
@@ -203,14 +203,14 @@
    background-color:var(--b3-theme-background);
 }
 :root {
-    --b3-font-background1: hsla(0deg,100%,88%,0.3);
-    --b3-font-background2: hsla(50deg,100%,50%,0.3);
-    --b3-font-background3: hsla(177deg,46%,80%,0.3);
-    --b3-font-background4: hsla(100deg,58%,75%,0.3);
-    --b3-font-background5: hsla(0deg, 0%, 77%, 0.3);
-    --b3-font-background8: hsla(31, 100%, 73%,0.3);
-    --b3-font-background6:  hsla(259, 100%, 89%,0.3);
-    --b3-font-background7:  rgba(177,217,255,0.3);
+    --b3-font-background1: #ffe4e4;
+    --b3-font-background2: #ffface;
+    --b3-font-background3: #d9ebea;
+    --b3-font-background4: #e8eed8;
+    --b3-font-background5: #ede5e5;
+    --b3-font-background8: #ffe3cd;
+    --b3-font-background6: #f3e6f7;
+    --b3-font-background7:  #e7ecf7;
     --b3-font-background9:  var(--text-selection-background);
 }
 [style*="color:var(--b3-font-background10)"], [style*="color: var(--b3-font-background10)"] {

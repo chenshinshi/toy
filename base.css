@@ -748,9 +748,9 @@ span[data-type="tag"][data-content="完成"],span[data-type="tag"][data-content=
 
 /**** 超级块、横排 ****/
 /*** 调整超级块中元素间距 ***/
-.protyle-wysiwyg .sb div[data-node-id]{
-  margin: 4px;
-  border-radius: 3px;
+.protyle-wysiwyg .sb div[data-node-id]:not([data-type="NodeBlockquote"]){
+  padding-left: 0px !important;
+  border-radius: 0px;
 }
 .protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] .sb,.protyle-wysiwyg [data-node-id].sb[data-sb-layout="row"] .sb{
   margin:4px;

@@ -108,4 +108,40 @@
 }
 
 /* -----------------------------------------------------------便利贴样式 END------------------------------------------------- */
+.protyle-wysiwyg.protyle-wysiwyg .p[custom-bk="1"] {
+   border-radius:10px !important;
+   border:2px dashed var(--b3-theme-primary) !important;
+}
+.protyle-wysiwyg.protyle-wysiwyg .p[custom-bk="1"][style="background-color: var(--b3-font-background1);"] {
+   border-radius:10px !important;
+   border:2px dashed var(--b3-font-color1) !important;
+}
+.protyle-wysiwyg.protyle-wysiwyg .p[custom-bk="1"][style="background-color: var(--b3-font-background2);"] {
+   border-radius:10px !important;
+   border:2px dashed var(--b3-font-color2) !important;
+}
+.protyle-wysiwyg.protyle-wysiwyg .p[custom-bk="1"][style="background-color: var(--b3-font-background3);"] {
+   border-radius:10px !important;
+   border:2px dashed var(--b3-font-color3) !important;
+}
+.protyle-wysiwyg.protyle-wysiwyg .p[custom-bk="1"][style="background-color: var(--b3-font-background4);"] {
+   border-radius:10px !important;
+   border:2px dashed var(--b3-font-color4) !important;
+}
+.protyle-wysiwyg.protyle-wysiwyg .p[custom-bk="1"][style="background-color: var(--b3-font-background5);"] {
+   border-radius:10px !important;
+   border:2px dashed var(--b3-font-color5) !important;
+}
+.protyle-wysiwyg.protyle-wysiwyg .p[custom-bk="1"][style="background-color: var(--b3-font-background6);"] {
+   border-radius:10px !important;
+   border:2px dashed var(--b3-font-color6) !important;
+}
+.protyle-wysiwyg.protyle-wysiwyg .p[custom-bk="1"][style="background-color: var(--b3-font-background7);"] {
+   border-radius:10px !important;
+   border:2px dashed var(--b3-font-color7) !important;
+}
+.protyle-wysiwyg.protyle-wysiwyg .p[custom-bk="1"][style="background-color: var(--b3-font-background8);"] {
+   border-radius:10px !important;
+   border:2px dashed var(--b3-font-color8) !important;
+}
 /* -----------------------------------------------------块的自定义属性结束-------------------------------------------- */

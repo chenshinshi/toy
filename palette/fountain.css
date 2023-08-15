@@ -51,7 +51,7 @@
 
     /* 阴影 */
     --b3-point-shadow: 0 0 2px rgb(132 132 132 / 10%) inset, 0 1px 4px rgb(68 68 68 / 20%);
-    --b3-dialog-shadow:-8px 8px 16px hsl(0deg 0% 0% / 0.25);
+    --b3-dialog-shadow: rgba(0, 0, 0, 0.133) 0px 6.4px 14.4px 0px, rgba(0, 0, 0, 0.11) 0px 1.2px 3.6px 0px;
 
     /* diff */
     --b3-diff-add: #dfd;
@@ -250,10 +250,10 @@ ol ol {
 }
 
 :root {
-    --b3-font-background1: hsla(0deg,100%,88%,0.5);
-    --b3-font-background2: hsla(50deg,100%,50%,0.5);
+    --b3-font-background1: #fae1de;
+    --b3-font-background2: #fff8b8;
     --b3-font-background3: hsla(177deg,46%,80%,0.5);
-    --b3-font-background4: hsla(100deg,58%,75%,0.5);
+    --b3-font-background4: #e2f6d3;
     --b3-font-background5: hsla(0deg, 0%, 77%, 0.5);
     --b3-font-background8: hsla(31, 100%, 73%,0.5);
     --b3-font-background6:  hsla(259, 100%, 89%,0.5);

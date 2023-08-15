@@ -9,22 +9,6 @@ window.HBuilderXLight = {};
 window.HBuilderXLight.ButtonControl = {};
 
 
-//按钮功能类型
-let ButtonFunctionType;
-(function (ButtonFunctionType) {
-    ButtonFunctionType[ButtonFunctionType["default"] = 1] = "default";//默认
-    ButtonFunctionType[ButtonFunctionType["topicfilter"] = 2] = "topicfilter";//滤镜
-})(ButtonFunctionType || (ButtonFunctionType = {}));
-var EnumButtonFunctionType = Object.freeze(ButtonFunctionType);
-
-
-//按钮特性类型
-let ButtonCharacteristicType;
-(function (ButtonCharacteristicType) {
-    ButtonCharacteristicType[ButtonCharacteristicType["default"] = 1] = "default";//默认
-    ButtonCharacteristicType[ButtonCharacteristicType["multiple"] = 2] = "multiple";//单选
-})(ButtonCharacteristicType || (ButtonCharacteristicType = {}));
-var EnumButtonCharacteristicType = Object.freeze(ButtonCharacteristicType);
 
 
 //渲染进程和主进程通信
@@ -2870,6 +2854,8 @@ function SubMenu(selectid,selecttype,className = 'b3-menu__submenu') {
 	node.appendChild(Defaultth(selectid))
   }
   if(selecttype=="NodeParagraph"){
+node.appendChild(bk(selectid))
+node.appendChild(qbk(selectid))
     node.appendChild(qblta(selectid))
           node.appendChild(qbltb(selectid))
           node.appendChild(qbltc(selectid))
@@ -2956,6 +2942,26 @@ function Defaultth(selectid){
   button.setAttribute("custom-attr-name","t")
   button.setAttribute("custom-attr-value","")
   button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#iconRefresh"></use></svg><span class="b3-menu__label">默认表头</span>`
+  button.onclick=ViewMonitor
+  return button
+}
+function bk(selectid){
+  let button = document.createElement("button")
+  button.className="b3-menu__item"
+  button.setAttribute("data-node-id",selectid)
+  button.setAttribute("custom-attr-name","bk")
+  button.setAttribute("custom-attr-value","1")
+  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">边框</span>`
+  button.onclick=ViewMonitor
+  return button
+}
+function qbk(selectid){
+  let button = document.createElement("button")
+  button.className="b3-menu__item"
+  button.setAttribute("data-node-id",selectid)
+  button.setAttribute("custom-attr-name","bk")
+  button.setAttribute("custom-attr-value","")
+  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#iconRefresh"></use></svg><span class="b3-menu__label">取消边框</span>`
   button.onclick=ViewMonitor
   return button
 }

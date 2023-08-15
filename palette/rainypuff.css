@@ -113,7 +113,7 @@
     --b3-select-background: url("data:image/svg+xml;utf8,<svg fill='rgba(95, 99, 104, .68)' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right 2px center var(--b3-theme-background);
 
     /* 阴影 */
-    --b3-dialog-shadow: -8px 8px 16px hsl(0deg 0% 0% / 0.25);
+    --b3-dialog-shadow: rgba(0, 0, 0, 0.133) 0px 6.4px 14.4px 0px, rgba(0, 0, 0, 0.11) 0px 1.2px 3.6px 0px;
     --b3-button-shadow: 0px 5px 5px -3px rgb(0 0 0 / 0.2), 0px 8px 10px 1px rgb(0 0 0 / 0.14), 0px 3px 14px 2px rgb(0 0 0 / 0.12);
 
     /* 图表颜色 */
@@ -217,14 +217,14 @@
    background-color:var(--b3-theme-background);
 }
 :root {
-    --b3-font-background1: hsla(0deg,100%,88%,0.3);
-    --b3-font-background2: hsla(50deg,100%,50%,0.3);
-    --b3-font-background3: hsla(177deg,46%,80%,0.3);
-    --b3-font-background4: hsla(100deg,58%,75%,0.3);
-    --b3-font-background5: hsla(0deg, 0%, 77%, 0.3);
-    --b3-font-background8: hsla(31, 100%, 73%,0.3);
-    --b3-font-background6:  hsla(259, 100%, 89%,0.3);
-    --b3-font-background7:  rgba(177,217,255,0.3);
+    --b3-font-background1: #f2dfdf;
+    --b3-font-background2: #fbf5c2;
+    --b3-font-background3: #dbe9e9;
+    --b3-font-background4: #dbe9d3;
+    --b3-font-background5: #e0e0e0;
+    --b3-font-background8: #f2dec8;
+    --b3-font-background6:  #e6e1f2;
+    --b3-font-background7:  #dae7f2;
     --b3-font-background9:  var(--text-selection-background);
 }
 .layout__resize--lr {

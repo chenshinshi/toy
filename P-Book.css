@@ -690,3 +690,82 @@ background-color: var(--b3-theme-background);
 }
 #layouts div.fn__flex-column div[data-type="wnd"] div.layout-tab-container .sy__file ul.b3-list li.b3-list-item[data-type="toggle"]{margin-left:10px !important;border-radius:6px;opacity:0}
 #layouts div.fn__flex-column div[data-type="wnd"] div.layout-tab-container .sy__file ul.b3-list li.b3-list-item[data-type="toggle"]:hover {opacity:1}
+.b3-card {
+   box-shadow:unset;
+   border:2px solid var(--b3-theme-surface);
+}
+#configBazaarPlugin .b3-card--wrap,#configBazaarTheme .b3-card--wrap{
+        max-height:116px;
+}
+
+#configBazaarPlugin .b3-card__img img,#configBazaarTheme .b3-card__img img {
+   height:116px;
+   width:116px;
+   border-radius:0px;
+}
+#configBazaarPlugin .b3-card__img,#configBazaarTheme .b3-card__img {
+    margin: 0px;
+}
+#configBazaarPlugin .b3-card__info::-webkit-scrollbar,#configBazaarTheme .b3-card__info::-webkit-scrollbar {
+   width:0px !important;
+}
+#configBazaarPlugin .b3-card__info,#configBazaarTheme .b3-card__info {
+    padding: 16px 8px 4px 16px;
+}
+#configBazaarPlugin .b3-card__actions,#configBazaarTheme .b3-card__actions {
+    padding: 0 8px 4px 16px;
+}
+#configBazaarPlugin .b3-card--wrap .b3-card__actions .block__icon--show[data-type="uninstall"],#configBazaarPlugin .b3-card--wrap .b3-card__actions .block__icon--show[data-type="switch"],#configBazaarTheme .b3-card--wrap .b3-card__actions .block__icon--show[data-type="uninstall"],#configBazaarTheme .b3-card--wrap .b3-card__actions .block__icon--show[data-type="switch"] {
+   color:var(--b3-theme-primary) !important;
+}
+#configBazaarIcon .b3-card--wrap,#configBazaarTemplate .b3-card--wrap{
+        max-height:116px;
+}
+
+#configBazaarIcon .b3-card__img img,#configBazaarTemplate .b3-card__img img {
+   height:116px;
+   width:116px;
+   border-radius:0px;
+}
+#configBazaarIcon .b3-card__img,#configBazaarTemplate .b3-card__img {
+    margin: 0px;
+}
+#configBazaarIcon .b3-card__info::-webkit-scrollbar,#configBazaarTemplate .b3-card__info::-webkit-scrollbar {
+   width:0px !important;
+}
+#configBazaarIcon .b3-card__info,#configBazaarTemplate .b3-card__info {
+    padding: 16px 8px 4px 16px;
+}
+#configBazaarIcon .b3-card__actions,#configBazaarTemplate .b3-card__actions {
+    padding: 0 8px 4px 16px;
+}
+#configBazaarIcon .b3-card--wrap .b3-card__actions .block__icon--show[data-type="uninstall"],#configBazaarIcon .b3-card--wrap .b3-card__actions .block__icon--show[data-type="switch"],#configBazaarTemplate .b3-card--wrap .b3-card__actions .block__icon--show[data-type="uninstall"],#configBazaarTemplate .b3-card--wrap .b3-card__actions .block__icon--show[data-type="switch"] {
+   color:var(--b3-theme-primary) !important;
+}
+#configBazaarWidget .b3-card--wrap,#configBazaarTheme .b3-card--wrap{
+        max-height:116px;
+}
+
+#configBazaarWidget .b3-card__img img,#configBazaarTheme .b3-card__img img {
+   height:116px;
+   width:116px;
+   border-radius:0px;
+}
+#configBazaarWidget .b3-card__img,#configBazaarTheme .b3-card__img {
+    margin: 0px;
+}
+#configBazaarWidget .b3-card__info::-webkit-scrollbar,#configBazaarTheme .b3-card__info::-webkit-scrollbar {
+   width:0px !important;
+}
+#configBazaarWidget .b3-card__info,#configBazaarTheme .b3-card__info {
+    padding: 16px 8px 4px 16px;
+}
+#configBazaarWidget .b3-card__actions,#configBazaarTheme .b3-card__actions {
+    padding: 0 8px 4px 16px;
+}
+#configBazaarWidget .b3-card--wrap .b3-card__actions .block__icon--show[data-type="uninstall"],#configBazaarWidget .b3-card--wrap .b3-card__actions .block__icon--show[data-type="switch"],#configBazaarTheme .b3-card--wrap .b3-card__actions .block__icon--show[data-type="uninstall"],#configBazaarTheme .b3-card--wrap .b3-card__actions .block__icon--show[data-type="switch"] {
+   color:var(--b3-theme-primary) !important;
+}
+.protyle-wysiwyg div.table[data-node-id] table {
+    width: auto;
+}
