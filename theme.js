@@ -12,24 +12,26 @@ window.HBuilderXLight.ButtonControl = {};
 
 
 //渲染进程和主进程通信
-const { ipcRenderer } = require('electron');
-ipcRenderer.on("siyuan-send_windows", (event, data) => {
-    //console.log(data);
-    switch (data.Value) {
-        case "ButtonControl"://按钮状态控制
-            var ControlButtonIDs = data.ControlButtonIDs;
-            for (let index = 0; index < ControlButtonIDs.length; index++) {
-                const ControlButtonID = ControlButtonIDs[index];
-                window.HBuilderXLight.ButtonControl[ControlButtonID.ButtonID][ControlButtonID.ControlFun]();
-            }
-            break;
-
-        default:
-            break;
+if (isPc() || isPcWindow()) {
+    const { ipcRenderer } = require('electron');
+    ipcRenderer.on("siyuan-send_windows", (event, data) => {
+        //console.log(data);
+        switch (data.Value) {
+            case "ButtonControl"://按钮状态控制
+                var ControlButtonIDs = data.ControlButtonIDs;
+                for (let index = 0; index < ControlButtonIDs.length; index++) {
+                    const ControlButtonID = ControlButtonIDs[index];
+                    window.HBuilderXLight.ButtonControl[ControlButtonID.ButtonID][ControlButtonID.ControlFun]();
+                }
+                break;
+    
+            default:
+                break;
+        }
+    });
+    window.HBuilderXLight.broadcast = (data) => {
+        ipcRenderer.send("siyuan-send_windows", data);
     }
-});
-function broadcast(data) {
-    ipcRenderer.send("siyuan-send_windows", data);
 }
 
 function Removefirstlineindent() {
@@ -1720,12 +1722,12 @@ function HBuiderXThemeToolbarAddButton(ButtonID, ButtonFunctionType, ButtonChara
         window.HBuilderXLight.ButtonControl[ButtonID].Isclick = isclick = 1;
 
         if (offon == "0" || offon == null || offon == undefined) {
-            broadcast(broadcastData_on);
+            window.HBuilderXLight.broadcast(broadcastData_on);
             return;
         }
 
         if (offon == "1") {
-            broadcast(broadcastData_off);
+            window.HBuilderXLight.broadcast(broadcastData_off);
             return;
         }
     });
@@ -3137,6 +3139,22 @@ function ViewMonitor(event){
 
 setTimeout(()=>ClickMonitor(),1000)
 
+/**简单判断目前思源是否是手机模式 */
+function isPhone() {
+    return document.getElementById("toolbarName") != null && document.getElementById("toolbar") == null;
+}
+/**简单判断目前思源是否是pc窗口模式 */
+function isPcWindow() {
+    return document.body.classList.contains("body--window");
+}
+/**简单判断目前思源是pc模式 */
+function isPc() {
+    return document.getElementById("windowControls") != null && document.getElementById("toolbar") != null && !document.getElementById("toolbar").classList.contains("toolbar--browser");
+}
+/**简单判断目前思源是否是浏览器模式 */
+function isBrowser() {
+    return document.getElementById("toolbar") != null && document.getElementById("toolbar").classList.contains("toolbar--browser");
+}
 
 // REF https://github.com/Zuoqiu-Yingyi/siyuan-theme-dark-plus/blob/main/theme.js
 window.theme = {};
@@ -3201,7 +3219,8 @@ window.theme.updateStyle = function (id, href) {
 }
 
 setTimeout(() => {
-    const drag = document.getElementById('drag'); // 标题栏
+    let drag = document.getElementById('drag'); // 标题栏
+    if (isPhone()) drag = document.getElementById('toolbarName'); // 手机端的标题栏不太一样
     const themeStyle = document.getElementById('themeStyle'); // 当前主题引用路径
     if (drag && themeStyle) {
         const THEME_ROOT = new URL(themeStyle.href).pathname.replace('theme.css', ''); // 当前主题根目录
@@ -3227,11 +3246,26 @@ setTimeout(() => {
         /* 加载配色文件 */
         window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
 
+        if (isPhone()) {
+            // 如果是手机端，就直接给标题栏塞个图标，不然样式不对
+            const doc = new DOMParser().parseFromString(`<svg id="${window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR}" class="toolbar__icon"><use xlink:href="#iconTheme"></use></svg>`, 'text/html')
+            const svg_change_color = doc.getElementById(window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR)
+            svg_change_color.addEventListener('click', e => {
+                color_href = window.theme.iter.next().value;
+                localStorage.setItem(window.theme.IDs.LOCAL_STORAGE_COLOR_HREF, color_href);
+                setLocalStorageVal(window.theme.IDs.LOCAL_STORAGE_COLOR_HREF, color_href);
+                window.theme.updateStyle(window.theme.IDs.STYLE_COLOR, color_href);
+            });
+            drag.insertAdjacentElement('afterend', svg_change_color);
+            return;
+        }
+
         const button_change_color = document.createElement('button'); // 切换主题颜色按钮
         button_change_color.id = window.theme.IDs.BUTTON_TOOLBAR_CHANGE_COLOR;
         button_change_color.className = 'toolbar__item b3-tooltips b3-tooltips__sw';
+        if (isPhone()) button_change_color.className = 'toolbar__item b3-tooltips b3-tooltips__sw';
         button_change_color.ariaLabel = '切换主题颜色';
-        button_change_color.innerHTML = `<svg><use xlink:href="#iconTheme"></use></svg>`;
+        button_change_color.innerHTML = `<svg class="toolbar__icon"><use xlink:href="#iconTheme"></use></svg>`;
         button_change_color.addEventListener('click', e => {
             color_href = window.theme.iter.next().value;
             localStorage.setItem(window.theme.IDs.LOCAL_STORAGE_COLOR_HREF, color_href);
