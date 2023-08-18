@@ -611,7 +611,7 @@ border-bottom: 1px solid var(--b3-protyle-inline-link-color);
 
 /**** 图片 ****/
 .b3-typography img, .protyle-wysiwyg img{
-  border-radius: 4px;
+  border-radius: 0px;
 }
 
 /**** 标签 ****/
@@ -1189,9 +1189,7 @@ body.body--blur .layout__wnd--active .layout-tab-bar .item--focus {
 }*/
 /*图片样式*/
 .b3-typography span.img img:not(.emoji), .protyle-wysiwyg span.img img:not(.emoji) {
-    border: 0.6em solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 0 2px rgb(126 50 0 / 10%) inset, 0 1px 4px rgb(58 15 0 / 20%);
-    margin:0px auto;
+    margin:0px;
 }
 .b3-typography span.img,
 .protyle-wysiwyg span.img {

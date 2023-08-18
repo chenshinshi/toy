@@ -769,3 +769,18 @@ background-color: var(--b3-theme-background);
 .protyle-wysiwyg div.table[data-node-id] table {
     width: auto;
 }
+.b3-typography .img, .protyle-wysiwyg .img {
+border-top: 0.3em solid rgba(255, 255, 255);
+border-bottom: 0.3em solid rgba(255, 255, 255);
+border-left: 0.1em solid rgba(255, 255, 255);
+border-right: 0.1em solid rgba(255, 255, 255);
+    box-shadow: 0 1px 4px rgb(58 15 0 / 20%);
+   margin:0 4px;
+    background-color:rgb(255, 255, 255);
+}
+.b3-typography .img:not([style]), .protyle-wysiwyg .img:not([style]) {
+   display:inline-block;
+}
+.protyle-wysiwyg [data-node-id][custom-riff-decks] {
+    animation: unset !important;
+}

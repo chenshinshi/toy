@@ -2857,17 +2857,9 @@ function SubMenu(selectid,selecttype,className = 'b3-menu__submenu') {
   }
   if(selecttype=="NodeParagraph"){
 node.appendChild(bk(selectid))
+          node.appendChild(bl(selectid))
+          node.appendChild(hx(selectid))
 node.appendChild(qbk(selectid))
-    node.appendChild(qblta(selectid))
-          node.appendChild(qbltb(selectid))
-          node.appendChild(qbltc(selectid))
-          node.appendChild(qbltd(selectid))
-          node.appendChild(sblta(selectid))
-          node.appendChild(sbltb(selectid))
-          node.appendChild(sbltc(selectid))
-          node.appendChild(sbltd(selectid))
-          node.appendChild(qblt(selectid))	
-    node.appendChild(sblt(selectid))	
   }
 return node;
 }
@@ -2957,113 +2949,33 @@ function bk(selectid){
   button.onclick=ViewMonitor
   return button
 }
+function bl(selectid){
+  let button = document.createElement("button")
+  button.className="b3-menu__item"
+  button.setAttribute("data-node-id",selectid)
+  button.setAttribute("custom-attr-name","bk")
+  button.setAttribute("custom-attr-value","bl")
+  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">便利贴</span>`
+  button.onclick=ViewMonitor
+  return button
+}
+function hx(selectid){
+  let button = document.createElement("button")
+  button.className="b3-menu__item"
+  button.setAttribute("data-node-id",selectid)
+  button.setAttribute("custom-attr-name","bk")
+  button.setAttribute("custom-attr-value","hx")
+  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">行线</span>`
+  button.onclick=ViewMonitor
+  return button
+}
 function qbk(selectid){
   let button = document.createElement("button")
   button.className="b3-menu__item"
   button.setAttribute("data-node-id",selectid)
   button.setAttribute("custom-attr-name","bk")
   button.setAttribute("custom-attr-value","")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#iconRefresh"></use></svg><span class="b3-menu__label">取消边框</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function qblta(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","q")
-  button.setAttribute("custom-attr-value","blt1")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">浅粉</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function qbltb(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","q")
-  button.setAttribute("custom-attr-value","blt2")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">浅黄</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function qbltc(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","q")
-  button.setAttribute("custom-attr-value","blt3")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">浅蓝</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function qbltd(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","q")
-  button.setAttribute("custom-attr-value","blt4")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">浅绿</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function sblta(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","s")
-  button.setAttribute("custom-attr-value","blt1")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">深红</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function sbltb(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","s")
-  button.setAttribute("custom-attr-value","blt2")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">深橙</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function sbltc(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","s")
-  button.setAttribute("custom-attr-value","blt3")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">深蓝</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function sbltd(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","s")
-  button.setAttribute("custom-attr-value","blt4")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">深绿</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function qblt(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","q")
-  button.setAttribute("custom-attr-value","")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#iconRefresh"></use></svg><span class="b3-menu__label">恢复原样式（浅）</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function sblt(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","s")
-  button.setAttribute("custom-attr-value","")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#iconRefresh"></use></svg><span class="b3-menu__label">恢复原样式（深）</span>`
+  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#iconRefresh"></use></svg><span class="b3-menu__label">还原</span>`
   button.onclick=ViewMonitor
   return button
 }

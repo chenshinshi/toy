@@ -489,3 +489,15 @@ background-color: rgba(0,0,0,0);
     float: left;
     padding-top: 30px;
 }
+.b3-typography .img, .protyle-wysiwyg .img {
+border-top: 0.3em solid rgba(200, 200, 200);
+border-bottom: 0.3em solid rgba(200, 200, 200);
+border-left: 0.1em solid rgba(200, 200, 200);
+border-right: 0.1em solid rgba(200, 200, 200);
+    box-shadow: 0 1px 4px rgb(58 15 0 / 20%);
+   margin:0 4px;
+    background-color:rgb(200, 200, 200);
+}
+.b3-typography .img .protyle-action__title, .protyle-wysiwyg .img .protyle-action__title {
+   font-size:70%;
+}

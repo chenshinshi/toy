@@ -273,3 +273,6 @@
 .protyle-wysiwyg [data-node-id] span[data-type~=tag] {
    background-color:#fcb8b8;
 }
+.protyle-wysiwyg [data-node-id][custom-riff-decks] {
+   box-shadow: -3px 0px 0px -1px #f9dada inset;
+}
