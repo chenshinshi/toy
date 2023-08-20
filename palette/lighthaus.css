@@ -501,3 +501,6 @@ border-right: 0.1em solid rgba(200, 200, 200);
 .b3-typography .img .protyle-action__title, .protyle-wysiwyg .img .protyle-action__title {
    font-size:70%;
 }
+.fullscreen {
+   background-color:#222222 !important;
+}

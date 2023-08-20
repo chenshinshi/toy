@@ -380,3 +380,9 @@ div.list div.bq {
 #layouts div.layout__center div[data-type="wnd"] .layout-tab-container .protyle .protyle-breadcrumb .protyle-breadcrumb__item svg {
    color:var(--b3-theme-primary);
 }
+.fullscreen .protyle-content{
+   margin-top:40px;
+}
+.fullscreen{
+   background-color:#e7e7e2;
+}
