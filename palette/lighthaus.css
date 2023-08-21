@@ -373,7 +373,7 @@ body {
 }
 .block__popover .protyle {
    background-color:rgba(0,0,0,0.75);
-    backdrop-filter: blur(90px);
+/*    backdrop-filter: blur(90px);*/
 }
 .block__popover>.block__icons {
    background-color:#12100e;
@@ -459,6 +459,22 @@ background-color: rgba(0,0,0,0);
     backdrop-filter: blur(140px);
     border-radius:6px;
 }
+.block__popover .protyle::before,[data-key="⌘P"] .b3-dialog__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -3;
+   /* background-image: var(--allen-background-image);*/
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    background: rgb(0 0 0 / 73%);
+    backdrop-filter: blur(140px);
+    border-radius:6px;
+}
 
 .b3-menu__item {
    background-color:transparent;
@@ -503,4 +519,9 @@ border-right: 0.1em solid rgba(200, 200, 200);
 }
 .fullscreen {
    background-color:#222222 !important;
+}
+
+[data-key="⌘P"] .b3-dialog__container{
+   backdrop-filter:unset !important;
+   background-color:rgba(0,0,0,0.75);
 }
