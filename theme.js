@@ -659,199 +659,6 @@ function CreatetriggerBlock(e) {
 
 
 
-/**----------------鼠标中键标题、列表文本折叠/展开----------------*/
-function collapseExpand_Head_List() {
-    var flag45 = false;
-    AddEvent(document.body, "mouseup", () => {
-        flag45 = false;
-    });
-
-    AddEvent(document.body, "mousedown", (e) => {
-        if (e.button == 2) { flag45 = true; return }
-        if (flag45 || e.shiftKey || e.altKey || e.button != 1) return;
-        var target = e.target;
-
-        if (target.getAttribute("contenteditable") == null) {
-            isFatherFather(target, (v) => {
-                if (v.getAttribute("contenteditable") != null) {
-                    target = v;
-                    return true;
-                }
-                return false;
-            }, 10);
-        }
-
-        var targetParentElement = target.parentElement;
-        if (targetParentElement == null) return;
-
-        //是标题吗？
-        if (targetParentElement != null && targetParentElement.getAttribute("data-type") == "NodeHeading") {
-
-            var targetParentElementParentElement = targetParentElement.parentElement;
-            //标题父元素是列表吗？
-            if (targetParentElementParentElement != null && targetParentElementParentElement.getAttribute("data-type") == "NodeListItem") {
-                e.preventDefault();
-                //列表项实现折叠
-                _collapseExpand_NodeListItem(target);
-            } else {
-                e.preventDefault();
-                //标题块标项实现折叠
-                _collapseExpand_NodeHeading(target);
-            }
-        } else {//是列表
-            var targetParentElementParentElement = targetParentElement.parentElement;
-            if (targetParentElementParentElement != null && targetParentElementParentElement.getAttribute("data-type") == "NodeListItem") {
-                e.preventDefault();
-                //列表项实现折叠
-                _collapseExpand_NodeListItem(target);
-            }
-        }
-    });
-
-    //标题，块标实现折叠
-    function _collapseExpand_NodeHeading(element) {
-
-        var i = 0;
-        while (element.className != "protyle" && element.className != "fn__flex-1 protyle" && element.className != "block__edit fn__flex-1 protyle" && element.className != "fn__flex-1 spread-search__preview protyle") {
-            if (i == 999) return;
-            i++;
-            element = element.parentElement;
-        }
-        var ddddd = element.children;
-        for (let index = ddddd.length - 1; index >= 0; index--) {
-            const element = ddddd[index];
-            if (element.className == "protyle-gutters") {
-                var fold = diguiTooONE_1(element, (v) => { return v.getAttribute("data-type") === "fold"; })
-                if (fold != null) fold.click();
-                return;
-            }
-        }
-    }
-
-    //列表，列表项实现折叠
-    function _collapseExpand_NodeListItem(element) {
-
-        //在悬浮窗中第一个折叠元素吗？
-        var SiyuanFloatingWindow = isSiyuanFloatingWindow(element);
-        if (SiyuanFloatingWindow) {
-            var vs = isFatherFather(element, (v) => v.classList.contains("li"), 7);
-            if (vs != null && (vs.previousElementSibling == null)) {
-                var foid = vs.getAttribute("fold");
-                if (foid == null || foid == "0") {//判断是折叠
-                    vs.setAttribute("fold", "1");
-                } else {
-                    vs.setAttribute("fold", "0");
-                }
-                return;
-            }
-        }
-
-
-        var i = 0;
-        while (element.getAttribute("contenteditable") == null) {
-            if (i == 999) return;
-            i++;
-            element = element.parentElement;
-        }
-        var elementParentElement = element.parentElement.parentElement;
-
-        var fold = elementParentElement.getAttribute("fold");
-
-        if (elementParentElement.children.length == 3) return;
-
-        if (fold == null || fold == "0") {
-            setBlockfold_1(elementParentElement.getAttribute("data-node-id"));
-        } else {
-            setBlockfold_0(elementParentElement.getAttribute("data-node-id"));
-        }
-    }
-}
-
-/**
- * 
- * @param {*} element 元素是否在思源悬浮窗中
- * @returns 是返回悬浮窗元素，否返回null
- */
-function isSiyuanFloatingWindow(element) {
-    return isFatherFather(element, (v) => {
-        if (v.getAttribute("data-oid") != null) {
-            return true;
-        }
-        return false;
-    });
-}
-
-
-
-
-/**----------------------------------查找匹配列表条目前的图标可以鼠标悬停打开悬浮窗--------------------------------------*/
-
-function findMatchingListEntries() {
-    BodyEventRunFun("mouseover", _findMatchingListEntries, 3000);
-}
-
-function _findMatchingListEntries() {
-
-    var searchList = document.getElementById("searchList");
-    var globalSearchList = document.getElementById("globalSearchList");
-
-    if (searchList != null) {
-        var searchLists = searchList.children;
-        for (let index = 0; index < searchLists.length; index++) {
-            const element = searchLists[index];
-            //var b3_list_item__text=element.children[1];
-            //if(element.getAttribute("title")!=null)break;
-            //element.setAttribute("title",b3_list_item__text.innerText);
-
-            var itemlianjie = element.firstElementChild;
-            if (itemlianjie == null || itemlianjie.getAttribute("data-defids") != null) break;
-            itemlianjie.setAttribute("data-defids", '[""]');
-            itemlianjie.setAttribute("class", "b3-list-item__graphic popover__block");
-            itemlianjie.setAttribute("data-id", element.getAttribute("data-node-id"));
-        }
-    };
-
-    if (globalSearchList != null) {
-        var globalSearchLists = globalSearchList.children;
-        for (let index = 0; index < globalSearchLists.length; index++) {
-            const element = globalSearchLists[index];
-            //var b3_list_item__text=element.children[1];
-            //if(element.getAttribute("title")!=null)break;
-            //element.setAttribute("title",b3_list_item__text.innerText);
-            var itemlianjie = element.firstElementChild;
-            if (itemlianjie == null || itemlianjie.getAttribute("data-defids") != null) break;
-            itemlianjie.setAttribute("data-defids", '[""]');
-            itemlianjie.setAttribute("class", "b3-list-item__graphic popover__block");
-            itemlianjie.setAttribute("data-id", element.getAttribute("data-node-id"));
-        }
-    };
-}
-
-
-
-/**------------------------------------思源悬浮窗头栏中键关闭------------------------------------- */
-function theFloatingWindowIsClosed() {
-    AddEvent(document.body, "mousedown", (e) => {
-        if (e.button != 1) return;
-        var element = e.target;
-        var className = element.className;
-        if (className == "block__icons block__icons--border" || className == "fn__space fn__flex-1" || className == "maxMinButton") {
-            element = element.parentElement;
-        } else {
-            return;
-        }
-
-        diguiTooONE_1(element, (v) => {
-            if (v.getAttribute("data-type") == "close") {
-                v.click();
-                return true;
-            }
-            return false;
-        })
-    });
-}
-
-
 /**----------------------------------钉住悬浮窗增强---------------------- */
 //点击思源悬浮窗头栏中央触发块缩小窗口（默认设置钉住），再次点击恢复
 //记忆缩小、放大状态窗口大小调整红的状态
@@ -1023,223 +830,6 @@ function zoomOutToRestoreTheFloatingWindow() {
 
 
 
-
-/**----------------------思源悬浮窗检测到单个段落块，单个列表项，面包屑前一级展示/反链计数悬浮窗反链引用高亮标记----------------------- */
-/*请无视糟糕中文代码 */
-function SuspendedWindowNoSection() {
-
-    setInterval(() => {
-        //获取所有悬浮窗内容类型,排除一个以元素和非段落块,查找面包屑模拟点击倒数第二级展开内容
-        document.querySelectorAll("[data-oid]:not([zhankai])").forEach((da) => {
-
-            if (da.querySelector(".fn__loading")) return; //有内容没加载
-
-
-            var protyles;
-            try {
-                protyles = da.children[1].children;
-                if (protyles == null) return;
-            } catch (error) {
-                return;
-            }
-
-            for (let index = 0; index < protyles.length; index++) {
-                const element = protyles[index];
-                /***********************************************排除失效引用但还站一个悬浮窗格的情况 */
-                if (element.querySelector("[data-doc-type]" && element.firstElementChild != null) == null) return;
-            }
-
-            if (da.getAttribute("zhankai") != null) return;//已经处理过的悬浮窗
-            da.setAttribute("zhankai", true);//标记已经处理，防止下次循环多次处理
-
-            Array.from(da.children[1].children).forEach((g) => {
-
-                var v = g.querySelector("[data-doc-type]");//查询基力悬浮窗内容类型元素
-                if (v.children.length != 1 && v.getAttribute("data-doc-type") != "NodeHeading") return;//剔除data-doc-type存在多个子元素的悬浮窗
-
-
-                var 悬浮窗类型 = "引用悬浮窗";
-                var 反链引用ID;
-                var defmark = v.querySelector(".def--mark");
-                if (defmark) {
-                    悬浮窗类型 = "反链悬浮窗";//判断悬浮窗类型
-                    反链引用ID = defmark.getAttribute("data-id");
-                }
-
-
-                //console.log(悬浮窗类型, 反链引用ID);
-                var 悬浮窗出现的单独块是什么块;
-                //悬浮窗出现的单独块是什么块？
-                switch (v.firstElementChild.className) {
-                    case "render-node"://嵌入块
-                        悬浮窗出现的单独块是什么块 = "嵌入块"; break;
-                    case "p"://段落块
-                        悬浮窗出现的单独块是什么块 = "段落块"; break;
-                    case "li"://单独列表项块//列表只要有三个子元素就是单独列表项块
-                        if (v.firstElementChild.children.length == 3) 悬浮窗出现的单独块是什么块 = "列表块";
-                        else 悬浮窗出现的单独块是什么块 = ""; break;
-                    case "sb"://单独超级快
-                        悬浮窗出现的单独块是什么块 = "超级块"; break;
-                    default:
-                        悬浮窗出现的单独块是什么块 = ""; break;
-                }
-
-
-                var 引用ID;
-                var 拟点击面包屑模元素;
-
-                var 时间累加器 = 0;
-                var iD = setInterval(() => {
-                    时间累加器 += 100;
-                    if (时间累加器 > 3000) clearInterval(iD);//超时
-
-
-                    try {
-
-                        if (悬浮窗出现的单独块是什么块 != "超级块") {
-                            引用ID = v.parentElement.previousElementSibling.firstElementChild.lastElementChild.getAttribute("data-node-id");//记录原块id
-                        } else {//思源超级块不显示面包屑上因此需要单独处理
-                            引用ID = v.firstElementChild.getAttribute("data-node-id");
-                        }
-                        拟点击面包屑模元素 = v.parentElement.previousElementSibling.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.children[1];
-                        clearInterval(iD);//上段代码没报错就证明元素获取成功了,关闭定时器
-
-                        if (悬浮窗出现的单独块是什么块 != "") {
-                            悬浮窗面包屑跳转();
-                        } else {
-                            不需要模拟点击的反链展示();
-                        }
-
-                    } catch (error) {
-                        console.log("面包屑模拟点击元素获取错误", v.parentElement.previousElementSibling.firstElementChild.lastElementChild);
-                    }
-                }, 100);
-
-
-                function 悬浮窗面包屑跳转() {
-                    拟点击面包屑模元素.click();
-
-                    const observer = new MutationObserver(() => {//创建监视
-                        observer.disconnect();//关闭监视
-                        setTimeout(() => {
-                            switch (悬浮窗类型) {
-                                case "反链悬浮窗":
-
-                                    switch (悬浮窗出现的单独块是什么块) {
-                                        case "嵌入块":
-                                            var ts = v.parentElement.querySelectorAll(`[data-content="select * from blocks where id='${反链引用ID}'"]`);
-                                            for (let index = 0; index < ts.length; index++) {
-                                                const element = ts[index];
-                                                element.classList.add("blockhighlighting")///块高亮
-                                                if (index == 0) 高亮内容跳转到悬浮窗中间(element, v);
-                                            }
-                                            break;
-                                        default:
-                                            var ts = v.parentElement.querySelectorAll(`[data-id='${反链引用ID}'][data-subtype]`);
-                                            for (let index = 0; index < ts.length; index++) {
-                                                const element = ts[index];
-                                                element.classList.add("blockRefhighlighting")//引用高亮
-                                                isFatherFather(element, (f) => {
-                                                    if (f.getAttribute("contenteditable") != null) {
-                                                        f.classList.add("blockhighlighting")//块高亮
-                                                        if (index == 0) 高亮内容跳转到悬浮窗中间(element, v);
-                                                        return true;
-                                                    }
-                                                    if (f.tagName == "TD" || f.tagName == "TR") {
-                                                        f.classList.add("blockhighlighting")//块高亮
-                                                        if (index == 0) 高亮内容跳转到悬浮窗中间(element, v);
-                                                        return true;
-                                                    }
-                                                    return false;
-                                                }, 4)
-                                            }
-                                            break;
-                                    }
-                                    break;
-                                case "引用悬浮窗":
-                                    switch (悬浮窗出现的单独块是什么块) {
-                                        case "嵌入块":
-                                            var ts = v.parentElement.querySelector(`[data-node-id='${引用ID}'][data-type="NodeBlockQueryEmbed"]`);
-                                            ts.classList.add("blockhighlighting")//引用高亮
-                                            高亮内容跳转到悬浮窗中间(ts, v);
-                                            break;
-                                        default:
-                                            var ts = v.parentElement.querySelector(`[data-node-id='${引用ID}']`);
-                                            ts.classList.add("blockhighlighting")//引用高亮
-                                            高亮内容跳转到悬浮窗中间(ts, v);
-                                            break;
-                                    }
-
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }, 500)
-
-                    });
-                    observer.observe(v, { attributes: false, childList: true, subtree: false });
-                }
-
-                function 不需要模拟点击的反链展示() {
-                    switch (悬浮窗类型) {
-                        case "反链悬浮窗":
-                            var protyle_content = v.parentElement;
-                            var ts = protyle_content.querySelectorAll(`[data-id='${反链引用ID}']`);
-                            for (let index = 0; index < ts.length; index++) {
-                                const element = ts[index];
-                                element.classList.add("blockRefhighlighting")//引用高亮
-                                isFatherFather(element, (f) => {
-                                    if (f.getAttribute("contenteditable") != null) {
-                                        f.classList.add("blockhighlighting")//块高亮
-                                        if (index == 0) 高亮内容跳转到悬浮窗中间(element, v)
-                                        return true;
-                                    }
-                                    if (f.tagName == "TD" || f.tagName == "TR") {
-                                        f.classList.add("blockhighlighting")//块高亮
-                                        if (index == 0) 高亮内容跳转到悬浮窗中间(element, v)
-                                        return true;
-                                    }
-                                    return false;
-                                }, 4)
-                            }
-                            break;
-                        case "引用悬浮窗":
-                            var protyle_content = v.parentElement;
-                            var ts = protyle_content.querySelector(`[data-node-id='${引用ID}']`);
-                            //ts.scrollIntoView(true);
-                            // ts.classList.add("blockRefhighlighting")//引用高亮
-
-                            break;
-                        default:
-                            break;
-                    }
-                }
-
-                function 高亮内容跳转到悬浮窗中间(element, v) {
-                    setTimeout(() => {
-                        element.scrollIntoView(false);
-                        setTimeout(() => {
-                            var tim = v.parentElement;
-                            //console.log(tim, tim.scrollTop);
-                            if (tim.scrollTop != 0) {
-                                tim.scrollBy(0, tim.offsetHeight / 2);
-                            }
-                        }, 100);
-                        isFatherFather(v, (g) => {
-                            if (g.getAttribute("class") == "block__content") {
-                                g.scrollTo(0, 0);
-                                return true;
-                            }
-                            return false;
-                        }, 5)
-                    }, 100);
-                }
-
-            });
-        });
-    }, 1000);
-
-}
 
 
 
@@ -2598,127 +2188,6 @@ function getDocPath(docId, then) {
 
 
 
-/**++++++++++++++++++++++++++++++++按需调用++++++++++++++++++++++++++++++ */
-
-
-
-function 调整新窗口头栏位置() {
-    if (!document.body.classList.contains("body--window")) return;
-    const toolbar__window = document.querySelector("body > .toolbar__window");
-    const layouts = document.getElementById("layouts")?.parentElement;
-    var toolbarTxt = insertCreateBefore(toolbar__window.firstElementChild, "div", "toolbarTxt");
-    if (toolbar__window && layouts) {
-        document.body.insertBefore(toolbar__window, layouts);
-    }
-
-
-    /************************************************************窗口一些元素调整 */
-    var layoutTabBarReadonly = document.querySelector(".layout-tab-bar.layout-tab-bar--readonly.fn__flex-1");
-    layoutTabBarReadonly.style.paddingRight = "0px";
-    layoutTabBarReadonly.style.marginTop = "-26px";
-
-
-
-    /**********************************************************更改子窗口标题 */
-    let _id = /^\d{14}\-[0-9a-z]{7}$/;
-    let _url = /^siyuan:\/\/blocks\/(\d{14}\-[0-9a-z]{7})\/*(?:(?:\?)(\w+=\w+)(?:(?:\&)(\w+=\w+))*)?$/;
-    /**
-     * 获得目标的块 ID
-     * @params {HTMLElement} target: 目标
-     * @return {string} 块 ID
-     * @return {null} 没有找到块 ID
-     */
-    function getTargetBlockID(target) {
-        let element = target;
-        while (element != null
-            && !(element.localName === 'a' && element.href
-                || element.dataset.href
-                || _id.test(element.dataset.nodeId)
-                || _id.test(element.dataset.oid)
-                || _id.test(element.dataset.id)
-                || _id.test(element.dataset.rootId)
-            )) element = element.parentElement;
-
-        if (element != null) {
-            if (_id.test(element.dataset.nodeId)) return element.dataset.nodeId;
-            if (_id.test(element.dataset.oid)) return element.dataset.oid;
-            if (_id.test(element.dataset.id)) return element.dataset.id;
-            if (_id.test(element.dataset.oid)) return element.dataset.rootId;
-            if (_url.test(element.dataset.href)) return url2id(element.dataset.href);
-            if (_url.test(element.href)) return url2id(element.href);
-            return element.href || element.dataset.href || null;
-        }
-        else return null;
-    }
-    function url2id(url) {
-        let results = _url.exec(url);
-        if (results && results.length >= 2) {
-            return results[1];
-        }
-        return null;
-    }
-    var reg = new RegExp('<[^>]+>', 'gi');  //过滤所有的html标签，不包括内容
-
-    var title = document.querySelector("title");
-    title.innerText = "[#] 思源子窗口 - toy [#]";
-    toolbarTxt.innerText = "[#] 思源子窗口 - toy [#]";
-
-    AddEvent(document.body, "click", (e) => {
-        //console.log(e);
-
-        var title = document.querySelector("title");
-        var TargetBlockID = getTargetBlockID(e.target);
-        if (TargetBlockID == null) {
-            title.innerText = "[#] 思源子窗口 - toy [#]";
-            toolbarTxt.innerText = "[#] 思源子窗口 - toy [#]";
-            return;
-        };
-        titleTxt(TargetBlockID);
-    })
-
-    function titleTxt(TargetBlockID) {
-
-        以id获取文档聚焦内容(TargetBlockID, (v) => {
-            var htmltxt = v.content;
-
-            var element = document.createElement("div");
-            element.innerHTML = htmltxt;
-
-            htmltxt = diguiTooONE_1(element, (v) => {
-                return v.getAttribute("contenteditable") == "true";
-            })
-
-            var txt = (htmltxt.innerText).replace(reg, '');
-            if (txt == "​" || txt == "") {
-                txt = "[#] 思源子窗口 - toy [#]";
-                根据ID获取人类可读路径(TargetBlockID, (v) => {
-                    title.innerText = "[#] " + v.substring(1, v.length) + " [#]";
-                    toolbarTxt.innerText = "[#] " + v.substring(1, v.length) + " [#]";
-
-                })
-                return;
-            }
-            if (txt.length > 25) {
-                title.innerText = "[#] " + txt.substring(0, 25) + "...";
-                toolbarTxt.innerText = "[#] " + txt.substring(0, 25) + "...";
-
-            } else {
-                title.innerText = "[#] " + txt + " [#]";
-                toolbarTxt.innerText = "[#] " + txt + " [#]";
-            }
-            element.remove();
-        });
-    }
-
-
-
-}
-
-
-
-
-
-调整新窗口头栏位置();
 
 
 var Funs;
@@ -2745,10 +2214,7 @@ if (isPhone()) {
         displayParentChildDocuments2,//为文档展示父子文档
         autoOpenList,//自动展开悬浮窗内折叠列表（第一次折叠）
         collapsedListPreview,//折叠列表内容预览查看
-        collapseExpand_Head_List,//鼠标中键标题、列表文本折叠/展开
-        theFloatingWindowIsClosed,//思源悬浮窗头栏中键关闭
         zoomOutToRestoreTheFloatingWindow,//钉住悬浮窗增强
-        SuspendedWindowNoSection,//思源悬浮窗检测到单个段落块，单个列表项，面包屑前一级展示
         () => console.log("==============>toy主题:附加CSS和特性JS_已经执行<==============")
     ];
 
@@ -2765,20 +2231,9 @@ if (isPhone()) {
         autoOpenList();//自动展开悬浮窗内折叠列表（第一次折叠）
     
         collapsedListPreview();//折叠列表内容预览查看
-    
-        collapseExpand_Head_List();//鼠标中键标题、列表文本折叠/展开
-
-        // findMatchingListEntries();//查找匹配列表条目前的图标可以鼠标悬停打开悬浮窗
-    
-    
-    
-        theFloatingWindowIsClosed();//思源悬浮窗头栏中键关闭
-    
-        zoomOutToRestoreTheFloatingWindow();//钉住悬浮窗增强
-    
         
-        SuspendedWindowNoSection();//思源悬浮窗检测到单个段落块，单个列表项，面包屑前一级展示
-    
+        zoomOutToRestoreTheFloatingWindow();//钉住悬浮窗增强
+        
     */
 
 }
@@ -2857,17 +2312,9 @@ function SubMenu(selectid,selecttype,className = 'b3-menu__submenu') {
   }
   if(selecttype=="NodeParagraph"){
 node.appendChild(bk(selectid))
+          node.appendChild(bl(selectid))
+          node.appendChild(hx(selectid))
 node.appendChild(qbk(selectid))
-    node.appendChild(qblta(selectid))
-          node.appendChild(qbltb(selectid))
-          node.appendChild(qbltc(selectid))
-          node.appendChild(qbltd(selectid))
-          node.appendChild(sblta(selectid))
-          node.appendChild(sbltb(selectid))
-          node.appendChild(sbltc(selectid))
-          node.appendChild(sbltd(selectid))
-          node.appendChild(qblt(selectid))	
-    node.appendChild(sblt(selectid))	
   }
 return node;
 }
@@ -2957,113 +2404,33 @@ function bk(selectid){
   button.onclick=ViewMonitor
   return button
 }
+function bl(selectid){
+  let button = document.createElement("button")
+  button.className="b3-menu__item"
+  button.setAttribute("data-node-id",selectid)
+  button.setAttribute("custom-attr-name","bk")
+  button.setAttribute("custom-attr-value","bl")
+  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">便利贴</span>`
+  button.onclick=ViewMonitor
+  return button
+}
+function hx(selectid){
+  let button = document.createElement("button")
+  button.className="b3-menu__item"
+  button.setAttribute("data-node-id",selectid)
+  button.setAttribute("custom-attr-name","bk")
+  button.setAttribute("custom-attr-value","hx")
+  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">行线</span>`
+  button.onclick=ViewMonitor
+  return button
+}
 function qbk(selectid){
   let button = document.createElement("button")
   button.className="b3-menu__item"
   button.setAttribute("data-node-id",selectid)
   button.setAttribute("custom-attr-name","bk")
   button.setAttribute("custom-attr-value","")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#iconRefresh"></use></svg><span class="b3-menu__label">取消边框</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function qblta(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","q")
-  button.setAttribute("custom-attr-value","blt1")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">浅粉</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function qbltb(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","q")
-  button.setAttribute("custom-attr-value","blt2")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">浅黄</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function qbltc(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","q")
-  button.setAttribute("custom-attr-value","blt3")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">浅蓝</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function qbltd(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","q")
-  button.setAttribute("custom-attr-value","blt4")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">浅绿</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function sblta(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","s")
-  button.setAttribute("custom-attr-value","blt1")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">深红</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function sbltb(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","s")
-  button.setAttribute("custom-attr-value","blt2")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">深橙</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function sbltc(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","s")
-  button.setAttribute("custom-attr-value","blt3")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">深蓝</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function sbltd(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","s")
-  button.setAttribute("custom-attr-value","blt4")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#icon-1f514"></use></svg><span class="b3-menu__label">深绿</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function qblt(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","q")
-  button.setAttribute("custom-attr-value","")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#iconRefresh"></use></svg><span class="b3-menu__label">恢复原样式（浅）</span>`
-  button.onclick=ViewMonitor
-  return button
-}
-function sblt(selectid){
-  let button = document.createElement("button")
-  button.className="b3-menu__item"
-  button.setAttribute("data-node-id",selectid)
-  button.setAttribute("custom-attr-name","s")
-  button.setAttribute("custom-attr-value","")
-  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#iconRefresh"></use></svg><span class="b3-menu__label">恢复原样式（深）</span>`
+  button.innerHTML=`<svg class="b3-menu__icon" style=""><use xlink:href="#iconRefresh"></use></svg><span class="b3-menu__label">还原</span>`
   button.onclick=ViewMonitor
   return button
 }
