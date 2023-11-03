@@ -425,8 +425,8 @@ box-shadow: inset 0 0 0 0.6px var(--b3-theme-on-surface);
 /* 代码块上方部分设置 */
 .protyle-wysiwyg .code-block,
 .b3-typography .code-block {
-    position: relative;
-    display: block;
+   /* position: relative;
+    display: block;*/
     border-radius: 0px;
     padding-top: 32px !important;
     /* box-shadow: var(--b3-code-block-shadow); */
@@ -448,7 +448,7 @@ box-shadow: inset 0 0 0 0.6px var(--b3-theme-on-surface);
 
 /*  ————————————————————————————————————代码块行数——————————————————————————————————*/
 .protyle-linenumber__rows {
-    margin-top: 32px !important;
+   /* margin-top: 32px !important;*/
     padding: 4px;
     background-color: var(--code-block-background);
     margin-bottom: 0px;
